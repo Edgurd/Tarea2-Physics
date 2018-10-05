@@ -2,5 +2,397 @@
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Event sheet 1</name>
-    <events />
+    <events>
+        <event-group description="" sid="636716604472751" title="Functions">
+            <sub-events>
+                <event-block sid="598280766838701">
+                    <conditions>
+                        <condition id="0" name="On function" sid="299051536405615" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="977671327884749">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="640397382419599" type="System">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="966750162335005" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="590618965242769">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="127387539585717" type="FlySpirte" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="505490782199800" type="FlySpirte" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="887394747033035">
+                            <conditions>
+                                <condition id="-10" name="For" sid="376964748442771" type="System">
+                                    <param id="0" name="Name">&quot;FlySpawn&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">Spidy.FlyUp</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="788798573291207" type="Spidy">
+                                    <param id="0" name="Instance variable">FlyUp</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="828382100130922" type="Spidy">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="519460173332874" type="FlySpirte">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="269086666205893" type="FlySpirte">
+                                    <param id="0" name="Angle">((Self.ID * ( (180 ) /(( Spidy.FlyUp )+1) ) ) +180) + Spidy.Angle</param>
+                                    <param id="1" name="Distance">50</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="854762786509611" type="FlySpirte">
+                                    <param id="0" name="Pin to">Spidy</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="281809098772073" title="Spidy">
+            <sub-events>
+                <event-group description="" sid="141859035551260" title="Moving">
+                    <sub-events>
+                        <variable constant="0" name="Variable1" sid="605162602972646" static="0" type="number">0</variable>
+                        <event-block sid="370989373476354">
+                            <conditions>
+                                <condition id="7" name="Cursor is over object" sid="429791008447410" type="Mouse">
+                                    <param id="0" name="Object">vasjn</param>
+                                </condition>
+                                <condition id="2" name="Mouse button is down" sid="554816135009991" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-3" name="Set position" sid="764369924685813" type="Tela">
+                                    <param id="0" name="X">vasjn.X</param>
+                                    <param id="1" name="Y">vasjn.Y</param>
+                                </action>
+                                <action id="-7" name="Set size" sid="501687986323441" type="Tela">
+                                    <param id="0" name="Width">10</param>
+                                    <param id="1" name="Height">distance(Spidy.X,Spidy.Y,vasjn.X,vasjn.Y)</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="255447425142129" type="Tela">
+                                    <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,vasjn.X,vasjn.Y) +90</param>
+                                </action>
+                                <action behavior="Physics" id="10" name="Create distance joint" sid="777057693133507" type="Spidy">
+                                    <param id="0" name="This image point">0</param>
+                                    <param id="1" name="Object">vasjn</param>
+                                    <param id="2" name="That image point">0</param>
+                                    <param id="3" name="Damping ratio">1</param>
+                                    <param id="4" name="Spring frequency">200</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="349010856756234">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="163913731903135" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-7" name="Set size" sid="127007734268987" type="Tela">
+                                    <param id="0" name="Width">10</param>
+                                    <param id="1" name="Height">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="435314131146791" type="Tela">
+                                    <param id="0" name="X">-30</param>
+                                    <param id="1" name="Y">-30</param>
+                                </action>
+                                <action behavior="Physics" id="26" name="Remove all joints" sid="940997120282593" type="Spidy" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="397922305324632">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="842508296258886" type="Keyboard">
+                                    <param id="0" name="Key">68</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="981210477793525" type="Spidy">
+                                    <param id="0" name="Object">Stick</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">3</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="147181314344592" type="Spidy">
+                                    <param id="0" name="Object">Tela</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="0" name="Apply force" sid="829310328123619" type="Spidy">
+                                    <param id="0" name="Force X">Self.velocidad</param>
+                                    <param id="1" name="Force Y">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="431781986150544">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="408290759548390" type="Keyboard">
+                                    <param id="0" name="Key">65</param>
+                                </condition>
+                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="418466171824727" type="Spidy">
+                                    <param id="0" name="Object">Stick</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">3</param>
+                                </condition>
+                                <condition id="1" name="Is overlapping another object" sid="510139553184191" type="Spidy">
+                                    <param id="0" name="Object">Tela</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="0" name="Apply force" sid="579480357648529" type="Spidy">
+                                    <param id="0" name="Force X">-Self.velocidad</param>
+                                    <param id="1" name="Force Y">0</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="599148504212812">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="885340243812022" type="Keyboard">
+                                    <param id="0" name="Key">87</param>
+                                </condition>
+                                <condition id="9" name="Is overlapping at offset" sid="315883035474768" type="Spidy">
+                                    <param id="0" name="Object">Stick</param>
+                                    <param id="1" name="Offset X">0</param>
+                                    <param id="2" name="Offset Y">3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Physics" id="3" name="Apply impulse" sid="443911399017108" type="Spidy">
+                                    <param id="0" name="Impulse X">0</param>
+                                    <param id="1" name="Impulse Y">-Spidy.salto</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="235641515853251">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="527511924446616" type="Spidy">
+                            <param id="0" name="Object">Fly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="913327222736161" type="Fly" />
+                        <action id="-11" name="Add to" sid="639333571481380" type="Spidy">
+                            <param id="0" name="Instance variable">FlyUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="755939014474427" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="947199281586354">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="915745969241639" type="System">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="109410783738372">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="178578842340434" type="System">
+                                            <param id="0" name="First value">Spidy.FlyUp</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Second value">FlySpirte.ID</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="742647498042061" type="FlySpirte" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <comment>Letterbox Scale</comment>
+        <comment>HTML5 Website -&gt; Zip</comment>
+        <comment>Upload New Proyect -&gt;HTML -&gt; 0$ or donate -&gt; Upload Zip -&gt; This file will be played in teh browser</comment>
+        <event-group description="" sid="884502806569036" title="Misc">
+            <sub-events>
+                <event-block sid="512668026620438">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="513344617949587" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="626911202675844" type="Tela">
+                            <param id="0" name="Object">Family1</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="437607628982949" type="Spidy">
+                            <param id="0" name="Gravity">10</param>
+                        </action>
+                        <action id="0" name="Call function" sid="789868736775098" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="284621445359257" type="Sprite">
+                            <param id="0" name="Pin to">vasjn</param>
+                            <param id="1" name="Mode">3</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="770192041861100" type="Sprite">
+                            <param id="0" name="Pin to">Spidy</param>
+                            <param id="1" name="Mode">3</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="809326027290617" type="Spidy">
+                            <param id="0" name="Pin to">Sprite</param>
+                            <param id="1" name="Mode">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="324051016842862">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="990913727924595" type="Keyboard">
+                            <param id="0" name="Key">90</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="341220616636522" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="780181481668434">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="717456519515173" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="CustomMovement" id="2" name="Set speed" sid="474000544476675" type="Sprite">
+                    <param id="0" name="Which">2</param>
+                    <param id="1" name="Speed">250</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" disabled="1" sid="913749796099655" title="ASD">
+            <sub-events>
+                <event-block disabled="1" sid="487172164202035">
+                    <conditions>
+                        <condition id="0" name="On function" sid="165795964010850" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="380572132740863">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="888642517390745" type="System">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="817802605391674" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="394055340304328">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="530778255416231" type="FlySpirte" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="320997061435379" type="FlySpirte" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <variable constant="0" name="UID1" sid="859768056489803" static="0" type="number">0</variable>
+                        <variable constant="0" name="UID2" sid="411202152936061" static="0" type="number">0</variable>
+                        <event-block disabled="1" sid="534153854598222">
+                            <conditions />
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="841289122684920" type="Spidy">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                    <param id="1" name="Layer">0</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="139156962106809" type="FlySpirte">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">loopindex(&quot;SpawnFly&quot;)</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="691581386737338" type="FlySpirte">
+                                    <param id="0" name="Pin to">Spidy</param>
+                                    <param id="1" name="Mode">3</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="193423336357474" type="System">
+                                    <param id="0" name="Variable">UID1</param>
+                                    <param id="1" name="Value">FlySpirte.UID</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block disabled="1" sid="688352088135689">
+                            <conditions>
+                                <condition id="-10" name="For" sid="243729728437348" type="System">
+                                    <param id="0" name="Name">&quot;SpawnFly&quot;</param>
+                                    <param id="1" name="Start index">2</param>
+                                    <param id="2" name="End index">Spidy.FlyUp</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block disabled="1" sid="725372794265738">
+                                    <conditions />
+                                    <actions>
+                                        <action id="-3" name="Create object" sid="736339170207820" type="System">
+                                            <param id="0" name="Object to create">FlySpirte</param>
+                                            <param id="1" name="Layer">0</param>
+                                            <param id="2" name="X">Spidy.X + (FlySpirte.Width * (loopindex-1))</param>
+                                            <param id="3" name="Y">Spidy.Y + (FlySpirte.Height-10 * (loopindex-1))</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="556001289153822" type="System">
+                                            <param id="0" name="Variable">UID2</param>
+                                            <param id="1" name="Value">FlySpirte.UID</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block disabled="1" sid="904031136257187">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="885705639544345" type="FlySpirte">
+                                            <param id="0" name="Unique ID">UID1</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="982872728350665" type="FlySprite2">
+                                            <param id="0" name="Unique ID">UID2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Pin" id="0" name="Pin to object" sid="519140985785587" type="FlySprite2">
+                                            <param id="0" name="Pin to">FlySpirte</param>
+                                            <param id="1" name="Mode">3</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="876072297268766" type="System">
+                                            <param id="0" name="Variable">UID1</param>
+                                            <param id="1" name="Value">UID2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
 </c2eventsheet>

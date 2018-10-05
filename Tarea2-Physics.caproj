@@ -9,15 +9,25 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>23zd3hdo5fxgo</unique-id>
     <saved-with-version>26200</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Function" version="1">Function</plugin>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>700</width>
+        <height>700</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -37,15 +47,173 @@
         <prop name="Sampling">Linear</prop>
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
-    <object-folder />
-    <families />
+    <object-folder>
+        <object-type name="Stick" sid="814267663605080">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="138089621482182">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952442122040790" speed="5">
+                    <frame duration="1" hotspotX="0.508" hotspotY="1" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Spidy" sid="458093168645169">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="velocidad" sid="622597533479418" type="number" />
+                <instance-variable name="salto" sid="474895795710937" type="number" />
+                <instance-variable name="FlyLvl" sid="859837657419363" type="number" />
+                <instance-variable name="FlyUp" sid="439808918915465" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Physics" sid="147636474276684">
+                    <behavior id="Physics" />
+                </behavior-type>
+                <behavior-type name="Pin" sid="873097149195335">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="799011750187104" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Desktop\Spidiplayer.png">
+                        <image-point name="Imagepoint 1" x="0.535" y="0.865" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Tela" sid="384141139240140">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="903364805709396">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512419493730585" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <image-point name="Imagepoint 1" x="0.5" y="1" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Keyboard" sid="347866114716673">
+            <plugin id="Keyboard" />
+        </object-type>
+        <object-type name="Mouse" sid="749265832125014">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="vasjn" sid="310635264854678">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Physics" sid="540820162311827">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992449314965529" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Fly" sid="414772927833674">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="767708250697321">
+                    <behavior id="Sin" />
+                </behavior-type>
+                <behavior-type name="Sine2" sid="520205480452029">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="366768841597640" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="FlySpirte" sid="675924403140544">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="ID" sid="146631058448508" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="CustomMovement" sid="485871586746778">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="793402500465125" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.484" y="0.968" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Function" sid="935192405769472">
+            <plugin id="Function" />
+        </object-type>
+        <object-type name="Sprite" sid="861835920102629">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="830271841663550">
+                    <behavior id="Pin" />
+                </behavior-type>
+                <behavior-type name="CustomMovement" sid="924940746514937">
+                    <behavior id="custom" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="812498666700259" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+    </object-folder>
+    <families>
+        <family name="Family1" plugin-id="Sprite" sid="323336265046797">
+            <members>
+                <member>Spidy</member>
+                <member>Stick</member>
+                <member>Tela</member>
+                <member>vasjn</member>
+            </members>
+        </family>
+        <family name="FlySprite2" plugin-id="Sprite" sid="654407159530943">
+            <members>
+                <member>FlySpirte</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin" sid="664661920722564">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Family2" plugin-id="Sprite" sid="474217170506001">
+            <members>
+                <member>Sprite</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Pin2" sid="832666371393127">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+        </family>
+    </families>
     <layout-folder>
         <layout>Layout 1.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Event sheet 1.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="3" />
+        <global-instance type="Mouse" uid="4" />
+        <global-instance type="Function" uid="12" />
+    </global-instances>
     <sounds-folder />
     <music-folder />
     <files-folder>
