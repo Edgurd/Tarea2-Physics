@@ -162,6 +162,11 @@
                                         <condition id="2" name="Mouse button is down" sid="554816135009991" type="Mouse">
                                             <param id="0" name="Mouse button">0</param>
                                         </condition>
+                                        <condition id="-8" name="Compare two values" sid="511647330826123" type="System">
+                                            <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red.X,Red.Y)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Spidy.Rango</param>
+                                        </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-3" name="Set position" sid="764369924685813" type="SpidyTela">
@@ -179,8 +184,8 @@
                                             <param id="0" name="This image point">0</param>
                                             <param id="1" name="Object">Red</param>
                                             <param id="2" name="That image point">0</param>
-                                            <param id="3" name="Damping ratio">1</param>
-                                            <param id="4" name="Spring frequency">200</param>
+                                            <param id="3" name="Damping ratio">0.5</param>
+                                            <param id="4" name="Spring frequency">100</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -189,6 +194,7 @@
                                         <condition id="-22" name="Else" sid="163913731903135" type="System" />
                                     </conditions>
                                     <actions>
+                                        <action behavior="Physics" id="26" name="Remove all joints" sid="940997120282593" type="Spidy" />
                                         <action id="-7" name="Set size" sid="127007734268987" type="SpidyTela">
                                             <param id="0" name="Width">10</param>
                                             <param id="1" name="Height">10</param>
@@ -197,7 +203,6 @@
                                             <param id="0" name="X">-30</param>
                                             <param id="1" name="Y">-30</param>
                                         </action>
-                                        <action behavior="Physics" id="26" name="Remove all joints" sid="940997120282593" type="Spidy" />
                                     </actions>
                                 </event-block>
                                 <event-block sid="397922305324632">
@@ -499,11 +504,7 @@
                             <param id="2" name="Object clicked">BackToSelect</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-2" name="Go to layout" sid="245662264301015" type="System">
-                            <param id="0" name="Layout">SelectLvl_Layout</param>
-                        </action>
-                    </actions>
+                    <actions />
                 </event-block>
                 <event-block sid="424879570089224">
                     <conditions>
@@ -536,15 +537,19 @@
                         <condition id="-18" name="On created" sid="876865278756149" type="Sapo" />
                     </conditions>
                     <actions>
-                        <action id="-21" name="Rotate toward position" sid="727272786346975" type="Sapo">
-                            <param id="0" name="Degrees">0</param>
-                            <param id="1" name="X">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
-                            <param id="2" name="Y">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
+                        <action id="-22" name="Set angle toward position" sid="727272786346975" type="Sapo">
+                            <param id="0" name="X">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
+                            <param id="1" name="Y">int(tokenat((Self.Target),1,&quot;|&quot;))</param>
                         </action>
-                        <action id="-21" name="Rotate toward position" sid="766807660558157" type="LenguaSapo">
-                            <param id="0" name="Degrees">0</param>
-                            <param id="1" name="X">int(tokenat((Sapo.Target),0,&quot;|&quot;))</param>
-                            <param id="2" name="Y">int(tokenat((Sapo.Target),1,&quot;|&quot;))</param>
+                        <action id="-22" name="Set angle toward position" sid="766807660558157" type="LenguaSapo">
+                            <param id="0" name="X">int(tokenat((Sapo.Target),0,&quot;|&quot;))</param>
+                            <param id="1" name="Y">int(tokenat((Sapo.Target),1,&quot;|&quot;))</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="491168062511376" type="Sapo">
+                            <param id="0" name="Angle">Self.Angle + 90</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="623402026353051" type="LenguaSapo">
+                            <param id="0" name="Angle">Self.Angle + 90</param>
                         </action>
                     </actions>
                 </event-block>
@@ -582,12 +587,21 @@
                             <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="-6" name="Set height" sid="231374712894501" type="LenguaSapo">
-                            <param id="0" name="Height">LenguaSapo.Height+30</param>
-                        </action>
-                    </actions>
+                    <actions />
                     <sub-events>
+                        <event-block sid="136811092463002">
+                            <conditions>
+                                <condition id="-6" name="Compare height" sid="951800485125146" type="LenguaSapo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Height">Sapo.LargoLengua</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="231374712894501" type="LenguaSapo">
+                                    <param id="0" name="Height">LenguaSapo.Height+30</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="471168618621283">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="635404702810818" type="LenguaSapo">
@@ -595,9 +609,6 @@
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-16" name="Wait" sid="609811445584735" type="System">
-                                    <param id="0" name="Seconds">0.02</param>
-                                </action>
                                 <action id="-10" name="Set value" sid="585111908983130" type="LenguaSapo">
                                     <param id="0" name="Instance variable">EstadoLengua</param>
                                     <param id="1" name="Value">3</param>
@@ -675,6 +686,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="173919589218061" type="Sapo">
+                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="503128896932695" type="Sapo">
+                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="918021370418786" type="SpidyTela">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -691,12 +708,6 @@
                         <action id="-10" name="Set value" sid="187740176812991" type="LenguaSapo">
                             <param id="0" name="Instance variable">EstadoLengua</param>
                             <param id="1" name="Value">2</param>
-                        </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="173919589218061" type="Sapo">
-                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
-                        </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="503128896932695" type="Sapo">
-                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
                         </action>
                     </actions>
                 </event-block>

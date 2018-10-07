@@ -131,9 +131,9 @@
                 <instance-variables>
                     <instance-variable name="velocidad" sid="622597533479418" type="number" />
                     <instance-variable name="salto" sid="474895795710937" type="number" />
-                    <instance-variable name="FlyLvl" sid="859837657419363" type="number" />
                     <instance-variable name="FlyUp" sid="439808918915465" type="number" />
                     <instance-variable name="Control" sid="292221437071534" type="boolean" />
+                    <instance-variable name="Rango" sid="183618341482512" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="147636474276684">
@@ -189,6 +189,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable name="Target" sid="979125437345194" type="string" />
+                    <instance-variable name="LargoLengua" sid="739067310687654" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Timer" sid="209258627847149">
@@ -438,12 +439,10 @@
     <layout-folder>
         <layout>Test_Layout.xml</layout>
         <layout>Inicio_Layout.xml</layout>
-        <layout>SelectLvl_Layout.xml</layout>
     </layout-folder>
     <event-folder>
         <event-sheet>Nivel.xml</event-sheet>
         <event-sheet>Inicio.xml</event-sheet>
-        <event-sheet>SelectLvl.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />

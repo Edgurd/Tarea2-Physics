@@ -93,11 +93,11 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <velocidad>100</velocidad>
-                        <salto>10</salto>
-                        <FlyLvl>3</FlyLvl>
+                        <velocidad>10</velocidad>
+                        <salto>5</salto>
                         <FlyUp>0</FlyUp>
                         <Control>true</Control>
+                        <Rango>250</Rango>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -119,8 +119,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>40</x>
-                        <y>367</y>
+                        <x>61.777832031</x>
+                        <y>329.749328613</y>
                         <z>0</z>
                         <width>64</width>
                         <height>68</height>
@@ -195,8 +195,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>113</x>
-                        <y>452</y>
+                        <x>120</x>
+                        <y>453</y>
                         <z>0</z>
                         <width>64</width>
                         <height>316</height>
@@ -309,8 +309,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-281</x>
-                        <y>162</y>
+                        <x>-170</x>
+                        <y>191</y>
                         <z>0</z>
                         <width>40</width>
                         <height>40</height>
@@ -515,6 +515,7 @@
                     </properties>
                     <instance-variables>
                         <Target>370|370</Target>
+                        <LargoLengua>400</LargoLengua>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Timer" />
@@ -530,7 +531,7 @@
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
+                        <angle>0.007195497</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
