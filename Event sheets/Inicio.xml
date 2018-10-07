@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Inicio</name>
+    <events>
+        <event-block sid="649767237766627">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="286056244537386" type="System" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="264651418653137" type="Text">
+                    <param id="0" name="Family name">&quot;cut-n-pasteregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

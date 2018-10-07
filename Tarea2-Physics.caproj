@@ -10,16 +10,19 @@
     <unique-id>23zd3hdo5fxgo</unique-id>
     <saved-with-version>26200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
+        <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
     </used-behaviors>
     <used-effects>
@@ -62,8 +65,66 @@
             <object-type name="Keyboard" sid="347866114716673">
                 <plugin id="Keyboard" />
             </object-type>
+            <object-type name="Audio" sid="822322342277351">
+                <plugin id="Audio" />
+            </object-type>
         </object-folder>
-        <object-folder name="Particles" />
+        <object-folder name="Particles">
+            <object-type name="ParticulaHorizontal" sid="642424221637238">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="305274934234017">
+                        <behavior id="custom" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="418846536453125">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="426498203051913">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="BlurHorizontal">
+                        <effect id="blurhorizontal" />
+                    </effect-type>
+                    <effect-type name="BlurVertical">
+                        <effect id="blurvertical" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261550942842501" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ParticulaVertical" sid="774844355856391">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="131945481226165">
+                        <behavior id="custom" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="840186616196091">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="304592190985226">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="BlurHorizontal">
+                        <effect id="blurhorizontal" />
+                    </effect-type>
+                    <effect-type name="BlurVertical">
+                        <effect id="blurvertical" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404363944448964" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-folder name="Characters">
             <object-type name="Spidy" sid="458093168645169">
                 <plugin id="Sprite" />
@@ -72,6 +133,7 @@
                     <instance-variable name="salto" sid="474895795710937" type="number" />
                     <instance-variable name="FlyLvl" sid="859837657419363" type="number" />
                     <instance-variable name="FlyUp" sid="439808918915465" type="number" />
+                    <instance-variable name="Control" sid="292221437071534" type="boolean" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="147636474276684">
@@ -125,6 +187,14 @@
             </object-type>
             <object-type name="Sapo" sid="641832039273895">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="Target" sid="979125437345194" type="string" />
+                </instance-variables>
+                <behaviors>
+                    <behavior-type name="Timer" sid="209258627847149">
+                        <behavior id="Timer" />
+                    </behavior-type>
+                </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="250033886171252" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -146,6 +216,32 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="LenguaSapo" sid="394321178089905">
+                <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable comment="0: Tirar 1:Static 2:Regreso 3:Found" name="EstadoLengua" sid="829679092993946" type="number" />
+                </instance-variables>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999349883233827" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="1">
+                            <image-point name="Imagepoint 1" x="0.48" y="0.116" />
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="SpidyLengua" sid="539447337385489">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="708905341149730">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313322769782145" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Escenario">
             <object-type name="Stick" sid="814267663605080">
@@ -161,77 +257,152 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="TelaFin" sid="665446074432804">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356086452468646" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Red" sid="310635264854678">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="540820162311827">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992449314965529" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
-        <object-type name="Red" sid="310635264854678">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Physics" sid="540820162311827">
-                    <behavior id="Physics" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992449314965529" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ParticulaHorizontal" sid="642424221637238">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="CustomMovement" sid="305274934234017">
-                    <behavior id="custom" />
-                </behavior-type>
-                <behavior-type name="Sine" sid="418846536453125">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="426498203051913">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <effects>
-                <effect-type name="BlurHorizontal">
-                    <effect id="blurhorizontal" />
-                </effect-type>
-                <effect-type name="BlurVertical">
-                    <effect id="blurvertical" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261550942842501" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="ParticulaVertical" sid="774844355856391">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="CustomMovement" sid="131945481226165">
-                    <behavior id="custom" />
-                </behavior-type>
-                <behavior-type name="Sine" sid="840186616196091">
-                    <behavior id="Sin" />
-                </behavior-type>
-                <behavior-type name="Fade" sid="304592190985226">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <effects>
-                <effect-type name="BlurHorizontal">
-                    <effect id="blurhorizontal" />
-                </effect-type>
-                <effect-type name="BlurVertical">
-                    <effect id="blurvertical" />
-                </effect-type>
-            </effects>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404363944448964" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
+        <object-folder name="HUD">
+            <object-folder name="Complete">
+                <object-type name="CantidadMoscas" sid="195217974474505">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="810917330205567">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
+                <object-type name="LvlComplete" sid="472097257395905">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="578595505970078" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.192" y="0.56" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="RetryLvl" sid="702646658507313">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="163544908389052">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889704106720468" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="BackToSelect" sid="281684557569763">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="177158523087398">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="484736747273064" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FlySpirteHUD" sid="624222412434594">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="ID" sid="710699528514658" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="102890421618198">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="449376382333853" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.484" y="0.968" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="ArañaHUD" sid="906097574396941">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="668098851084924">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="576747692860034" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-folder name="InGame">
+                <object-type name="Pausa" sid="245365385305144">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="201997832416160" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Retry" sid="430409212939367">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="327036081996814" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="FlySpirteHudNormal" sid="208182031577623">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="ID" sid="975743305427449" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="637763982371565">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="554919166871077" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <image-point name="Imagepoint 1" x="0.484" y="0.968" />
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="CantidadFly" sid="874450620788051">
+                    <plugin id="Text" />
+                </object-type>
+            </object-folder>
+        </object-folder>
+        <object-type name="Text" sid="518256097437591">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families>
-        <family name="Family1" plugin-id="Sprite" sid="323336265046797">
+        <family name="Solid" plugin-id="Sprite" sid="323336265046797">
             <members>
                 <member>Red</member>
                 <member>Spidy</member>
@@ -239,7 +410,7 @@
                 <member>Stick</member>
             </members>
         </family>
-        <family name="FlySprite2" plugin-id="Sprite" sid="654407159530943">
+        <family name="FlySprite" plugin-id="Sprite" sid="654407159530943">
             <members>
                 <member>FlySpirte</member>
             </members>
@@ -249,19 +420,53 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="LvlCompleteFade" plugin-id="Sprite" sid="859224416489914">
+            <members>
+                <member>ArañaHUD</member>
+                <member>BackToSelect</member>
+                <member>FlySpirteHUD</member>
+                <member>LvlComplete</member>
+                <member>RetryLvl</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="898827596108998">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
     </families>
     <layout-folder>
-        <layout>Layout 1.xml</layout>
+        <layout>Test_Layout.xml</layout>
+        <layout>Inicio_Layout.xml</layout>
+        <layout>SelectLvl_Layout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Nivel.xml</event-sheet>
+        <event-sheet>Inicio.xml</event-sheet>
+        <event-sheet>SelectLvl.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
         <global-instance type="Mouse" uid="4" />
         <global-instance type="Function" uid="12" />
+        <global-instance type="Audio" uid="32">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
-    <sounds-folder />
+    <sounds-folder>
+        <file name="MainLvl.ogg" />
+    </sounds-folder>
     <music-folder />
     <files-folder>
         <file-folder name="Icons">
@@ -272,5 +477,8 @@
             <file name="icon-256.png" />
             <file name="loading-logo.png" />
         </file-folder>
+        <file name="pou-webfont.woff" />
+        <file name="pou-webfont.woff2" />
+        <file name="stylesheet.css" />
     </files-folder>
 </c2project>

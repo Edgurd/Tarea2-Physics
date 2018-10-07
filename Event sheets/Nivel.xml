@@ -1,0 +1,706 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Nivel</name>
+    <events>
+        <variable comment="1: True 0: False" constant="0" name="PlaySong" sid="955422386921335" static="0" type="number">0</variable>
+        <variable comment="1: True 0: False" constant="0" name="PlaySong2" sid="529995793590602" static="0" type="number">-60</variable>
+        <comment>Letterbox Scale</comment>
+        <comment>HTML5 Website -&gt; Zip</comment>
+        <comment>Upload New Proyect -&gt;HTML -&gt; 0$ or donate -&gt; Upload Zip -&gt; This file will be played in teh browser</comment>
+        <event-group description="" sid="636716604472751" title="Functions">
+            <sub-events>
+                <event-group description="" sid="421224668171598" title="FadeAudio">
+                    <sub-events>
+                        <variable constant="0" name="Param1" sid="760860607231174" static="1" type="text"></variable>
+                        <variable constant="0" name="Param2" sid="796921113017796" static="1" type="number">0</variable>
+                        <event-block sid="153139532345208">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="263435429932701" type="System">
+                                    <param id="0" name="First value">audio.Volume(Param1)</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">Param2</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="837766632924115">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="377113762707947" type="System">
+                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-10" name="Add to" sid="396772268110882" type="System">
+                                            <param id="0" name="Variable">PlaySong2</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                        <action id="3" name="Set volume" sid="143912934610894" type="Audio">
+                                            <param id="0" name="Tag">Param1</param>
+                                            <param id="1" name="dB">Self.Volume(Param1) + 2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="880072893741451">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="904875894187440" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="643539526964272" type="System">
+                                    <param id="0" name="Variable">Param1</param>
+                                    <param id="1" name="Value">&quot;&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="320004424449899" type="System">
+                                    <param id="0" name="Variable">Param2</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="919075684364330">
+                            <conditions>
+                                <condition id="0" name="On function" sid="398504303262104" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="282390891424370" type="System">
+                                    <param id="0" name="Variable">Param1</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="792015004192525" type="System">
+                                    <param id="0" name="Variable">Param2</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="598280766838701">
+                    <conditions>
+                        <condition id="0" name="On function" sid="299051536405615" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="977671327884749">
+                            <conditions>
+                                <condition id="-11" name="For Each" sid="640397382419599" type="System">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                </condition>
+                                <condition id="-4" name="Trigger once while true" sid="966750162335005" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="590618965242769">
+                                    <conditions>
+                                        <condition id="-3" name="Is on-screen" sid="127387539585717" type="FlySpirte" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="505490782199800" type="FlySpirte" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="887394747033035">
+                            <conditions>
+                                <condition id="-10" name="For" sid="376964748442771" type="System">
+                                    <param id="0" name="Name">&quot;FlySpawn&quot;</param>
+                                    <param id="1" name="Start index">1</param>
+                                    <param id="2" name="End index">Spidy.FlyUp</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="788798573291207" type="Spidy">
+                                    <param id="0" name="Instance variable">FlyUp</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Spawn another object" sid="828382100130922" type="Spidy">
+                                    <param id="0" name="Object">FlySpirte</param>
+                                    <param id="1" name="Layer">&quot;Game&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="519460173332874" type="FlySpirte">
+                                    <param id="0" name="Instance variable">ID</param>
+                                    <param id="1" name="Value">loopindex</param>
+                                </action>
+                                <action id="-23" name="Move at angle" sid="269086666205893" type="FlySpirte">
+                                    <param id="0" name="Angle">((Self.ID * ( (360 ) /(( Spidy.FlyUp )) ) ) +360) + Spidy.Angle</param>
+                                    <param id="1" name="Distance">50</param>
+                                </action>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="854762786509611" type="FlySpirte">
+                                    <param id="0" name="Pin to">Spidy</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="281809098772073" title="Spidy">
+            <sub-events>
+                <event-group description="" sid="141859035551260" title="Moving">
+                    <sub-events>
+                        <event-block sid="143923659412638">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="543299072298560" type="Spidy">
+                                    <param id="0" name="Instance variable">Control</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <variable constant="0" name="Variable1" sid="605162602972646" static="0" type="number">0</variable>
+                                <event-block sid="370989373476354">
+                                    <conditions>
+                                        <condition id="7" name="Cursor is over object" sid="429791008447410" type="Mouse">
+                                            <param id="0" name="Object">Red</param>
+                                        </condition>
+                                        <condition id="2" name="Mouse button is down" sid="554816135009991" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="764369924685813" type="SpidyTela">
+                                            <param id="0" name="X">Red.X</param>
+                                            <param id="1" name="Y">Red.Y</param>
+                                        </action>
+                                        <action id="-7" name="Set size" sid="501687986323441" type="SpidyTela">
+                                            <param id="0" name="Width">10</param>
+                                            <param id="1" name="Height">distance(Spidy.X,Spidy.Y,Red.X,Red.Y)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="255447425142129" type="SpidyTela">
+                                            <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red.X,Red.Y) +90</param>
+                                        </action>
+                                        <action behavior="Physics" id="10" name="Create distance joint" sid="777057693133507" type="Spidy">
+                                            <param id="0" name="This image point">0</param>
+                                            <param id="1" name="Object">Red</param>
+                                            <param id="2" name="That image point">0</param>
+                                            <param id="3" name="Damping ratio">1</param>
+                                            <param id="4" name="Spring frequency">200</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="349010856756234">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="163913731903135" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-7" name="Set size" sid="127007734268987" type="SpidyTela">
+                                            <param id="0" name="Width">10</param>
+                                            <param id="1" name="Height">10</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="435314131146791" type="SpidyTela">
+                                            <param id="0" name="X">-30</param>
+                                            <param id="1" name="Y">-30</param>
+                                        </action>
+                                        <action behavior="Physics" id="26" name="Remove all joints" sid="940997120282593" type="Spidy" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="397922305324632">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="842508296258886" type="Keyboard">
+                                            <param id="0" name="Key">68</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="981210477793525" type="Spidy">
+                                            <param id="0" name="Object">Stick</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="147181314344592" type="Spidy">
+                                            <param id="0" name="Object">SpidyTela</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="829310328123619" type="Spidy">
+                                            <param id="0" name="Force X">Self.velocidad</param>
+                                            <param id="1" name="Force Y">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="431781986150544">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="408290759548390" type="Keyboard">
+                                            <param id="0" name="Key">65</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="418466171824727" type="Spidy">
+                                            <param id="0" name="Object">Stick</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="510139553184191" type="Spidy">
+                                            <param id="0" name="Object">SpidyTela</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="0" name="Apply force" sid="579480357648529" type="Spidy">
+                                            <param id="0" name="Force X">-Self.velocidad</param>
+                                            <param id="1" name="Force Y">0</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="599148504212812">
+                                    <conditions>
+                                        <condition id="0" name="On key pressed" sid="885340243812022" type="Keyboard">
+                                            <param id="0" name="Key">87</param>
+                                        </condition>
+                                        <condition id="9" name="Is overlapping at offset" sid="315883035474768" type="Spidy">
+                                            <param id="0" name="Object">Stick</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="3" name="Apply impulse" sid="443911399017108" type="Spidy">
+                                            <param id="0" name="Impulse X">0</param>
+                                            <param id="1" name="Impulse Y">-Spidy.salto</param>
+                                            <param id="2" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-block sid="235641515853251">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="527511924446616" type="Spidy">
+                            <param id="0" name="Object">Fly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Destroy" sid="913327222736161" type="Fly" />
+                        <action id="-11" name="Add to" sid="639333571481380" type="Spidy">
+                            <param id="0" name="Instance variable">FlyUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="755939014474427" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="666426520046424" title="Particles">
+            <sub-events>
+                <event-block sid="597095308877741">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="753025949959628" type="ParticulaHorizontal" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="259989154350035" type="ParticulaHorizontal">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">(choose(-1,1)) * 80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="618794090332419">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="160349886126139" type="ParticulaVertical" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="448801098808535" type="ParticulaVertical">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">-80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="500479587673189">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="992112568304363" type="System">
+                            <param id="0" name="Interval (seconds)">2.5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="348546263066877" type="System">
+                            <param id="0" name="Object to create">ParticulaHorizontal</param>
+                            <param id="1" name="Layer">&quot;Particles&quot;</param>
+                            <param id="2" name="X">round(random(0,LayoutWidth))</param>
+                            <param id="3" name="Y">round(random(0,LayoutHeight))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="927886174330277">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="180733200605054" type="System">
+                            <param id="0" name="Interval (seconds)">5</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="829383098856881" type="System">
+                            <param id="0" name="Object to create">ParticulaVertical</param>
+                            <param id="1" name="Layer">&quot;Particles&quot;</param>
+                            <param id="2" name="X">round(random(0,LayoutWidth))</param>
+                            <param id="3" name="Y">round(random(0,LayoutHeight))</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="884502806569036" title="Misc">
+            <sub-events>
+                <variable constant="0" name="Audio" sid="314464474360049" static="0" type="number">0</variable>
+                <event-block sid="512668026620438">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="513344617949587" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="626911202675844" type="SpidyTela">
+                            <param id="0" name="Object">Solid</param>
+                            <param id="1" name="State">0</param>
+                        </action>
+                        <action behavior="Physics" id="12" name="Set world gravity" sid="437607628982949" type="Spidy">
+                            <param id="0" name="Gravity">10</param>
+                        </action>
+                        <action id="0" name="Call function" sid="789868736775098" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                        <action id="5" name="Set web font" sid="516179995212130" type="CantidadMoscas">
+                            <param id="0" name="Family name">&quot;pouregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action id="5" name="Set web font" sid="650116531816815" type="CantidadFly">
+                            <param id="0" name="Family name">&quot;pouregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="961950335921175" type="CantidadMoscas">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="308337494648793" type="FlySpirteHUD">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="526424396445891" type="BackToSelect">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="137691950237806" type="RetryLvl">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="644231579088101" type="ArañaHUD">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">1</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="289309654557825">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="534282038836301" type="System">
+                                    <param id="0" name="Variable">PlaySong</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Add to" sid="586178308784645" type="System">
+                                    <param id="0" name="Variable">PlaySong</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Play" sid="125002705212417" type="Audio">
+                                    <param id="0" name="Audio file">MainLvl</param>
+                                    <param id="2" name="Loop">1</param>
+                                    <param id="3" name="Volume">-60</param>
+                                    <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="538385095066192" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="933686444740955" title="HUD">
+            <sub-events>
+                <event-block sid="495598768374360">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="771685937692066" type="Spidy">
+                            <param id="0" name="Object">Stick</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="632976042266115">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="791462383824252" type="Spidy">
+                                    <param id="0" name="Object">TelaFin</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-15" name="Set visible" sid="227772433680289" type="SpidyTela">
+                                    <param id="0" name="Visibility">0</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="966635443591304" type="LvlComplete">
+                                    <param id="0" name="X">LayoutWidth/2</param>
+                                    <param id="1" name="Y">LayoutHeight/2</param>
+                                </action>
+                                <action id="0" name="Set text" sid="666561827302350" type="CantidadMoscas">
+                                    <param id="0" name="Text">&quot;&quot; &amp;Spidy.FlyUp</param>
+                                </action>
+                                <action behavior="Physics" id="26" name="Remove all joints" sid="564935436500919" type="Spidy" />
+                                <action behavior="Physics" id="12" name="Set world gravity" sid="421227550878175" type="Spidy">
+                                    <param id="0" name="Gravity">0</param>
+                                </action>
+                                <action id="-13" name="Set boolean" sid="571421324309373" type="Spidy">
+                                    <param id="0" name="Instance variable">Control</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action behavior="Physics" id="15" name="Set velocity" sid="995875313025344" type="Spidy">
+                                    <param id="0" name="X component">0</param>
+                                    <param id="1" name="Y component">0</param>
+                                </action>
+                                <action behavior="Physics" id="26" name="Remove all joints" sid="935509533042446" type="Spidy" />
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="666248319445188">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="675266016517827" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">RetryLvl</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="757399379646917" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="622298238047290">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="387048630407453" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Retry</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-26" name="Restart layout" sid="564361731261496" type="System" />
+                    </actions>
+                </event-block>
+                <event-block sid="551539059124377">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="286860491496633" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">BackToSelect</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-2" name="Go to layout" sid="245662264301015" type="System">
+                            <param id="0" name="Layout">SelectLvl_Layout</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="424879570089224">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="597222578365331" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                            <param id="2" name="Object clicked">Pausa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-13" name="Set time scale" sid="533977571757457" type="System">
+                            <param id="0" name="Time scale">1-timescale</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="567856487257979">
+                    <conditions />
+                    <actions>
+                        <action id="0" name="Set text" sid="870348471647342" type="CantidadFly">
+                            <param id="0" name="Text">&quot;x &quot; &amp;Spidy.FlyUp </param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="313727277309531" title="Sapo">
+            <sub-events>
+                <event-block sid="720847990940911">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="876865278756149" type="Sapo" />
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Rotate toward position" sid="727272786346975" type="Sapo">
+                            <param id="0" name="Degrees">0</param>
+                            <param id="1" name="X">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
+                            <param id="2" name="Y">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
+                        </action>
+                        <action id="-21" name="Rotate toward position" sid="766807660558157" type="LenguaSapo">
+                            <param id="0" name="Degrees">0</param>
+                            <param id="1" name="X">int(tokenat((Sapo.Target),0,&quot;|&quot;))</param>
+                            <param id="2" name="Y">int(tokenat((Sapo.Target),1,&quot;|&quot;))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="608625233985217">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="306230037202464" type="Sapo">
+                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="222359093530039" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="117358739622306">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="903319761811980" type="Sapo">
+                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="940114876284757" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="245124303449504">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="958704887816405" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="231374712894501" type="LenguaSapo">
+                            <param id="0" name="Height">LenguaSapo.Height+30</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="471168618621283">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="635404702810818" type="LenguaSapo">
+                                    <param id="0" name="Object">Solid</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-16" name="Wait" sid="609811445584735" type="System">
+                                    <param id="0" name="Seconds">0.02</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="585111908983130" type="LenguaSapo">
+                                    <param id="0" name="Instance variable">EstadoLengua</param>
+                                    <param id="1" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="823683943500577">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="387757125379483" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="646298643717738" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="259172726845462" type="Sapo">
+                            <param id="0" name="Duration">5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;GoTongue&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="0" name="Start timer" sid="758623609331060" type="Sapo">
+                            <param id="0" name="Duration">8</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;ComeTongue&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="878399554079698">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="607563100923939" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="203433498629931" type="LenguaSapo">
+                            <param id="0" name="Height">LenguaSapo.Height-30</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="547362242763485">
+                            <conditions>
+                                <condition id="-6" name="Compare height" sid="597317921676936" type="LenguaSapo">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="717888500558352" type="LenguaSapo">
+                                    <param id="0" name="Instance variable">EstadoLengua</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="397645704542060">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="118554882521122" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="826312789801395">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="466062255301800" type="LenguaSapo">
+                            <param id="0" name="Object">Spidy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="918021370418786" type="SpidyTela">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Physics" id="27" name="Set enabled" sid="896465324492013" type="Spidy">
+                            <param id="0" name="Mode">0</param>
+                        </action>
+                        <action behavior="Physics" id="26" name="Remove all joints" sid="140576313987932" type="Spidy" />
+                        <action id="-9" name="Destroy" sid="912138146133993" type="Spidy" />
+                        <action id="0" name="Spawn another object" sid="704569758853640" type="LenguaSapo">
+                            <param id="0" name="Object">SpidyLengua</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="187740176812991" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="173919589218061" type="Sapo">
+                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
+                        </action>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="503128896932695" type="Sapo">
+                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
