@@ -4,79 +4,12 @@
     <name>Nivel</name>
     <events>
         <variable comment="1: True 0: False" constant="0" name="PlaySong" sid="955422386921335" static="0" type="number">0</variable>
-        <variable comment="1: True 0: False" constant="0" name="PlaySong2" sid="529995793590602" static="0" type="number">-60</variable>
+        <variable comment="1: True 0: False" constant="0" name="FadeOutTime" sid="701286384916133" static="0" type="number">0.3</variable>
         <comment>Letterbox Scale</comment>
         <comment>HTML5 Website -&gt; Zip</comment>
         <comment>Upload New Proyect -&gt;HTML -&gt; 0$ or donate -&gt; Upload Zip -&gt; This file will be played in teh browser</comment>
         <event-group description="" sid="636716604472751" title="Functions">
             <sub-events>
-                <event-group description="" sid="421224668171598" title="FadeAudio">
-                    <sub-events>
-                        <variable constant="0" name="Param1" sid="760860607231174" static="1" type="text"></variable>
-                        <variable constant="0" name="Param2" sid="796921113017796" static="1" type="number">0</variable>
-                        <event-block sid="153139532345208">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="263435429932701" type="System">
-                                    <param id="0" name="First value">audio.Volume(Param1)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Param2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="837766632924115">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="377113762707947" type="System">
-                                            <param id="0" name="Interval (seconds)">0.2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-10" name="Add to" sid="396772268110882" type="System">
-                                            <param id="0" name="Variable">PlaySong2</param>
-                                            <param id="1" name="Value">2</param>
-                                        </action>
-                                        <action id="3" name="Set volume" sid="143912934610894" type="Audio">
-                                            <param id="0" name="Tag">Param1</param>
-                                            <param id="1" name="dB">Self.Volume(Param1) + 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                        <event-block disabled="1" sid="880072893741451">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="904875894187440" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="643539526964272" type="System">
-                                    <param id="0" name="Variable">Param1</param>
-                                    <param id="1" name="Value">&quot;&quot;</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="320004424449899" type="System">
-                                    <param id="0" name="Variable">Param2</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="919075684364330">
-                            <conditions>
-                                <condition id="0" name="On function" sid="398504303262104" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-9" name="Set value" sid="282390891424370" type="System">
-                                    <param id="0" name="Variable">Param1</param>
-                                    <param id="1" name="Value">Function.Param(0)</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="792015004192525" type="System">
-                                    <param id="0" name="Variable">Param2</param>
-                                    <param id="1" name="Value">Function.Param(1)</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-group>
                 <event-block sid="598280766838701">
                     <conditions>
                         <condition id="0" name="On function" sid="299051536405615" type="Function">
@@ -139,6 +72,109 @@
                         </event-block>
                     </sub-events>
                 </event-block>
+                <event-group description="" sid="421224668171598" title="FadeAudio">
+                    <sub-events>
+                        <comment>1: Tag Audio | 2: limite | 3: [0: in - 1: out]</comment>
+                        <variable constant="0" name="Param1" sid="760860607231174" static="1" type="text"></variable>
+                        <variable constant="0" name="Param2" sid="796921113017796" static="1" type="number">0</variable>
+                        <variable constant="0" name="Param3" sid="736519096676797" static="1" type="number">0</variable>
+                        <event-block sid="620046182468220">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="559171767102468" type="System">
+                                    <param id="0" name="First value">Param3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="153139532345208">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="263435429932701" type="System">
+                                            <param id="0" name="First value">audio.Volume(Param1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Param2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="837766632924115">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="377113762707947" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.05</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set volume" sid="143912934610894" type="Audio">
+                                                    <param id="0" name="Tag">Param1</param>
+                                                    <param id="1" name="dB">Self.Volume(Param1) + 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="217882579819488">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="153469060071128" type="System">
+                                    <param id="0" name="First value">Param3</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="358688078610466">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="751750948778149" type="System">
+                                            <param id="0" name="First value">audio.Volume(Param1)</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Second value">Param2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="711507539211542">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="250026566603586" type="System">
+                                                    <param id="0" name="Interval (seconds)">0.2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="3" name="Set volume" sid="380088956203189" type="Audio">
+                                                    <param id="0" name="Tag">Param1</param>
+                                                    <param id="1" name="dB">Self.Volume(Param1) - 2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="919075684364330">
+                            <conditions>
+                                <condition id="0" name="On function" sid="398504303262104" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Set value" sid="282390891424370" type="System">
+                                    <param id="0" name="Variable">Param1</param>
+                                    <param id="1" name="Value">Function.Param(0)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="792015004192525" type="System">
+                                    <param id="0" name="Variable">Param2</param>
+                                    <param id="1" name="Value">Function.Param(1)</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="245230754477633" type="System">
+                                    <param id="0" name="Variable">Param3</param>
+                                    <param id="1" name="Value">Function.Param(2)</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
             </sub-events>
         </event-group>
         <event-group description="" sid="281809098772073" title="Spidy">
@@ -360,6 +396,10 @@
                             <param id="0" name="Object">Solid</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="995940717660800" type="Spidy">
+                            <param id="0" name="Object">Red</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                         <action behavior="Physics" id="12" name="Set world gravity" sid="437607628982949" type="Spidy">
                             <param id="0" name="Gravity">10</param>
                         </action>
@@ -418,11 +458,50 @@
                                 </action>
                                 <action id="0" name="Call function" sid="538385095066192" type="Function">
                                     <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20{###}0</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="718708292901721">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="630260419847437" type="Black" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="494433834226621" type="Black">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">LayoutHeight</param>
+                        </action>
+                        <action id="-3" name="Set position" sid="713265227959876" type="Black">
+                            <param id="0" name="X">0</param>
+                            <param id="1" name="Y">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="586943047962245">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="218925501482330" type="Blur" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="690990101138718" type="Blur">
+                            <param id="0" name="Width">LayoutWidth</param>
+                            <param id="1" name="Height">LayoutHeight</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="780192152019984">
+                    <conditions>
+                        <condition behavior="Fade" id="0" name="On fade-out finished" sid="738529056954450" type="Black" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="764409433399951" type="Black">
+                            <param id="0" name="Fade-in time">FadeOutTime</param>
+                        </action>
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="811859438392305" type="Black">
+                            <param id="0" name="Fade-out time">0</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
@@ -445,6 +524,14 @@
                                 </condition>
                             </conditions>
                             <actions>
+                                <action id="-3" name="Set position" sid="284184874216890" type="Blur">
+                                    <param id="0" name="X">0</param>
+                                    <param id="1" name="Y">0</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="124744567717860" type="Blur" />
+                                <action id="-16" name="Wait" sid="668317252471525" type="System">
+                                    <param id="0" name="Seconds">0.3</param>
+                                </action>
                                 <action id="-15" name="Set visible" sid="227772433680289" type="SpidyTela">
                                     <param id="0" name="Visibility">0</param>
                                 </action>
@@ -481,6 +568,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="479650963363605" type="Black" />
+                        <action id="-16" name="Wait" sid="670912121409587" type="System">
+                            <param id="0" name="Seconds">FadeOutTime</param>
+                        </action>
                         <action id="-26" name="Restart layout" sid="757399379646917" type="System" />
                     </actions>
                 </event-block>
@@ -493,6 +584,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="580733607154927" type="Black" />
+                        <action id="-16" name="Wait" sid="423987651955917" type="System">
+                            <param id="0" name="Seconds">FadeOutTime</param>
+                        </action>
                         <action id="-26" name="Restart layout" sid="564361731261496" type="System" />
                     </actions>
                 </event-block>
@@ -504,7 +599,16 @@
                             <param id="2" name="Object clicked">BackToSelect</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action behavior="Fade" id="1" name="Start fade" sid="157562977767045" type="Black" />
+                        <action id="0" name="Call function" sid="111803878204792" type="Function">
+                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="179544057080153" type="System">
+                            <param id="0" name="Seconds">FadeOutTime</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="424879570089224">
                     <conditions>
@@ -598,7 +702,18 @@
                             </conditions>
                             <actions>
                                 <action id="-6" name="Set height" sid="231374712894501" type="LenguaSapo">
-                                    <param id="0" name="Height">LenguaSapo.Height+30</param>
+                                    <param id="0" name="Height">LenguaSapo.Height+ Self.Speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="813361591593889">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="220542158166099" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="119151934611366" type="LenguaSapo">
+                                    <param id="0" name="Instance variable">EstadoLengua</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -611,7 +726,7 @@
                             <actions>
                                 <action id="-10" name="Set value" sid="585111908983130" type="LenguaSapo">
                                     <param id="0" name="Instance variable">EstadoLengua</param>
-                                    <param id="1" name="Value">3</param>
+                                    <param id="1" name="Value">2</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -632,11 +747,6 @@
                             <param id="1" name="Type">0</param>
                             <param id="2" name="Tag">&quot;GoTongue&quot;</param>
                         </action>
-                        <action behavior="Timer" id="0" name="Start timer" sid="758623609331060" type="Sapo">
-                            <param id="0" name="Duration">8</param>
-                            <param id="1" name="Type">0</param>
-                            <param id="2" name="Tag">&quot;ComeTongue&quot;</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="878399554079698">
@@ -649,7 +759,7 @@
                     </conditions>
                     <actions>
                         <action id="-6" name="Set height" sid="203433498629931" type="LenguaSapo">
-                            <param id="0" name="Height">LenguaSapo.Height-30</param>
+                            <param id="0" name="Height">LenguaSapo.Height - Self.Speed</param>
                         </action>
                     </actions>
                     <sub-events>
@@ -689,9 +799,6 @@
                         <action behavior="Timer" id="1" name="Stop timer" sid="173919589218061" type="Sapo">
                             <param id="0" name="Tag">&quot;GoTongue&quot;</param>
                         </action>
-                        <action behavior="Timer" id="1" name="Stop timer" sid="503128896932695" type="Sapo">
-                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="918021370418786" type="SpidyTela">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -708,6 +815,37 @@
                         <action id="-10" name="Set value" sid="187740176812991" type="LenguaSapo">
                             <param id="0" name="Instance variable">EstadoLengua</param>
                             <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="387278954325421" type="System">
+                            <param id="0" name="Seconds">FadeOutTime * 2</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="228111664120986" type="Black" />
+                        <action behavior="Fade" id="4" name="Set fade-out time" sid="463227192683514" type="Black">
+                            <param id="0" name="Fade-out time">FadeOutTime</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="974041501695009" type="System">
+                            <param id="0" name="Seconds">FadeOutTime</param>
+                        </action>
+                        <action id="-26" name="Restart layout" sid="895845484661638" type="System" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="934045611270812" title="Helicopter">
+            <sub-events>
+                <event-block sid="716050506000467">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="669572746652765" type="helicopter" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="426958208913108" type="helicopter">
+                            <param id="0" name="Object">Red</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="985468190234957" type="Red">
+                            <param id="0" name="Pin to">helicopter</param>
+                            <param id="1" name="Mode">1</param>
                         </action>
                     </actions>
                 </event-block>

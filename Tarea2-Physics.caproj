@@ -28,6 +28,7 @@
     <used-effects>
         <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
         <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
+        <effect author="Scirra" id="glass">Glass</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -67,6 +68,40 @@
             </object-type>
             <object-type name="Audio" sid="822322342277351">
                 <plugin id="Audio" />
+            </object-type>
+            <object-type name="Black" sid="390532391854127">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="976506398453198">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="243397031431462" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Blur" sid="701068238184567">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="770371349068639">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="Glass">
+                        <effect id="glass" />
+                    </effect-type>
+                    <effect-type name="BlurHorizontal">
+                        <effect id="blurhorizontal" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="344639228639527" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
             </object-type>
         </object-folder>
         <object-folder name="Particles">
@@ -221,6 +256,7 @@
                 <plugin id="Sprite" />
                 <instance-variables>
                     <instance-variable comment="0: Tirar 1:Static 2:Regreso 3:Found" name="EstadoLengua" sid="829679092993946" type="number" />
+                    <instance-variable name="Speed" sid="161353977722015" type="number" />
                 </instance-variables>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="999349883233827" speed="5">
@@ -271,6 +307,9 @@
                 <behaviors>
                     <behavior-type name="Physics" sid="540820162311827">
                         <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="581049051134402">
+                        <behavior id="Pin" />
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
@@ -398,8 +437,135 @@
                 </object-type>
             </object-folder>
         </object-folder>
-        <object-type name="Text" sid="518256097437591">
-            <plugin id="Text" />
+        <object-folder name="Menu">
+            <object-folder name="Etapa">
+                <object-type name="Etapa1" sid="968030964125301">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930771563347327" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa2" sid="442640316041747">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485275131921256" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa3" sid="367338578309621">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505749856756999" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa4" sid="372169608793485">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938432240255463" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa5" sid="484235730691825">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330864929522707" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa6" sid="775908470501409">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359614231824542" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa7" sid="928667033437880">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394378918898623" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa8" sid="896794202724669">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116959550143853" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Etapa9" sid="814297424130476">
+                    <plugin id="Sprite" />
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691433252590120" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
+            <object-type name="Logo" sid="226559685254475">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="551430851337717">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656544147145981" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="play" sid="229840524651644">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="242716632297216">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821396309243854" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-type name="helicopter" sid="619356979483792">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Sine" sid="925293633277827">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817500348454305" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Imagepoint 1" x="0.508" y="0.732" />
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HelicopterRamita" sid="284324882745720">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Pin" sid="410627880474250">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995820609053824" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families>
@@ -431,6 +597,24 @@
             </members>
             <behaviors>
                 <behavior-type name="Fade" sid="898827596108998">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Etapa" plugin-id="Sprite" sid="612346962955712">
+            <members>
+                <member>Etapa1</member>
+                <member>Etapa2</member>
+                <member>Etapa3</member>
+                <member>Etapa4</member>
+                <member>Etapa5</member>
+                <member>Etapa6</member>
+                <member>Etapa7</member>
+                <member>Etapa8</member>
+                <member>Etapa9</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="694846554621849">
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
