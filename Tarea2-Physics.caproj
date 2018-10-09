@@ -1263,6 +1263,7 @@
         <file name="MainLvl.ogg" />
         <file name="title.ogg" />
         <file name="Bubble.ogg" />
+        <file name="Wind.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
