@@ -28,7 +28,6 @@
     <used-effects>
         <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
         <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
-        <effect author="Scirra" id="dodge">Dodge</effect>
         <effect author="Scirra" id="glass">Glass</effect>
     </used-effects>
     <configurations>
@@ -126,13 +125,10 @@
                     <effect-type name="BlurVertical">
                         <effect id="blurvertical" />
                     </effect-type>
-                    <effect-type name="Dodge">
-                        <effect id="dodge" />
-                    </effect-type>
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261550942842501" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\Particle2.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\particle_1.png">
                             <collision-poly>
                                 <point x="0.37069" y="0.373913" />
                                 <point x="0.5" y="0.321739" />
@@ -167,13 +163,10 @@
                     <effect-type name="BlurVertical">
                         <effect id="blurvertical" />
                     </effect-type>
-                    <effect-type name="Dodge">
-                        <effect id="dodge" />
-                    </effect-type>
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="404363944448964" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\Particle1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\particle_2.png">
                             <collision-poly>
                                 <point x="0.37069" y="0.373913" />
                                 <point x="0.5" y="0.321739" />
@@ -208,72 +201,41 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="4" loop="1" name="Iddle" pingpong="0" repeatcount="1" repeatto="0" sid="799011750187104" speed="7">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_iddle_1.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                    <animation framecount="4" loop="1" name="Iddle" pingpong="0" repeatcount="1" repeatto="0" sid="799011750187104" speed="6">
+                        <frame duration="1" hotspotX="0.479381" hotspotY="0.548611" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_Iddle_1.png">
+                            <image-point name="Imagepoint 1" x="0.505155" y="0.951389" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_iddle_2.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.477157" hotspotY="0.550336" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_Iddle_2.png">
+                            <image-point name="Imagepoint 1" x="0.507614" y="0.95302" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_iddle_3.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.480198" hotspotY="0.546053" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_Iddle_3.png">
+                            <image-point name="Imagepoint 1" x="0.504951" y="0.953947" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_iddle_4.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.477157" hotspotY="0.550336" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_Iddle_4.png">
+                            <image-point name="Imagepoint 1" x="0.507614" y="0.95302" />
                         </frame>
                     </animation>
-                    <animation framecount="4" loop="1" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="925410521074699" speed="7">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_1.png">
+                    <animation framecount="4" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="293446338689517" speed="5">
+                        <frame duration="1" hotspotX="0.479798" hotspotY="0.548611" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_1.png">
+                            <image-point name="Imagepoint 1" x="0.50505" y="0.951389" />
                             <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
+                                <point x="0.186869" y="0.131944" />
+                                <point x="0.489899" y="0.0208333" />
+                                <point x="0.858586" y="0.0416667" />
+                                <point x="0.89899" y="0.548611" />
+                                <point x="0.792929" y="0.965278" />
+                                <point x="0.186869" y="0.965278" />
+                                <point x="0.050505" y="0.548611" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_2.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.48" hotspotY="0.550336" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_2.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.95302" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_3.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.480198" hotspotY="0.546053" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_3.png">
+                            <image-point name="Imagepoint 1" x="0.504951" y="0.953947" />
                         </frame>
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_4.png">
-                            <collision-poly>
-                                <point x="0.085" y="0.1" />
-                                <point x="0.915" y="0.1" />
-                                <point x="0.915" y="0.82" />
-                                <point x="0.085" y="0.82" />
-                            </collision-poly>
+                        <frame duration="1" hotspotX="0.48" hotspotY="0.550336" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Spider\Spider_attack_4.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.95302" />
                         </frame>
                     </animation>
                 </animation-folder>
@@ -348,42 +310,25 @@
                     </behavior-type>
                 </behaviors>
                 <animation-folder>
-                    <animation framecount="4" loop="1" name="Iddle" pingpong="0" repeatcount="1" repeatto="0" sid="250033886171252" speed="6">
-                        <frame duration="1" hotspotX="0.493421" hotspotY="0.530864" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_1.png">
+                    <animation framecount="4" loop="1" name="Iddle" pingpong="0" repeatcount="1" repeatto="0" sid="250033886171252" speed="5">
+                        <frame duration="1" hotspotX="0.493421" hotspotY="0.512346" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_1.png">
                             <collision-poly>
-                                <point x="0.00657895" y="0.0123457" />
-                                <point x="1" y="0.0123457" />
-                                <point x="1" y="0.925926" />
-                                <point x="0.00657895" y="0.925926" />
+                                <point x="0.230263" y="0.0987654" />
+                                <point x="0.664474" y="0.0308642" />
+                                <point x="0.967105" y="0.222222" />
+                                <point x="0.921053" y="0.506173" />
+                                <point x="0.815789" y="0.648148" />
+                                <point x="0.664474" y="0.969136" />
+                                <point x="0.25" y="0.895062" />
+                                <point x="0.0855263" y="0.506173" />
                             </collision-poly>
                         </frame>
-                        <frame duration="1" hotspotX="0.49" hotspotY="0.53" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_2.png">
-                            <collision-poly>
-                                <point x="0.00636943" y="0.0352941" />
-                                <point x="0.974523" y="0.0352941" />
-                                <point x="0.974523" y="0.905883" />
-                                <point x="0.00636943" y="0.905883" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.49" hotspotY="0.53" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_3.png">
-                            <collision-poly>
-                                <point x="0.00584795" y="0.0514286" />
-                                <point x="0.894737" y="0.0514286" />
-                                <point x="0.894737" y="0.897143" />
-                                <point x="0.00584795" y="0.897143" />
-                            </collision-poly>
-                        </frame>
-                        <frame duration="1" hotspotX="0.49" hotspotY="0.53" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_4.png">
-                            <collision-poly>
-                                <point x="0.00636943" y="0.0352941" />
-                                <point x="0.974523" y="0.0352941" />
-                                <point x="0.974523" y="0.905883" />
-                                <point x="0.00636943" y="0.905883" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.490446" hotspotY="0.511765" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_2.png" />
+                        <frame duration="1" hotspotX="0.491228" hotspotY="0.514286" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_3.png" />
+                        <frame duration="1" hotspotX="0.490446" hotspotY="0.511765" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Iddle_4.png" />
                     </animation>
                     <animation framecount="1" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="527934570031154" speed="5">
-                        <frame duration="1" hotspotX="0.493421" hotspotY="0.528302" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_attack.png">
+                        <frame duration="1" hotspotX="0.493421" hotspotY="0.509434" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_attack.png">
                             <collision-poly>
                                 <point x="0.217105" y="0.081761" />
                                 <point x="0.664474" y="0.0440252" />
@@ -397,7 +342,7 @@
                         </frame>
                     </animation>
                     <animation framecount="1" loop="0" name="Fat" pingpong="0" repeatcount="1" repeatto="0" sid="480789615838808" speed="5">
-                        <frame duration="1" hotspotX="0.494624" hotspotY="0.533333" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_fat.png">
+                        <frame duration="1" hotspotX="0.494624" hotspotY="0.512821" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_fat.png">
                             <collision-poly>
                                 <point x="0.155914" y="0.133333" />
                                 <point x="0.543011" y="0.0102564" />
@@ -447,11 +392,10 @@
                         <frame duration="1" hotspotX="0.5" hotspotY="1" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Frog\Frog_Tongue.png">
                             <image-point name="Imagepoint 1" x="0.48" y="0.115" />
                             <collision-poly>
-                                <point x="0.045" y="0.045" />
-                                <point x="0.135" y="0.865" />
-                                <point x="0.135" y="0.5" />
-                                <point x="0.185" y="0.185" />
-                                <point x="0.035" y="0.965" />
+                                <point x="0.365" y="0" />
+                                <point x="0.58" y="0" />
+                                <point x="0.58" y="1" />
+                                <point x="0.365" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -467,6 +411,82 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="313322769782145" speed="5">
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="helicopter" sid="619356979483792">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Sine" sid="925293633277827">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817500348454305" speed="8">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_1.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.025" />
+                            <collision-poly>
+                                <point x="0.255" y="0.225" />
+                                <point x="0.735" y="0.225" />
+                                <point x="0.735" y="0.84" />
+                                <point x="0.25" y="0.84" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_2.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.025" />
+                            <collision-poly>
+                                <point x="0.255" y="0.225" />
+                                <point x="0.735" y="0.225" />
+                                <point x="0.735" y="0.84" />
+                                <point x="0.25" y="0.84" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_3.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.025" />
+                            <collision-poly>
+                                <point x="0.255" y="0.225" />
+                                <point x="0.735" y="0.225" />
+                                <point x="0.735" y="0.84" />
+                                <point x="0.25" y="0.84" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_4.png">
+                            <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                            <image-point name="Imagepoint 2" x="0.5" y="1.025" />
+                            <collision-poly>
+                                <point x="0.255" y="0.225" />
+                                <point x="0.735" y="0.225" />
+                                <point x="0.735" y="0.84" />
+                                <point x="0.25" y="0.84" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="HelicopterRamita" sid="284324882745720">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Pin" sid="410627880474250">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995820609053824" speed="5">
+                        <frame duration="1" hotspotX="0.503759" hotspotY="-0.0606061" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\Palito_2.png">
+                            <collision-poly>
+                                <point x="0.0150376" y="0.0606061" />
+                                <point x="0.496241" y="0.030303" />
+                                <point x="0.962406" y="0.151515" />
+                                <point x="0.984962" y="0.484848" />
+                                <point x="0.887218" y="0.545455" />
+                                <point x="0.496241" y="0.606061" />
+                                <point x="0.112782" y="0.545455" />
+                                <point x="0.037594" y="0.484848" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -914,87 +934,70 @@
                 </animation-folder>
             </object-type>
         </object-folder>
-        <object-type name="helicopter" sid="619356979483792">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Sine" sid="925293633277827">
-                    <behavior id="Sin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817500348454305" speed="8">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_1.png">
-                        <image-point name="Imagepoint 1" x="0.505" y="0.87" />
-                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
-                        <collision-poly>
-                            <point x="0.255" y="0.225" />
-                            <point x="0.735" y="0.225" />
-                            <point x="0.735" y="0.84" />
-                            <point x="0.25" y="0.84" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_2.png">
-                        <image-point name="Imagepoint 1" x="0.505" y="0.87" />
-                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
-                        <collision-poly>
-                            <point x="0.255" y="0.225" />
-                            <point x="0.735" y="0.225" />
-                            <point x="0.735" y="0.84" />
-                            <point x="0.25" y="0.84" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_3.png">
-                        <image-point name="Imagepoint 1" x="0.505" y="0.87" />
-                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
-                        <collision-poly>
-                            <point x="0.255" y="0.225" />
-                            <point x="0.735" y="0.225" />
-                            <point x="0.735" y="0.84" />
-                            <point x="0.25" y="0.84" />
-                        </collision-poly>
-                    </frame>
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_4.png">
-                        <image-point name="Imagepoint 1" x="0.505" y="0.87" />
-                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
-                        <collision-poly>
-                            <point x="0.255" y="0.225" />
-                            <point x="0.735" y="0.225" />
-                            <point x="0.735" y="0.84" />
-                            <point x="0.25" y="0.84" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="HelicopterRamita" sid="284324882745720">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Pin" sid="410627880474250">
-                    <behavior id="Pin" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995820609053824" speed="5">
-                    <frame duration="1" hotspotX="0.503759" hotspotY="-0.0606061" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\Palito_2.png">
-                        <collision-poly>
-                            <point x="0.0150376" y="0.0606061" />
-                            <point x="0.496241" y="0.030303" />
-                            <point x="0.962406" y="0.151515" />
-                            <point x="0.984962" y="0.484848" />
-                            <point x="0.887218" y="0.545455" />
-                            <point x="0.496241" y="0.606061" />
-                            <point x="0.112782" y="0.545455" />
-                            <point x="0.037594" y="0.484848" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
+        <object-folder name="EscenarioSolid">
+            <object-type name="Escenario1" sid="235002057541721">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="877620734990968" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Desktop\Escenario1.png">
+                            <collision-poly>
+                                <point x="0.00234742" y="0.025641" />
+                                <point x="0.267606" y="0.132479" />
+                                <point x="1" y="0.132479" />
+                                <point x="1" y="0.534188" />
+                                <point x="0.812207" y="0.65812" />
+                                <point x="0.28169" y="1" />
+                                <point x="0" y="0.944444" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escenario2" sid="701232560060109">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903639683106019" speed="5">
+                        <frame duration="1" hotspotX="0.500864" hotspotY="0.50463" original-source="C:\Users\Jhü\Desktop\Escenario2.png">
+                            <collision-poly>
+                                <point x="0" y="0.0462963" />
+                                <point x="0.820381" y="0.0462963" />
+                                <point x="0.91019" y="0" />
+                                <point x="0.979275" y="0.0231482" />
+                                <point x="1" y="0.150463" />
+                                <point x="0.911917" y="0.601852" />
+                                <point x="0.758204" y="0.796297" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escenario3" sid="417157325528524">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="616236869800405" speed="5">
+                        <frame duration="1" hotspotX="0.501661" hotspotY="0.505208" original-source="C:\Users\Jhü\Desktop\Escenario3.png">
+                            <collision-poly>
+                                <point x="0.0963455" y="0.348958" />
+                                <point x="0.57475" y="0.338542" />
+                                <point x="0.707642" y="0.0260417" />
+                                <point x="0.923588" y="0" />
+                                <point x="1" y="0.635417" />
+                                <point x="0.873754" y="0.989583" />
+                                <point x="0.0365449" y="0.880208" />
+                                <point x="0" y="0.463542" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="RedTela" sid="278643835286164">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="529963682543258" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Personajes\Spider\TelaAraña_1.png">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.769231" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Personajes\Spider\TelaAraña_1.png">
                         <collision-poly>
                             <point x="0.104167" y="0.25641" />
                             <point x="0.5" y="0.025641" />
@@ -1067,9 +1070,37 @@
                 <member>Stick_4</member>
                 <member>Stick_5</member>
             </members>
+            <behaviors>
+                <behavior-type name="Physics" sid="830471553844048">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="SolidEscenario" plugin-id="Sprite" sid="310510520261986">
+            <members>
+                <member>Escenario1</member>
+                <member>Escenario2</member>
+                <member>Escenario3</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Physics" sid="139974846881304">
+                    <behavior id="Physics" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="Zarsa" plugin-id="Sprite" sid="132057622302457">
+            <members>
+                <member>zarza_1</member>
+                <member>zarza_2</member>
+            </members>
         </family>
     </families>
     <layout-folder>
+        <layout-folder name="Etapas">
+            <layout>Etapa 1.xml</layout>
+            <layout>Etapa 2.xml</layout>
+            <layout>Etapa 3.xml</layout>
+        </layout-folder>
         <layout>Test_Layout.xml</layout>
         <layout>Inicio_Layout.xml</layout>
         <layout>Assets_Layout.xml</layout>
@@ -1099,6 +1130,7 @@
     </global-instances>
     <sounds-folder>
         <file name="MainLvl.ogg" />
+        <file name="title.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

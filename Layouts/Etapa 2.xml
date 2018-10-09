@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2layout>
-    <name>Test_Layout</name>
-    <sid>505123833474846</sid>
+    <name>Etapa 2</name>
+    <sid>101887555404904</sid>
     <event-sheet>Nivel</event-sheet>
     <size>
         <width>1280</width>
@@ -13,7 +13,7 @@
     </margins>
     <unbounded-scrolling>0</unbounded-scrolling>
     <layers>
-        <layer name="Background" sid="309579657695966">
+        <layer name="Background" sid="456356976876755">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>0</transparent>
@@ -29,7 +29,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="BG_1" uid="6">
+                <instance type="BG_1" uid="75">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -51,7 +51,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Troncolimite_1" uid="68">
+                <instance type="Troncolimite_1" uid="85">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -73,7 +73,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Troncolimite_2" uid="69">
+                <instance type="Troncolimite_2" uid="87">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -98,7 +98,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Game" sid="525953340104296">
+        <layer name="Game" sid="944551817757441">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -114,7 +114,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Stick" uid="0">
+                <instance type="Stick_3" uid="130">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -128,7 +128,7 @@
                                 <collision-mask>Use collision polygon</collision-mask>
                                 <prevent-rotation>No</prevent-rotation>
                                 <density>1</density>
-                                <friction>0.8</friction>
+                                <friction>0.5</friction>
                                 <elasticity>0.2</elasticity>
                                 <linear-damping>0</linear-damping>
                                 <angular-damping>0.01</angular-damping>
@@ -140,19 +140,57 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>203</x>
-                        <y>153</y>
+                        <x>916</x>
+                        <y>19</y>
                         <z>0</z>
-                        <width>64</width>
-                        <height>316</height>
+                        <width>192</width>
+                        <height>32</height>
                         <depth>0</depth>
-                        <hotspotX>0.508000016</hotspotX>
+                        <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
-                        <angle>-0.690467536</angle>
+                        <angle>-2.80247879</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Spidy" uid="1">
+                <instance type="Stick_4" uid="131">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>210</x>
+                        <y>327</y>
+                        <z>0</z>
+                        <width>263.686584473</width>
+                        <height>69.901168823</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0.007700861</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Spidy" uid="89">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -186,8 +224,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>125</x>
-                        <y>309</y>
+                        <x>256</x>
+                        <y>524</y>
                         <z>0</z>
                         <width>54.319999695</width>
                         <height>43.200000763</height>
@@ -198,45 +236,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stick" uid="5">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.8</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>807</x>
-                        <y>134</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>309</height>
-                        <depth>0</depth>
-                        <hotspotX>0.508000016</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>1.056332469</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Red" uid="9">
+                <instance type="Red" uid="111">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -263,8 +263,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>209</x>
-                        <y>155</y>
+                        <x>300</x>
+                        <y>304</y>
                         <z>0</z>
                         <width>97</width>
                         <height>77</height>
@@ -275,46 +275,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Red" uid="10">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>828</x>
-                        <y>116</y>
-                        <z>0</z>
-                        <width>97</width>
-                        <height>77</height>
-                        <depth>0</depth>
-                        <hotspotX>0.50515461</hotspotX>
-                        <hotspotY>0.506493509</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpidyTela" uid="2">
+                <instance type="SpidyTela" uid="113">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -352,7 +313,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlySpirte" uid="8">
+                <instance type="FlySpirte" uid="114">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -387,7 +348,7 @@
                         <opacity>0.5</opacity>
                     </world>
                 </instance>
-                <instance type="Fly" uid="13">
+                <instance type="Fly" uid="115">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -425,8 +386,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>385</x>
-                        <y>239</y>
+                        <x>416</x>
+                        <y>141</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -437,7 +398,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Fly" uid="14">
+                <instance type="Fly" uid="116">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -475,7 +436,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>729</x>
+                        <x>1052</x>
                         <y>554</y>
                         <z>0</z>
                         <width>64</width>
@@ -487,36 +448,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Sapo" uid="7">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <Target>370|370</Target>
-                        <LargoLengua>400</LargoLengua>
-                    </instance-variables>
-                    <behavior-instances>
-                        <behavior-instance type="Timer" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>134</x>
-                        <y>637</y>
-                        <z>0</z>
-                        <width>63.840000153</width>
-                        <height>66.096000671</height>
-                        <depth>0</depth>
-                        <hotspotX>0.493421048</hotspotX>
-                        <hotspotY>0.512345672</hotspotY>
-                        <angle>0.007195497</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParticulaVertical" uid="16">
+                <instance type="ParticulaVertical" uid="118">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -569,8 +501,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1048</x>
-                        <y>366</y>
+                        <x>454</x>
+                        <y>150</y>
                         <z>0</z>
                         <width>116</width>
                         <height>115</height>
@@ -581,7 +513,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TelaFin" uid="17">
+                <instance type="TelaFin" uid="119">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -591,8 +523,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1132</x>
-                        <y>613</y>
+                        <x>1221</x>
+                        <y>323</y>
                         <z>0</z>
                         <width>89.907997131</width>
                         <height>106.31199646</height>
@@ -603,45 +535,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stick" uid="18">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.8</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1001</x>
-                        <y>691</y>
-                        <z>0</z>
-                        <width>70</width>
-                        <height>282</height>
-                        <depth>0</depth>
-                        <hotspotX>0.508000016</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>1.386409402</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="ParticulaHorizontal" uid="15">
+                <instance type="ParticulaHorizontal" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -706,33 +600,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="LenguaSapo" uid="30">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <instance-variables>
-                        <EstadoLengua>1</EstadoLengua>
-                        <Speed>50</Speed>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-208</x>
-                        <y>482</y>
-                        <z>0</z>
-                        <width>118</width>
-                        <height>19</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="SpidyLengua" uid="31">
+                <instance type="SpidyLengua" uid="123">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -745,8 +613,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-123</x>
-                        <y>611</y>
+                        <x>-224</x>
+                        <y>464</y>
                         <z>0</z>
                         <width>44</width>
                         <height>36</height>
@@ -757,7 +625,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="helicopter" uid="11">
+                <instance type="helicopter" uid="124">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -770,11 +638,11 @@
                                 <active-on-start>Yes</active-on-start>
                                 <movement>Vertical</movement>
                                 <wave>Sine</wave>
-                                <period>4</period>
+                                <period>6</period>
                                 <period-random>0</period-random>
                                 <period-offset>0</period-offset>
                                 <period-offset-random>0</period-offset-random>
-                                <magnitude>60</magnitude>
+                                <magnitude>150</magnitude>
                                 <magnitude-random>0</magnitude-random>
                             </properties>
                         </behavior-instance>
@@ -782,8 +650,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>590</x>
-                        <y>329</y>
+                        <x>705</x>
+                        <y>195</y>
                         <z>0</z>
                         <width>93.090820313</width>
                         <height>82.616928101</height>
@@ -794,7 +662,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="HelicopterRamita" uid="35">
+                <instance type="HelicopterRamita" uid="125">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -819,7 +687,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Blur" uid="45">
+                <instance type="Blur" uid="126">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -864,7 +732,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RedTela" uid="60">
+                <instance type="RedTela" uid="127">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -886,45 +754,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stick_1" uid="61">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>-33</x>
-                        <y>389</y>
-                        <z>0</z>
-                        <width>248</width>
-                        <height>45</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0.141452149</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Stick_2" uid="62">
+                <instance type="Stick_2" uid="129">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -962,7 +792,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stick_3" uid="63">
+                <instance type="Stick_5" uid="132">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -988,95 +818,19 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1590</x>
-                        <y>148</y>
+                        <x>1005.857299805</x>
+                        <y>398.028533936</y>
                         <z>0</z>
-                        <width>192</width>
-                        <height>32</height>
+                        <width>342</width>
+                        <height>66</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>1</hotspotY>
-                        <angle>0</angle>
+                        <angle>-0.096000642</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Stick_4" uid="64">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1516</x>
-                        <y>13</y>
-                        <z>0</z>
-                        <width>263.686584473</width>
-                        <height>69.901168823</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Stick_5" uid="65">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Physics">
-                            <properties>
-                                <immovable>Yes</immovable>
-                                <collision-mask>Use collision polygon</collision-mask>
-                                <prevent-rotation>No</prevent-rotation>
-                                <density>1</density>
-                                <friction>0.5</friction>
-                                <elasticity>0.2</elasticity>
-                                <linear-damping>0</linear-damping>
-                                <angular-damping>0.01</angular-damping>
-                                <bullet>No</bullet>
-                                <initial-state>Enabled</initial-state>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1532</x>
-                        <y>148</y>
-                        <z>0</z>
-                        <width>371.438110352</width>
-                        <height>66.164459229</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="zarza_1" uid="66">
+                <instance type="zarza_1" uid="133">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1098,7 +852,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="zarza_2" uid="67">
+                <instance type="zarza_2" uid="134">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1120,10 +874,87 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Escenario2" uid="117">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>39</x>
+                        <y>628</y>
+                        <z>0</z>
+                        <width>579</width>
+                        <height>216</height>
+                        <depth>0</depth>
+                        <hotspotX>0.500863552</hotspotX>
+                        <hotspotY>0.504629612</hotspotY>
+                        <angle>0.153176501</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Red" uid="88">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Physics">
+                            <properties>
+                                <immovable>Yes</immovable>
+                                <collision-mask>Use collision polygon</collision-mask>
+                                <prevent-rotation>No</prevent-rotation>
+                                <density>1</density>
+                                <friction>0.5</friction>
+                                <elasticity>0.2</elasticity>
+                                <linear-damping>0</linear-damping>
+                                <angular-damping>0.01</angular-damping>
+                                <bullet>No</bullet>
+                                <initial-state>Enabled</initial-state>
+                            </properties>
+                        </behavior-instance>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1033</x>
+                        <y>366</y>
+                        <z>0</z>
+                        <width>97</width>
+                        <height>77</height>
+                        <depth>0</depth>
+                        <hotspotX>0.50515461</hotspotX>
+                        <hotspotY>0.506493509</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>
-        <layer name="Particles" sid="167422129488451">
+        <layer name="Particles" sid="484717170713767">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1141,7 +972,7 @@
             <instances />
             <effects />
         </layer>
-        <layer name="Fade" sid="328138836820272">
+        <layer name="Fade" sid="175394672704057">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1157,7 +988,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="Black" uid="33">
+                <instance type="Black" uid="135">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1193,7 +1024,7 @@
             </instances>
             <effects />
         </layer>
-        <layer name="Hud" sid="225000302815403">
+        <layer name="Hud" sid="608853186846447">
             <initially-visible>1</initially-visible>
             <background-color>255,255,255</background-color>
             <transparent>1</transparent>
@@ -1209,7 +1040,7 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
-                <instance type="LvlComplete" uid="20">
+                <instance type="LvlComplete" uid="136">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1242,7 +1073,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="BackToSelect" uid="23">
+                <instance type="BackToSelect" uid="137">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1276,7 +1107,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CantidadMoscas" uid="21">
+                <instance type="CantidadMoscas" uid="138">
                     <properties>
                         <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
@@ -1306,7 +1137,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlySpirteHUD" uid="24">
+                <instance type="FlySpirteHUD" uid="139">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1343,7 +1174,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="RetryLvl" uid="22">
+                <instance type="RetryLvl" uid="140">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1377,7 +1208,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Pausa" uid="25">
+                <instance type="Pausa" uid="141">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1399,7 +1230,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Retry" uid="26">
+                <instance type="Retry" uid="142">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1421,7 +1252,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ArañaHUD" uid="27">
+                <instance type="ArañaHUD" uid="143">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1455,7 +1286,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="FlySpirteHudNormal" uid="28">
+                <instance type="FlySpirteHudNormal" uid="144">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1483,7 +1314,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CantidadFly" uid="29">
+                <instance type="CantidadFly" uid="145">
                     <properties>
                         <text>x0</text>
                         <initial-visibility>Visible</initial-visibility>

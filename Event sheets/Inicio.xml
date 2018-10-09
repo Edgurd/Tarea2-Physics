@@ -3,109 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Inicio</name>
     <events>
-        <event-group description="" sid="648799404992843" title="FadeAudioInicio">
-            <sub-events>
-                <comment>1: Tag Audio | 2: limite | 3: [0: in - 1: out]</comment>
-                <variable constant="0" name="Param1" sid="208103488675896" static="1" type="text"></variable>
-                <variable constant="0" name="Param2" sid="198687288846088" static="1" type="number">0</variable>
-                <variable constant="0" name="Param3" sid="823869816434940" static="1" type="number">0</variable>
-                <event-block sid="631329899558576">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="615988051524339" type="System">
-                            <param id="0" name="First value">Param3</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="350871144389417">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="133131780225162" type="System">
-                                    <param id="0" name="First value">audio.Volume(Param1)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Param2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="811209352743740">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="899025915999009" type="System">
-                                            <param id="0" name="Interval (seconds)">0.05</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="3" name="Set volume" sid="295721239674778" type="Audio">
-                                            <param id="0" name="Tag">Param1</param>
-                                            <param id="1" name="dB">Self.Volume(Param1) + 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="110179185469710">
-                    <conditions>
-                        <condition id="-8" name="Compare two values" sid="148894246211818" type="System">
-                            <param id="0" name="First value">Param3</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">1</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="599350682119165">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="967008709837269" type="System">
-                                    <param id="0" name="First value">audio.Volume(Param1)</param>
-                                    <param id="1" name="Comparison">2</param>
-                                    <param id="2" name="Second value">Param2</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="942053674461370">
-                                    <conditions>
-                                        <condition id="-6" name="Every X seconds" sid="599407520480461" type="System">
-                                            <param id="0" name="Interval (seconds)">0.2</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="3" name="Set volume" sid="233115794314784" type="Audio">
-                                            <param id="0" name="Tag">Param1</param>
-                                            <param id="1" name="dB">Self.Volume(Param1) - 2</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="960836558770569">
-                    <conditions>
-                        <condition id="0" name="On function" sid="203479512797894" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-9" name="Set value" sid="396471520697354" type="System">
-                            <param id="0" name="Variable">Param1</param>
-                            <param id="1" name="Value">Function.Param(0)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="348696841903354" type="System">
-                            <param id="0" name="Variable">Param2</param>
-                            <param id="1" name="Value">Function.Param(1)</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="945991449414519" type="System">
-                            <param id="0" name="Variable">Param3</param>
-                            <param id="1" name="Value">Function.Param(2)</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <variable constant="0" name="Variable2" sid="258238528772033" static="0" type="number">-60</variable>
         <event-block any="1" sid="344205065176916">
             <conditions>
                 <condition id="1" name="On any click" sid="261791893035503" type="Mouse" />
@@ -128,7 +26,198 @@
             <conditions>
                 <condition id="-2" name="On start of layout" sid="754303304972437" type="System" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="0" name="Call function" sid="627172602769653" type="Function">
+                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20{###}0</param>
+                </action>
+                <action id="0" name="Play" sid="173793978874297" type="Audio">
+                    <param id="0" name="Audio file">title</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-60</param>
+                    <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
+                </action>
+            </actions>
         </event-block>
+        <event-group description="" sid="648799404992843" title="FadeAudioInicio">
+            <sub-events>
+                <comment>1: Tag Audio | 2: limite | 3: [0: in - 1: out]</comment>
+                <variable constant="0" name="Param1" sid="208103488675896" static="1" type="text"></variable>
+                <variable constant="0" name="Param2" sid="198687288846088" static="1" type="number">0</variable>
+                <variable constant="0" name="Param3" sid="823869816434940" static="1" type="number">0</variable>
+                <event-block sid="631329899558576">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="615988051524339" type="System">
+                            <param id="0" name="First value">Param3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="350871144389417">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="133131780225162" type="System">
+                                    <param id="0" name="First value">audio.Volume(str(Param1))</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Second value">-10</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="811209352743740">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="899025915999009" type="System">
+                                            <param id="0" name="Interval (seconds)">0.1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set volume" sid="295721239674778" type="Audio">
+                                            <param id="0" name="Tag">Param1</param>
+                                            <param id="1" name="dB">Self.Volume(Param1) + 2</param>
+                                        </action>
+                                        <action id="-10" name="Add to" sid="144586096051308" type="System">
+                                            <param id="0" name="Variable">Variable2</param>
+                                            <param id="1" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="110179185469710">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="148894246211818" type="System">
+                            <param id="0" name="First value">Param3</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="599350682119165">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="967008709837269" type="System">
+                                    <param id="0" name="First value">audio.Volume(Param1)</param>
+                                    <param id="1" name="Comparison">4</param>
+                                    <param id="2" name="Second value">-60</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="942053674461370">
+                                    <conditions>
+                                        <condition id="-6" name="Every X seconds" sid="599407520480461" type="System">
+                                            <param id="0" name="Interval (seconds)">0.2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set volume" sid="233115794314784" type="Audio">
+                                            <param id="0" name="Tag">Param1</param>
+                                            <param id="1" name="dB">Self.Volume(Param1) - 10</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="262453288326060" title="Etapa">
+            <sub-events>
+                <event-block sid="188284559590091">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="766630150658832" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="217564943139623">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="514511460206307" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="460958589158273">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="371435863254765" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="324846625722730">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="781856350596688" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="739507914237314">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="646094533164539" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa5</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="427536027752468">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="397769548637902" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa6</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="111321588809961">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="758432416271227" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa7</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="353891096125642">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="291833481209306" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa8</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="761296983345618">
+                    <conditions>
+                        <condition id="6" name="On object clicked" sid="233645989688027" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">1</param>
+                            <param id="2" name="Object clicked">Etapa9</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>
