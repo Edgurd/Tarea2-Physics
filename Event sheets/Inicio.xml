@@ -4,12 +4,19 @@
     <name>Inicio</name>
     <events>
         <variable constant="0" name="Variable2" sid="258238528772033" static="0" type="number">-60</variable>
+        <variable constant="0" name="Si" sid="690451838778817" static="0" type="number">0</variable>
         <event-block any="1" sid="344205065176916">
             <conditions>
                 <condition id="1" name="On any click" sid="261791893035503" type="Mouse" />
                 <condition id="1" name="On any key pressed" sid="932648058833587" type="Keyboard" />
             </conditions>
             <actions>
+                <action id="0" name="Play" sid="234858271546679" type="Audio">
+                    <param id="0" name="Audio file">Button</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-10</param>
+                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="499919570561723" type="Logo" />
                 <action behavior="Fade" id="1" name="Start fade" sid="723542166882200" type="play" />
             </actions>
@@ -20,6 +27,10 @@
             </conditions>
             <actions>
                 <action behavior="Fade" id="1" name="Start fade" sid="419574526010520" type="Etapa" />
+                <action id="-9" name="Set value" sid="717519210983859" type="System">
+                    <param id="0" name="Variable">Si</param>
+                    <param id="1" name="Value">1</param>
+                </action>
             </actions>
         </event-block>
         <event-block sid="209739764617627">
@@ -163,212 +174,314 @@
         </event-group>
         <event-group description="" sid="262453288326060" title="Etapa">
             <sub-events>
-                <event-block sid="188284559590091">
+                <event-block sid="267567901686945">
                     <conditions>
-                        <condition id="6" name="On object clicked" sid="766630150658832" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa1</param>
+                        <condition id="-14" name="Compare variable" sid="561515009147518" type="System">
+                            <param id="0" name="Variable">Si</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="700175287682154" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="224409777726856" type="Black" />
-                        <action id="-16" name="Wait" sid="453132933133574" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="531808007920138" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="215058453066759" type="System">
-                            <param id="0" name="Layout">Etapa 1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="217564943139623">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="514511460206307" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa2</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="844551927873121" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="353571184594278" type="Black" />
-                        <action id="-16" name="Wait" sid="595167483895368" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="341813026361733" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="830916344536611" type="System">
-                            <param id="0" name="Layout">Etapa 2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="460958589158273">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="371435863254765" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="993971510370817" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="298274843638075" type="Black" />
-                        <action id="-16" name="Wait" sid="397160255986338" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="765286210630142" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="807971399401872" type="System">
-                            <param id="0" name="Layout">Etapa 3</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="324846625722730">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="781856350596688" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="291553339439276" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="825289844381815" type="Black" />
-                        <action id="-16" name="Wait" sid="297968784762235" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="648860998362848" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="590595940297293" type="System">
-                            <param id="0" name="Layout">Etapa 4</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="739507914237314">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="646094533164539" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa5</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="365414489445327" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="879770545614792" type="Black" />
-                        <action id="-16" name="Wait" sid="578584168793979" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="287272823839428" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="221300056136254" type="System">
-                            <param id="0" name="Layout">Etapa 5</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="427536027752468">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="397769548637902" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa6</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="976476581498732" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="203919119842539" type="Black" />
-                        <action id="-16" name="Wait" sid="604482824951985" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="172889163306551" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="451859567830218" type="System">
-                            <param id="0" name="Layout">Etapa 6</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="111321588809961">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="758432416271227" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa7</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="843110414988769" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="926114566493724" type="Black" />
-                        <action id="-16" name="Wait" sid="862787558453795" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="226929604649541" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="537968130023643" type="System">
-                            <param id="0" name="Layout">Etapa 7</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="353891096125642">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="291833481209306" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa8</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="152489076920416" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="970582727439662" type="Black" />
-                        <action id="-16" name="Wait" sid="569992188521096" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="265799792714027" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="448886709805259" type="System">
-                            <param id="0" name="Layout">Etapa 8</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="761296983345618">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="233645989688027" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">1</param>
-                            <param id="2" name="Object clicked">Etapa9</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Call function" sid="348159647349233" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="978592309631531" type="Black" />
-                        <action id="-16" name="Wait" sid="292914665096544" type="System">
-                            <param id="0" name="Seconds">1</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="155136056436825" type="Audio" />
-                        <action id="-2" name="Go to layout" sid="455588986208901" type="System">
-                            <param id="0" name="Layout">Etapa 9</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="188284559590091">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="766630150658832" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="190303400008339" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="700175287682154" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="224409777726856" type="Black" />
+                                <action id="-16" name="Wait" sid="453132933133574" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="603950891289913" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="531808007920138" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="215058453066759" type="System">
+                                    <param id="0" name="Layout">Etapa 1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="217564943139623">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="514511460206307" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="696312056087955" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="844551927873121" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="353571184594278" type="Black" />
+                                <action id="-16" name="Wait" sid="595167483895368" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="528518164811830" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="341813026361733" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="830916344536611" type="System">
+                                    <param id="0" name="Layout">Etapa 2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="460958589158273">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="371435863254765" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="782309513536215" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="993971510370817" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="298274843638075" type="Black" />
+                                <action id="-16" name="Wait" sid="397160255986338" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="641762789138817" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="765286210630142" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="807971399401872" type="System">
+                                    <param id="0" name="Layout">Etapa 3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="324846625722730">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="781856350596688" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa4</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="492397269574306" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="291553339439276" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="825289844381815" type="Black" />
+                                <action id="-16" name="Wait" sid="297968784762235" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="263815418763969" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="648860998362848" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="590595940297293" type="System">
+                                    <param id="0" name="Layout">Etapa 4</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="739507914237314">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="646094533164539" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa5</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="661115861792762" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="365414489445327" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="879770545614792" type="Black" />
+                                <action id="-16" name="Wait" sid="578584168793979" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="318835743600739" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="287272823839428" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="221300056136254" type="System">
+                                    <param id="0" name="Layout">Etapa 5</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="427536027752468">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="397769548637902" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa6</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="249311809938022" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="976476581498732" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="203919119842539" type="Black" />
+                                <action id="-16" name="Wait" sid="604482824951985" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="278340212879996" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="172889163306551" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="451859567830218" type="System">
+                                    <param id="0" name="Layout">Etapa 6</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="111321588809961">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="758432416271227" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="319334668103286" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="843110414988769" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="926114566493724" type="Black" />
+                                <action id="-16" name="Wait" sid="862787558453795" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="210128672263229" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="226929604649541" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="537968130023643" type="System">
+                                    <param id="0" name="Layout">Etapa 7</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="353891096125642">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="291833481209306" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa8</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="718476071804551" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="152489076920416" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="970582727439662" type="Black" />
+                                <action id="-16" name="Wait" sid="569992188521096" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="973036192514113" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="265799792714027" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="448886709805259" type="System">
+                                    <param id="0" name="Layout">Etapa 8</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="761296983345618">
+                            <conditions>
+                                <condition id="6" name="On object clicked" sid="233645989688027" type="Mouse">
+                                    <param id="0" name="Mouse button">0</param>
+                                    <param id="1" name="Click type">0</param>
+                                    <param id="2" name="Object clicked">Etapa9</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="473278656021612" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action id="0" name="Call function" sid="348159647349233" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="978592309631531" type="Black" />
+                                <action id="-16" name="Wait" sid="292914665096544" type="System">
+                                    <param id="0" name="Seconds">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="747509689841271" type="System">
+                                    <param id="0" name="Variable">Si</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="155136056436825" type="Audio" />
+                                <action id="-2" name="Go to layout" sid="455588986208901" type="System">
+                                    <param id="0" name="Layout">Etapa 9</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
