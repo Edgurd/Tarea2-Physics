@@ -114,6 +114,28 @@
             <blend-mode>0</blend-mode>
             <effect-fallback>0</effect-fallback>
             <instances>
+                <instance type="TelaFin" uid="155">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1190</x>
+                        <y>614</y>
+                        <z>0</z>
+                        <width>89.907997131</width>
+                        <height>106.31199646</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0.022055363</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Spidy" uid="128">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -395,28 +417,6 @@
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="TelaFin" uid="155">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1190</x>
-                        <y>614</y>
-                        <z>0</z>
-                        <width>89.907997131</width>
-                        <height>106.31199646</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0.022055363</angle>
                         <opacity>1</opacity>
                     </world>
                 </instance>

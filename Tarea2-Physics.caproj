@@ -1038,6 +1038,81 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Escenario4" sid="801475540447577">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="263008216874003" speed="5">
+                        <frame duration="1" hotspotX="0.502212" hotspotY="0.505102" original-source="C:\Users\Jhü\Desktop\Escenario4.png">
+                            <collision-poly>
+                                <point x="0.039823" y="0" />
+                                <point x="0.495575" y="0" />
+                                <point x="0.993363" y="0" />
+                                <point x="1" y="0.290816" />
+                                <point x="0.856195" y="0.617347" />
+                                <point x="0.5" y="0.903061" />
+                                <point x="0.0376106" y="1" />
+                                <point x="0" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escenario5" sid="928429316935924">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700471789846253" speed="5">
+                        <frame duration="1" hotspotX="0.502137" hotspotY="0.503067" original-source="C:\Users\Jhü\Desktop\Escenario5.png">
+                            <collision-poly>
+                                <point x="0.034188" y="0" />
+                                <point x="0.5" y="0" />
+                                <point x="1" y="0" />
+                                <point x="1" y="0.791412" />
+                                <point x="0.752136" y="0.993865" />
+                                <point x="0.168803" y="0.840491" />
+                                <point x="0.0128205" y="0.564417" />
+                                <point x="0" y="0.14724" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escenario6" sid="896245843314530">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="734076055997857" speed="5">
+                        <frame duration="1" hotspotX="0.503247" hotspotY="0.503185" original-source="C:\Users\Jhü\Desktop\Escenario6.png">
+                            <collision-poly>
+                                <point x="0.207792" y="0.165605" />
+                                <point x="0.5" y="0.089172" />
+                                <point x="0.873378" y="0" />
+                                <point x="1" y="0" />
+                                <point x="0.824676" y="1" />
+                                <point x="0.198052" y="0.968153" />
+                                <point x="0.0227272" y="0.643312" />
+                                <point x="0" y="0.388535" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Escenario7" sid="660515633853012">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="416231615611657" speed="5">
+                        <frame duration="1" hotspotX="0.504149" hotspotY="0.504087" original-source="C:\Users\Jhü\Desktop\Escenario7.png">
+                            <collision-poly>
+                                <point x="0.0373444" y="0" />
+                                <point x="0.46888" y="0" />
+                                <point x="0.49585" y="0.525885" />
+                                <point x="0.935688" y="0.525885" />
+                                <point x="0.995851" y="0.643052" />
+                                <point x="0.954358" y="0.93733" />
+                                <point x="0" y="1" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-type name="RedTela" sid="278643835286164">
             <plugin id="Sprite" />
@@ -1127,6 +1202,10 @@
                 <member>Escenario1</member>
                 <member>Escenario2</member>
                 <member>Escenario3</member>
+                <member>Escenario4</member>
+                <member>Escenario5</member>
+                <member>Escenario6</member>
+                <member>Escenario7</member>
             </members>
             <behaviors>
                 <behavior-type name="Physics" sid="139974846881304">
@@ -1146,6 +1225,12 @@
             <layout>Etapa 1.xml</layout>
             <layout>Etapa 2.xml</layout>
             <layout>Etapa 3.xml</layout>
+            <layout>Etapa 4.xml</layout>
+            <layout>Etapa 5.xml</layout>
+            <layout>Etapa 6.xml</layout>
+            <layout>Etapa 7.xml</layout>
+            <layout>Etapa 8.xml</layout>
+            <layout>Etapa 9.xml</layout>
         </layout-folder>
         <layout>Test_Layout.xml</layout>
         <layout>Inicio_Layout.xml</layout>

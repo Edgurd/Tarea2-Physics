@@ -190,6 +190,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="TelaFin" uid="119">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1221</x>
+                        <y>323</y>
+                        <z>0</z>
+                        <width>89.907997131</width>
+                        <height>106.31199646</height>
+                        <depth>0</depth>
+                        <hotspotX>1</hotspotX>
+                        <hotspotY>1</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
                 <instance type="Spidy" uid="89">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -513,28 +535,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="TelaFin" uid="119">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1221</x>
-                        <y>323</y>
-                        <z>0</z>
-                        <width>89.907997131</width>
-                        <height>106.31199646</height>
-                        <depth>0</depth>
-                        <hotspotX>1</hotspotX>
-                        <hotspotY>1</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="ParticulaHorizontal" uid="121">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
@@ -591,11 +591,11 @@
                         <x>1150</x>
                         <y>518</y>
                         <z>0</z>
-                        <width>40</width>
-                        <height>51</height>
+                        <width>116</width>
+                        <height>115</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.509803951</hotspotY>
+                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -683,51 +683,6 @@
                         <depth>0</depth>
                         <hotspotX>0.503759384</hotspotX>
                         <hotspotY>-0.060606062</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="Blur" uid="126">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0.5</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                    </behavior-instances>
-                    <effect-instances>
-                        <effect-instance type="Glass">
-                            <parameters>
-                                <density>3</density>
-                            </parameters>
-                        </effect-instance>
-                        <effect-instance type="BlurHorizontal">
-                            <parameters>
-                                <intensity>1</intensity>
-                            </parameters>
-                        </effect-instance>
-                    </effect-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>91</x>
-                        <y>899</y>
-                        <z>0</z>
-                        <width>174</width>
-                        <height>184</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1014,6 +969,51 @@
                         <z>0</z>
                         <width>205</width>
                         <height>226</height>
+                        <depth>0</depth>
+                        <hotspotX>0</hotspotX>
+                        <hotspotY>0</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="Blur" uid="126">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0.5</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
+                    </behavior-instances>
+                    <effect-instances>
+                        <effect-instance type="Glass">
+                            <parameters>
+                                <density>3</density>
+                            </parameters>
+                        </effect-instance>
+                        <effect-instance type="BlurHorizontal">
+                            <parameters>
+                                <intensity>1</intensity>
+                            </parameters>
+                        </effect-instance>
+                    </effect-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>91</x>
+                        <y>899</y>
+                        <z>0</z>
+                        <width>174</width>
+                        <height>184</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

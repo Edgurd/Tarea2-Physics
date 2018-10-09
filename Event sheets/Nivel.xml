@@ -594,6 +594,11 @@
                             <param id="1" name="Offset X">0</param>
                             <param id="2" name="Offset Y">0</param>
                         </condition>
+                        <condition id="9" name="Is overlapping at offset" sid="793290704185838" type="Spidy">
+                            <param id="0" name="Object">SolidEscenario</param>
+                            <param id="1" name="Offset X">0</param>
+                            <param id="2" name="Offset Y">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
