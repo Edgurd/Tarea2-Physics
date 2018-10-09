@@ -716,6 +716,11 @@
                             <param id="1" name="Click type">0</param>
                             <param id="2" name="Object clicked">BackToSelect</param>
                         </condition>
+                        <condition id="-7" name="Compare instance variable" sid="990778556594841" type="Spidy">
+                            <param id="0" name="Instance variable">FlyUp</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions />
                     <sub-events>
@@ -1217,5 +1222,31 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block sid="650085201652112">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="982962159065483" type="Spidy">
+                    <param id="0" name="Instance variable">FlyUp</param>
+                    <param id="1" name="Comparison">4</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="696189863240218" type="BackToSelect">
+                    <param id="0" name="Mode">0</param>
+                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="457854341753462">
+            <conditions>
+                <condition id="-22" name="Else" sid="382257758930601" type="System" />
+            </conditions>
+            <actions>
+                <action id="-27" name="Set effect enabled" sid="116835511863227" type="BackToSelect">
+                    <param id="0" name="Mode">1</param>
+                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

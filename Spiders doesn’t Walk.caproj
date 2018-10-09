@@ -31,6 +31,7 @@
         <effect author="Scirra" id="blurhorizontal">Blur Horizontal</effect>
         <effect author="Scirra" id="blurvertical">Blur Vertical</effect>
         <effect author="Scirra" id="glass">Glass</effect>
+        <effect author="Scirra" id="grayscale">Grayscale</effect>
     </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
@@ -774,6 +775,11 @@
                             <behavior id="Pin" />
                         </behavior-type>
                     </behaviors>
+                    <effects>
+                        <effect-type name="Grayscale">
+                            <effect id="grayscale" />
+                        </effect-type>
+                    </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="484736747273064" speed="5">
                             <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\play.png">
