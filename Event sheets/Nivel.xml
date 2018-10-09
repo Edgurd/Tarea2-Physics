@@ -807,6 +807,19 @@
                                 </action>
                             </actions>
                         </event-block>
+                        <event-block sid="108587038529245">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="807094643302106" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="705280286433102" type="Audio">
+                                    <param id="0" name="Audio file">Bubble</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
                     </sub-events>
                 </event-block>
                 <event-block sid="823683943500577">
