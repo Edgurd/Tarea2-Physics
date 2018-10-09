@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2project>
-    <name>Tarea2-Physics</name>
+    <name>Spiders doesn’t Walk</name>
     <description></description>
     <version>1.0.0.0</version>
-    <author></author>
-    <author-email></author-email>
+    <author>Edgar Escarate, Lian Grandon</author>
+    <author-email>liangrandon@gmail.com , irgar1507@gmail.com</author-email>
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>23zd3hdo5fxgo</unique-id>
@@ -40,6 +40,7 @@
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
+    <first-layout>Inicio_Layout</first-layout>
     <use-loader-layout>0</use-loader-layout>
     <configuration-settings>
         <prop name="Clear background">Yes</prop>
@@ -1367,8 +1368,8 @@
             <layout>Etapa 8.xml</layout>
             <layout>Etapa 9.xml</layout>
         </layout-folder>
-        <layout>Test_Layout.xml</layout>
         <layout>Inicio_Layout.xml</layout>
+        <layout>Test_Layout.xml</layout>
         <layout>Assets_Layout.xml</layout>
     </layout-folder>
     <event-folder>
@@ -1400,6 +1401,7 @@
         <file name="Bubble.ogg" />
         <file name="Wind.ogg" />
         <file name="Button.ogg" />
+        <file name="jump.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>

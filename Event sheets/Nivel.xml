@@ -318,6 +318,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="690402354827649" type="Audio">
+                                            <param id="0" name="Audio file">jump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                        </action>
                                         <action behavior="Physics" id="3" name="Apply impulse" sid="443911399017108" type="Spidy">
                                             <param id="0" name="Impulse X">0</param>
                                             <param id="1" name="Impulse Y">-Spidy.salto</param>
@@ -337,6 +343,12 @@
                                         </condition>
                                     </conditions>
                                     <actions>
+                                        <action id="0" name="Play" sid="193789594505669" type="Audio">
+                                            <param id="0" name="Audio file">jump</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">0</param>
+                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                        </action>
                                         <action behavior="Physics" id="3" name="Apply impulse" sid="403298616737764" type="Spidy">
                                             <param id="0" name="Impulse X">0</param>
                                             <param id="1" name="Impulse Y">-Spidy.salto</param>
