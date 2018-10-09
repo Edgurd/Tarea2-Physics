@@ -478,11 +478,11 @@
                         <x>134</x>
                         <y>637</y>
                         <z>0</z>
-                        <width>84</width>
-                        <height>81.599998474</height>
+                        <width>63.840000153</width>
+                        <height>66.096000671</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotX>0.493421048</hotspotX>
+                        <hotspotY>0.530864179</hotspotY>
                         <angle>0.007195497</angle>
                         <opacity>1</opacity>
                     </world>
@@ -536,6 +536,7 @@
                                 <intensity>1</intensity>
                             </parameters>
                         </effect-instance>
+                        <effect-instance type="Dodge" />
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -543,11 +544,11 @@
                         <x>1048</x>
                         <y>366</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>116</width>
+                        <height>115</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -661,6 +662,7 @@
                                 <intensity>1</intensity>
                             </parameters>
                         </effect-instance>
+                        <effect-instance type="Dodge" />
                     </effect-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -668,11 +670,11 @@
                         <x>1150</x>
                         <y>518</y>
                         <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
+                        <width>116</width>
+                        <height>115</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
+                        <hotspotY>0.504347801</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
