@@ -368,6 +368,12 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Destroy" sid="913327222736161" type="Fly" />
+                        <action id="0" name="Play" sid="845434838808351" type="Audio">
+                            <param id="0" name="Audio file">234</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
                         <action id="-11" name="Add to" sid="639333571481380" type="Spidy">
                             <param id="0" name="Instance variable">FlyUp</param>
                             <param id="1" name="Value">1</param>
@@ -711,24 +717,61 @@
                             <param id="2" name="Object clicked">BackToSelect</param>
                         </condition>
                     </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="415977007295174" type="Audio">
-                            <param id="0" name="Audio file">Button</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="157562977767045" type="Black" />
-                        <action id="-16" name="Wait" sid="179544057080153" type="System">
-                            <param id="0" name="Seconds">FadeOutTime</param>
-                        </action>
-                        <action id="6" name="Stop" sid="665631604055358" type="Audio">
-                            <param id="0" name="Tag">&quot;SFX&quot;</param>
-                        </action>
-                        <action id="-43" name="Go to next/previous layout" sid="153447800438651" type="System">
-                            <param id="0" name="Which">0</param>
-                        </action>
-                    </actions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="115023349026723">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="529834684317744" type="System">
+                                    <param id="0" name="First value">LayoutName</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">&quot;Etapa 9&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="680702752586134" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="661187046603378" type="Black" />
+                                <action id="0" name="Call function" sid="564405457193318" type="Function">
+                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="530684416213306" type="System">
+                                    <param id="0" name="Seconds">FadeOutTime</param>
+                                </action>
+                                <action id="33" name="Stop all" sid="161663295681727" type="Audio" />
+                                <action id="-43" name="Go to next/previous layout" sid="705733186072957" type="System">
+                                    <param id="0" name="Which">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="654770408734089">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="524534720454064" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="415977007295174" type="Audio">
+                                    <param id="0" name="Audio file">Button</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                </action>
+                                <action behavior="Fade" id="1" name="Start fade" sid="157562977767045" type="Black" />
+                                <action id="-16" name="Wait" sid="179544057080153" type="System">
+                                    <param id="0" name="Seconds">FadeOutTime</param>
+                                </action>
+                                <action id="6" name="Stop" sid="665631604055358" type="Audio">
+                                    <param id="0" name="Tag">&quot;SFX&quot;</param>
+                                </action>
+                                <action id="-43" name="Go to next/previous layout" sid="153447800438651" type="System">
+                                    <param id="0" name="Which">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
                 </event-block>
                 <event-block sid="376265369582485">
                     <conditions>
@@ -991,6 +1034,12 @@
                         <action behavior="Timer" id="1" name="Stop timer" sid="173919589218061" type="Sapo">
                             <param id="0" name="Tag">&quot;GoTongue&quot;</param>
                         </action>
+                        <action id="0" name="Play" sid="296159519637136" type="Audio">
+                            <param id="0" name="Audio file">damage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
                         <action id="4" name="Set animation" sid="650962944134365" type="Sapo">
                             <param id="0" name="Animation">&quot;Fat&quot;</param>
                             <param id="1" name="From">1</param>
@@ -1086,6 +1135,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="313117862078923" type="Audio">
+                            <param id="0" name="Audio file">damage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="592018460515286" type="FlySpirte">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -1124,6 +1179,12 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="0" name="Play" sid="708783606239909" type="Audio">
+                            <param id="0" name="Audio file">damage</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="474341348389348" type="FlySpirte">
                             <param id="0" name="Visibility">0</param>
                         </action>

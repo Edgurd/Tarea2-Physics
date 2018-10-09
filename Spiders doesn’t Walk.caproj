@@ -16,6 +16,7 @@
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
@@ -974,7 +975,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930771563347327" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel1.png">
+                                <collision-poly>
+                                    <point x="0.0314286" y="0.040146" />
+                                    <point x="0.968571" y="0.040146" />
+                                    <point x="0.982857" y="0.5" />
+                                    <point x="0.962857" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0342857" y="0.956204" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -982,7 +992,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="485275131921256" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel2.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -990,7 +1009,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="505749856756999" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel3.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -998,7 +1026,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="938432240255463" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel4.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1006,7 +1043,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="330864929522707" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel5.png">
+                                <collision-poly>
+                                    <point x="0.0388889" y="0.0518519" />
+                                    <point x="0.5" y="0.0333333" />
+                                    <point x="0.963889" y="0.0481481" />
+                                    <point x="0.961111" y="0.948148" />
+                                    <point x="0.5" y="0.974074" />
+                                    <point x="0.0361111" y="0.951852" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1014,7 +1060,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359614231824542" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel6.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1022,7 +1077,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="394378918898623" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel7.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1030,7 +1094,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="116959550143853" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel8.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1038,7 +1111,16 @@
                     <plugin id="Sprite" />
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="691433252590120" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\nivel9.png">
+                                <collision-poly>
+                                    <point x="0.03125" y="0.040146" />
+                                    <point x="0.96875" y="0.040146" />
+                                    <point x="0.980114" y="0.5" />
+                                    <point x="0.963068" y="0.952555" />
+                                    <point x="0.5" y="0.967153" />
+                                    <point x="0.0369318" y="0.952555" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1049,10 +1131,24 @@
                     <behavior-type name="Fade" sid="551430851337717">
                         <behavior id="Fade" />
                     </behavior-type>
+                    <behavior-type name="Sine" sid="414091826546089">
+                        <behavior id="Sin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="656544147145981" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.500682" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\menuletras.png">
+                            <collision-poly>
+                                <point x="0.0581162" y="0.0791269" />
+                                <point x="0.5" y="0.122783" />
+                                <point x="0.950902" y="0.0668486" />
+                                <point x="0.911824" y="0.499318" />
+                                <point x="0.96994" y="0.959072" />
+                                <point x="0.5" y="0.893588" />
+                                <point x="0.198397" y="0.729877" />
+                                <point x="0.297595" y="0.499318" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1062,10 +1158,24 @@
                     <behavior-type name="Fade" sid="242716632297216">
                         <behavior id="Fade" />
                     </behavior-type>
+                    <behavior-type name="Sine" sid="595316861022246">
+                        <behavior id="Sin" />
+                    </behavior-type>
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="821396309243854" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.502674" hotspotY="0.5" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\play.png">
+                            <collision-poly>
+                                <point x="0.0641711" y="0.0674157" />
+                                <point x="0.497326" y="0.213483" />
+                                <point x="0.705882" y="0.308989" />
+                                <point x="0.962567" y="0.5" />
+                                <point x="0.705882" y="0.691011" />
+                                <point x="0.497326" y="0.814607" />
+                                <point x="0.0802139" y="0.91573" />
+                                <point x="0.0320856" y="0.5" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1267,6 +1377,18 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="TiledBackground" sid="486397726355995">
+            <plugin id="TiledBg" />
+            <texture original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\FondoMenu.png" />
+        </object-type>
+        <object-type name="Back" sid="440130388878639">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="889074666780291" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\FondoMenu.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families>
         <family name="Solid" plugin-id="Sprite" sid="323336265046797">
@@ -1402,6 +1524,8 @@
         <file name="Wind.ogg" />
         <file name="Button.ogg" />
         <file name="jump.ogg" />
+        <file name="234.ogg" />
+        <file name="damage.ogg" />
     </sounds-folder>
     <music-folder />
     <files-folder>
