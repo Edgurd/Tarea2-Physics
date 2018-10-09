@@ -311,8 +311,18 @@
                 </behaviors>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="512419493730585" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Personajes\Spider\TelaAraña.png">
                             <image-point name="Imagepoint 1" x="0.5" y="1" />
+                            <collision-poly>
+                                <point x="0.237113" y="0.298701" />
+                                <point x="0.494845" y="0.0779221" />
+                                <point x="0.835052" y="0.207792" />
+                                <point x="0.865979" y="0.493506" />
+                                <point x="0.752577" y="0.688312" />
+                                <point x="0.494845" y="0.909091" />
+                                <point x="0.123711" y="0.844156" />
+                                <point x="0.123711" y="0.493506" />
+                            </collision-poly>
                         </frame>
                     </animation>
                 </animation-folder>
@@ -806,6 +816,7 @@
                 <animation framecount="4" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="817500348454305" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_1.png">
                         <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
                         <collision-poly>
                             <point x="0.255" y="0.225" />
                             <point x="0.735" y="0.225" />
@@ -815,6 +826,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_2.png">
                         <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
                         <collision-poly>
                             <point x="0.255" y="0.225" />
                             <point x="0.735" y="0.225" />
@@ -824,6 +836,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_3.png">
                         <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
                         <collision-poly>
                             <point x="0.255" y="0.225" />
                             <point x="0.735" y="0.225" />
@@ -833,6 +846,7 @@
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Personajes\Coptero\coptero_iddle_4.png">
                         <image-point name="Imagepoint 1" x="0.505" y="0.87" />
+                        <image-point name="Imagepoint 2" x="0.5" y="1.025" />
                         <collision-poly>
                             <point x="0.255" y="0.225" />
                             <point x="0.735" y="0.225" />
@@ -852,7 +866,35 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995820609053824" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.503759" hotspotY="-0.0606061" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\Palito_2.png">
+                        <collision-poly>
+                            <point x="0.0150376" y="0.0606061" />
+                            <point x="0.496241" y="0.030303" />
+                            <point x="0.962406" y="0.151515" />
+                            <point x="0.984962" y="0.484848" />
+                            <point x="0.887218" y="0.545455" />
+                            <point x="0.496241" y="0.606061" />
+                            <point x="0.112782" y="0.545455" />
+                            <point x="0.037594" y="0.484848" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RedTela" sid="278643835286164">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="529963682543258" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.512821" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Personajes\Spider\TelaAraña_1.png">
+                        <collision-poly>
+                            <point x="0.104167" y="0.25641" />
+                            <point x="0.5" y="0.025641" />
+                            <point x="0.90625" y="0.230769" />
+                            <point x="0.916667" y="0.487179" />
+                            <point x="0.5" y="1" />
+                            <point x="0.125" y="0.487179" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
