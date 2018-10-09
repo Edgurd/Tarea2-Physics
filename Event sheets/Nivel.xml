@@ -425,6 +425,35 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="979996852303456">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="347798161739388" type="System">
+                            <param id="0" name="Interval (seconds)">4</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="817862681090931" type="System">
+                            <param id="0" name="Object to create">Leave</param>
+                            <param id="1" name="Layer">&quot;Particles&quot;</param>
+                            <param id="2" name="X">LayoutWidth</param>
+                            <param id="3" name="Y">round(random(0,LayoutHeight))</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="106189465147444">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="783539139173206" type="Leave" />
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set frame" sid="547123198409555" type="Leave">
+                            <param id="0" name="Frame number">round(random(0,1))</param>
+                        </action>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="897513447195772" type="Leave">
+                            <param id="0" name="Which">1</param>
+                            <param id="1" name="Speed">-80</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="884502806569036" title="Misc">

@@ -21,6 +21,7 @@
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
+        <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="Timer" version="1">Timer</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
@@ -128,7 +129,7 @@
                 </effects>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="261550942842501" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\particle_1.png">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\hoja_particle_1.png">
                             <collision-poly>
                                 <point x="0.37069" y="0.373913" />
                                 <point x="0.5" y="0.321739" />
@@ -176,6 +177,51 @@
                                 <point x="0.5" y="0.669565" />
                                 <point x="0.37931" y="0.617391" />
                                 <point x="0.327586" y="0.495652" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Leave" sid="725645493180318">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="351520275158889">
+                        <behavior id="custom" />
+                    </behavior-type>
+                    <behavior-type name="Sine" sid="807173124610688">
+                        <behavior id="Sin" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="179389627484750">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                    <behavior-type name="Rotate" sid="297533261603129">
+                        <behavior id="Rotate" />
+                    </behavior-type>
+                </behaviors>
+                <animation-folder>
+                    <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="522214392813460" speed="0">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.509804" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\hoja_particle_1.png">
+                            <collision-poly>
+                                <point x="0.37069" y="0.373913" />
+                                <point x="0.5" y="0.321739" />
+                                <point x="0.62069" y="0.382609" />
+                                <point x="0.672414" y="0.495652" />
+                                <point x="0.62069" y="0.617391" />
+                                <point x="0.5" y="0.669565" />
+                                <point x="0.37931" y="0.617391" />
+                                <point x="0.327586" y="0.495652" />
+                            </collision-poly>
+                        </frame>
+                        <frame duration="1" hotspotX="0.512195" hotspotY="0.518519" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\hoja_particle_2.png">
+                            <collision-poly>
+                                <point x="0.121951" y="0.185185" />
+                                <point x="0.487805" y="0.037037" />
+                                <point x="0.853659" y="0.222222" />
+                                <point x="0.926829" y="0.481481" />
+                                <point x="0.804878" y="0.703704" />
+                                <point x="0.487805" y="0.962963" />
+                                <point x="0.121951" y="0.814815" />
+                                <point x="0.0487805" y="0.481481" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -893,7 +939,7 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="685860021040351" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\FondoNivel.png" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\FondoNivel2.png" />
                     </animation>
                 </animation-folder>
             </object-type>
