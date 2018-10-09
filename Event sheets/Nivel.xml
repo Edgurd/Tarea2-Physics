@@ -717,6 +717,23 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="183690924759530">
+                    <conditions />
+                    <actions />
+                    <sub-events>
+                        <event-block sid="258853438960431">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="609258158375468" type="x" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="438581649567822" type="x">
+                                    <param id="0" name="Pin to">LvlComplete</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="313727277309531" title="Sapo">
