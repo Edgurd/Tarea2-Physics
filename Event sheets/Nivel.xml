@@ -710,7 +710,7 @@
                     <conditions />
                     <actions>
                         <action id="0" name="Set text" sid="870348471647342" type="CantidadFly">
-                            <param id="0" name="Text">&quot;x &quot; &amp;Spidy.FlyUp </param>
+                            <param id="0" name="Text">Spidy.FlyUp </param>
                         </action>
                     </actions>
                 </event-block>
@@ -724,6 +724,17 @@
                             </conditions>
                             <actions>
                                 <action behavior="Pin" id="0" name="Pin to object" sid="438581649567822" type="x">
+                                    <param id="0" name="Pin to">LvlComplete</param>
+                                    <param id="1" name="Mode">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="162357374912382">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="170517409733149" type="menu" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Pin" id="0" name="Pin to object" sid="800653409226417" type="menu">
                                     <param id="0" name="Pin to">LvlComplete</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
