@@ -1404,5 +1404,16 @@
                 </action>
             </actions>
         </event-block>
+        <event-block sid="584767722865267">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="514458810618172" type="System" />
+            </conditions>
+            <actions>
+                <action id="2" name="Set at X" sid="788556625421910" type="LevelState">
+                    <param id="0" name="X">Spidy.Etapa</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

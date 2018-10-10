@@ -10,6 +10,7 @@
     <unique-id>23zd3hdo5fxgo</unique-id>
     <saved-with-version>26200</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
@@ -21,6 +22,7 @@
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="NoSave" version="1">No Save</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Rotate" version="1">Rotate</behavior>
@@ -107,6 +109,9 @@
                         <frame duration="1" hotspotX="0" hotspotY="0" />
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type global="1" name="LevelState" sid="738026620599247">
+                <plugin id="Arr" />
             </object-type>
         </object-folder>
         <object-folder name="Particles">
@@ -241,6 +246,7 @@
                     <instance-variable name="FlyUp" sid="439808918915465" type="number" />
                     <instance-variable name="Control" sid="292221437071534" type="boolean" />
                     <instance-variable name="Rango" sid="183618341482512" type="number" />
+                    <instance-variable name="Etapa" sid="652389476680849" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="147636474276684">
@@ -1476,11 +1482,19 @@
                 <member>Etapa8</member>
                 <member>Etapa9</member>
             </members>
+            <instance-variables>
+                <instance-variable name="Unlocked" sid="811475033208673" type="boolean" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Fade" sid="694846554621849">
                     <behavior id="Fade" />
                 </behavior-type>
             </behaviors>
+            <effects>
+                <effect-type name="Grayscale">
+                    <effect id="grayscale" />
+                </effect-type>
+            </effects>
         </family>
         <family name="palitos" plugin-id="Sprite" sid="686586814618932">
             <members>
@@ -1517,6 +1531,35 @@
                 <member>zarza_1</member>
                 <member>zarza_2</member>
             </members>
+        </family>
+        <family name="NoSave" plugin-id="Sprite" sid="583734004780332">
+            <members>
+                <member>Back</member>
+                <member>BG_1</member>
+                <member>Escenario1</member>
+                <member>Escenario2</member>
+                <member>Escenario3</member>
+                <member>Escenario4</member>
+                <member>Escenario5</member>
+                <member>Escenario6</member>
+                <member>Escenario7</member>
+                <member>Logo</member>
+                <member>Stick_1</member>
+                <member>Stick_2</member>
+                <member>Stick_3</member>
+                <member>Stick_4</member>
+                <member>Stick_5</member>
+                <member>TelaFin</member>
+                <member>Troncolimite_1</member>
+                <member>Troncolimite_2</member>
+                <member>zarza_1</member>
+                <member>zarza_2</member>
+            </members>
+            <behaviors>
+                <behavior-type name="NoSave" sid="890151965951568">
+                    <behavior id="NoSave" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>
