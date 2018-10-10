@@ -1512,7 +1512,7 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="ArañaHUD" uid="225">
+                <instance type="AranaHUD" uid="225">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>

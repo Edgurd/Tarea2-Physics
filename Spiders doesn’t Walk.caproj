@@ -857,7 +857,7 @@
                         </animation>
                     </animation-folder>
                 </object-type>
-                <object-type name="ArañaHUD" sid="906097574396941">
+                <object-type name="AranaHUD" sid="906097574396941">
                     <plugin id="Sprite" />
                     <behaviors>
                         <behavior-type name="Pin" sid="668098851084924">
@@ -1458,7 +1458,7 @@
         </family>
         <family name="LvlCompleteFade" plugin-id="Sprite" sid="859224416489914">
             <members>
-                <member>ArañaHUD</member>
+                <member>AranaHUD</member>
                 <member>BackToSelect</member>
                 <member>FlySpirteHUD</member>
                 <member>LvlComplete</member>

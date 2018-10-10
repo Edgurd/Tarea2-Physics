@@ -630,7 +630,7 @@
                             <param id="0" name="Pin to">LvlComplete</param>
                             <param id="1" name="Mode">1</param>
                         </action>
-                        <action behavior="Pin" id="0" name="Pin to object" sid="644231579088101" type="ArañaHUD">
+                        <action behavior="Pin" id="0" name="Pin to object" sid="644231579088101" type="AranaHUD">
                             <param id="0" name="Pin to">LvlComplete</param>
                             <param id="1" name="Mode">1</param>
                         </action>
