@@ -19,6 +19,7 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Physics" version="1">Physics</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
@@ -560,12 +561,10 @@
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="356086452468646" speed="5">
                         <frame duration="1" hotspotX="1" hotspotY="1" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaWin.png">
                             <collision-poly>
-                                <point x="0.396761" y="0.357664" />
-                                <point x="0.497976" y="0.339416" />
-                                <point x="0.975708" y="0.0218978" />
-                                <point x="0.97166" y="0.974453" />
-                                <point x="0.0404858" y="0.963504" />
-                                <point x="0.242915" y="0.5" />
+                                <point x="0.153846" y="0.153285" />
+                                <point x="1" y="0" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -573,6 +572,10 @@
             </object-type>
             <object-type name="Red" sid="310635264854678">
                 <plugin id="Sprite" />
+                <instance-variables>
+                    <instance-variable name="coordsX" sid="932692032698151" type="number" />
+                    <instance-variable name="coordsY" sid="329949934550425" type="number" />
+                </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="540820162311827">
                         <behavior id="Physics" />
@@ -580,21 +583,17 @@
                     <behavior-type name="Pin" sid="581049051134402">
                         <behavior id="Pin" />
                     </behavior-type>
+                    <behavior-type name="DragDrop" sid="510294155657930">
+                        <behavior id="DragnDrop" />
+                    </behavior-type>
                 </behaviors>
+                <container>
+                    <type>Red</type>
+                    <type>Red2</type>
+                </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="992449314965529" speed="5">
-                        <frame duration="1" hotspotX="0.505155" hotspotY="0.506494" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaBalance.png">
-                            <collision-poly>
-                                <point x="0.237113" y="0.298701" />
-                                <point x="0.494845" y="0.0779221" />
-                                <point x="0.835052" y="0.207792" />
-                                <point x="0.865979" y="0.493506" />
-                                <point x="0.752577" y="0.688312" />
-                                <point x="0.494845" y="0.909091" />
-                                <point x="0.123711" y="0.844156" />
-                                <point x="0.123711" y="0.493506" />
-                            </collision-poly>
-                        </frame>
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaBalance.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -711,6 +710,33 @@
                                 <point x="0.209957" y="0.773109" />
                                 <point x="0.0324675" y="0.857143" />
                                 <point x="0.0108225" y="0.543417" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Red2" sid="226116029811281">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="Physics" sid="728631812394693">
+                        <behavior id="Physics" />
+                    </behavior-type>
+                    <behavior-type name="Pin" sid="127539223903651">
+                        <behavior id="Pin" />
+                    </behavior-type>
+                </behaviors>
+                <container>
+                    <type>Red</type>
+                    <type>Red2</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679578715952440" speed="5">
+                        <frame duration="1" hotspotX="0.505155" hotspotY="0.506494" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaBalance.png">
+                            <collision-poly>
+                                <point x="0.453608" y="0.519481" />
+                                <point x="0.608247" y="0.441559" />
+                                <point x="0.56701" y="0.597402" />
+                                <point x="0.474227" y="0.636364" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -1231,6 +1257,14 @@
                     </animation>
                 </animation-folder>
             </object-type>
+            <object-type name="Sprite" sid="108971072250817">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="561734611327473" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="EscenarioSolid">
             <object-type name="Escenario1" sid="235002057541721">
@@ -1400,6 +1434,7 @@
         <family name="Solid" plugin-id="Sprite" sid="323336265046797">
             <members>
                 <member>Red</member>
+                <member>Red2</member>
                 <member>Spidy</member>
                 <member>SpidyTela</member>
                 <member>Stick</member>

@@ -182,6 +182,21 @@
             <sub-events>
                 <event-group description="" sid="141859035551260" title="Moving">
                     <sub-events>
+                        <event-block sid="397472242182128">
+                            <conditions>
+                                <condition id="-18" name="On created" sid="643287647408241" type="Red" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="454543727766026" type="Red">
+                                    <param id="0" name="Instance variable">coordsX</param>
+                                    <param id="1" name="Value">Red.X</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="494561699437680" type="Red">
+                                    <param id="0" name="Instance variable">coordsY</param>
+                                    <param id="1" name="Value">Red.Y</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="143923659412638">
                             <conditions>
                                 <condition id="-8" name="Is boolean instance variable set" sid="543299072298560" type="Spidy">
@@ -193,39 +208,37 @@
                                 <variable constant="0" name="Variable1" sid="605162602972646" static="0" type="number">0</variable>
                                 <event-block sid="370989373476354">
                                     <conditions>
-                                        <condition id="7" name="Cursor is over object" sid="429791008447410" type="Mouse">
-                                            <param id="0" name="Object">Red</param>
-                                        </condition>
+                                        <condition behavior="DragDrop" id="0" name="Is dragging" sid="220857082095394" type="Red" />
                                         <condition id="2" name="Mouse button is down" sid="554816135009991" type="Mouse">
                                             <param id="0" name="Mouse button">0</param>
                                         </condition>
                                         <condition id="-8" name="Compare two values" sid="511647330826123" type="System">
-                                            <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red.X,Red.Y)</param>
+                                            <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
                                             <param id="1" name="Comparison">2</param>
                                             <param id="2" name="Second value">Spidy.Rango</param>
                                         </condition>
                                     </conditions>
                                     <actions>
                                         <action id="-4" name="Set position to another object" sid="280129713349163" type="RedTela">
-                                            <param id="0" name="Object">Red</param>
+                                            <param id="0" name="Object">Red2</param>
                                             <param id="1" name="Image point (optional)">0</param>
                                         </action>
                                         <action id="-3" name="Set position" sid="764369924685813" type="SpidyTela">
-                                            <param id="0" name="X">Red.X</param>
-                                            <param id="1" name="Y">Red.Y</param>
+                                            <param id="0" name="X">Red2.X</param>
+                                            <param id="1" name="Y">Red2.Y</param>
                                         </action>
                                         <action id="-24" name="Move to top" sid="360404856794053" type="SpidyTela" />
                                         <action id="-24" name="Move to top" sid="502972135735449" type="RedTela" />
                                         <action id="-7" name="Set size" sid="501687986323441" type="SpidyTela">
                                             <param id="0" name="Width">96</param>
-                                            <param id="1" name="Height">distance(Spidy.X,Spidy.Y,Red.X,Red.Y)</param>
+                                            <param id="1" name="Height">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
                                         </action>
                                         <action id="-8" name="Set angle" sid="255447425142129" type="SpidyTela">
-                                            <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red.X,Red.Y) +90</param>
+                                            <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red2.X,Red2.Y) +90</param>
                                         </action>
                                         <action behavior="Physics" id="10" name="Create distance joint" sid="777057693133507" type="Spidy">
                                             <param id="0" name="This image point">0</param>
-                                            <param id="1" name="Object">Red</param>
+                                            <param id="1" name="Object">Red2</param>
                                             <param id="2" name="That image point">0</param>
                                             <param id="3" name="Damping ratio">0.5</param>
                                             <param id="4" name="Spring frequency">100</param>
@@ -249,6 +262,17 @@
                                         <action id="-3" name="Set position" sid="508946971762214" type="RedTela">
                                             <param id="0" name="X">-30</param>
                                             <param id="1" name="Y">-30</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="582482761015412">
+                                    <conditions>
+                                        <condition behavior="DragDrop" id="2" name="On drop" sid="653397702979871" type="Red" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-3" name="Set position" sid="915520255513672" type="Red">
+                                            <param id="0" name="X">Red.coordsX</param>
+                                            <param id="1" name="Y">Red.coordsY</param>
                                         </action>
                                     </actions>
                                 </event-block>
@@ -381,6 +405,58 @@
                         <action id="0" name="Call function" sid="755939014474427" type="Function">
                             <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="190669463369828">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="838746307311371" type="Spidy">
+                            <param id="0" name="Object">Fly</param>
+                            <param id="1" name="Offset X">-60</param>
+                            <param id="2" name="Offset Y">-60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="127447184295551" type="Spidy">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="276335177797083">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="762481649144817" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="467366753516679" type="Spidy">
+                            <param id="0" name="Animation">&quot;Iddle&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="913761140552152">
+                    <conditions>
+                        <condition id="9" name="Is overlapping at offset" sid="221973730954905" type="Spidy">
+                            <param id="0" name="Object">Fly</param>
+                            <param id="1" name="Offset X">60</param>
+                            <param id="2" name="Offset Y">60</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="324418861480729" type="Spidy">
+                            <param id="0" name="Animation">&quot;Attack&quot;</param>
+                            <param id="1" name="From">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="651751000511365">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="101803233838350" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="788133418288547" type="Spidy">
+                            <param id="0" name="Animation">&quot;Iddle&quot;</param>
+                            <param id="1" name="From">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1108,6 +1184,10 @@
                         </action>
                         <action id="9" name="Set scale" sid="901120667947185" type="Red">
                             <param id="0" name="Scale">0.8</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="280825864125257" type="Red2">
+                            <param id="0" name="Pin to">Red</param>
+                            <param id="1" name="Mode">0</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="462939222062733" type="HelicopterRamita">
                             <param id="0" name="Pin to">helicopter</param>
