@@ -330,6 +330,34 @@
                                         </action>
                                     </actions>
                                 </event-block>
+                                <event-block sid="393848788153585">
+                                    <conditions>
+                                        <condition id="2" name="Key is down" sid="771383487401475" type="Keyboard">
+                                            <param id="0" name="Key">87</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="904400004048776" type="Spidy">
+                                            <param id="0" name="Object">palitos</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="367534317318680" type="Spidy">
+                                            <param id="0" name="Object">SpidyTela</param>
+                                        </condition>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="528973780623017" type="Spidy">
+                                            <param id="0" name="Object">SolidEscenario</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="688414659923613" type="Spidy">
+                                            <param id="0" name="Impulse">100</param>
+                                            <param id="1" name="X">RedTela.X</param>
+                                            <param id="2" name="Y">RedTela.Y</param>
+                                            <param id="3" name="Image point">0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
                                 <event-block sid="599148504212812">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="885340243812022" type="Keyboard">
@@ -942,6 +970,54 @@
                             </actions>
                         </event-block>
                     </sub-events>
+                </event-block>
+                <event-block sid="114985493473215">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="385022328450070" type="Mouse">
+                            <param id="0" name="Object">Pausa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="643671006468084" type="Pausa">
+                            <param id="0" name="Width">80</param>
+                            <param id="1" name="Height">100</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="344122950634163">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="857980961062387" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="943338622516852" type="Pausa">
+                            <param id="0" name="Width">49.331</param>
+                            <param id="1" name="Height">76.239</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="977056175319727">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="894381177914598" type="Mouse">
+                            <param id="0" name="Object">Retry</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="600084982182468" type="Retry">
+                            <param id="0" name="Width">115</param>
+                            <param id="1" name="Height">97</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="713913295569890">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="613692662046712" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-7" name="Set size" sid="649809226966115" type="Retry">
+                            <param id="0" name="Width">88.126</param>
+                            <param id="1" name="Height">73.41</param>
+                        </action>
+                    </actions>
                 </event-block>
             </sub-events>
         </event-group>
