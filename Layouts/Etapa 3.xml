@@ -1525,8 +1525,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1545.928466797</x>
-                        <y>446.785736084</y>
+                        <x>1548</x>
+                        <y>492</y>
                         <z>0</z>
                         <width>406.893005371</width>
                         <height>323.864135742</height>
@@ -1566,8 +1566,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1657.928466797</x>
-                        <y>512.785766602</y>
+                        <x>1660</x>
+                        <y>558</y>
                         <z>0</z>
                         <width>96.761856079</width>
                         <height>92.104866028</height>
@@ -1603,8 +1603,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1488.928466797</x>
-                        <y>389.785736084</y>
+                        <x>1491</x>
+                        <y>435</y>
                         <z>0</z>
                         <width>88.842247009</width>
                         <height>82.145599365</height>
@@ -1637,8 +1637,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1432.928466797</x>
-                        <y>510.785736084</y>
+                        <x>1435</x>
+                        <y>556</y>
                         <z>0</z>
                         <width>101.673614502</width>
                         <height>96.76184082</height>
@@ -1649,7 +1649,57 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="AranaHUD" uid="143">
+                <instance type="x" uid="178">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1561</x>
+                        <y>442</y>
+                        <z>0</z>
+                        <width>22.048536301</width>
+                        <height>24.128585815</height>
+                        <depth>0</depth>
+                        <hotspotX>0.509433985</hotspotX>
+                        <hotspotY>0.5</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="menu" uid="225">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <behavior-instances>
+                        <behavior-instance type="Pin" />
+                    </behavior-instances>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>1545</x>
+                        <y>558</y>
+                        <z>0</z>
+                        <width>103.114456177</width>
+                        <height>92.73815918</height>
+                        <depth>0</depth>
+                        <hotspotX>0.503144681</hotspotX>
+                        <hotspotY>0.503496528</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="aranahud" uid="300">
                     <properties>
                         <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
@@ -1671,94 +1721,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1548.928466797</x>
-                        <y>236.785736084</y>
+                        <x>1556</x>
+                        <y>292</y>
                         <z>0</z>
-                        <width>176.143875122</width>
-                        <height>132.107910156</height>
+                        <width>154.574691772</width>
+                        <height>115.931015015</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="x" uid="455">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1558.928466797</x>
-                        <y>396.785736084</y>
-                        <z>0</z>
-                        <width>22.048536301</width>
-                        <height>24.128585815</height>
-                        <depth>0</depth>
-                        <hotspotX>0.509433985</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="menu" uid="456">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1542.928466797</x>
-                        <y>512.785766602</y>
-                        <z>0</z>
-                        <width>103.114456177</width>
-                        <height>92.73815918</height>
-                        <depth>0</depth>
-                        <hotspotX>0.503144681</hotspotX>
-                        <hotspotY>0.503496528</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="CantidadMoscas" uid="459">
-                    <properties>
-                        <text>0</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1599.5</x>
-                        <y>377.500030518</y>
-                        <z>0</z>
-                        <width>200</width>
-                        <height>74</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

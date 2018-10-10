@@ -1389,8 +1389,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1565</x>
-                        <y>410</y>
+                        <x>1549</x>
+                        <y>425</y>
                         <z>0</z>
                         <width>406.893005371</width>
                         <height>323.864135742</height>
@@ -1430,8 +1430,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1677</x>
-                        <y>476</y>
+                        <x>1661</x>
+                        <y>491</y>
                         <z>0</z>
                         <width>96.761856079</width>
                         <height>92.104866028</height>
@@ -1467,8 +1467,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1508</x>
-                        <y>353</y>
+                        <x>1492</x>
+                        <y>368</y>
                         <z>0</z>
                         <width>88.842247009</width>
                         <height>82.145599365</height>
@@ -1501,48 +1501,14 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1452</x>
-                        <y>474</y>
+                        <x>1436</x>
+                        <y>489</y>
                         <z>0</z>
                         <width>101.673614502</width>
                         <height>96.76184082</height>
                         <depth>0</depth>
                         <hotspotX>0.502415478</hotspotX>
                         <hotspotY>0.502538085</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
-                <instance type="AranaHUD" uid="348">
-                    <properties>
-                        <initial-visibility>Visible</initial-visibility>
-                        <initial-animation>Default</initial-animation>
-                        <initial-frame>0</initial-frame>
-                        <collisions>Enabled</collisions>
-                    </properties>
-                    <behavior-instances>
-                        <behavior-instance type="Fade">
-                            <properties>
-                                <active-at-start>Yes</active-at-start>
-                                <fade-in-time>0</fade-in-time>
-                                <wait-time>0</wait-time>
-                                <fade-out-time>0</fade-out-time>
-                                <destroy>No</destroy>
-                            </properties>
-                        </behavior-instance>
-                        <behavior-instance type="Pin" />
-                    </behavior-instances>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>1568</x>
-                        <y>200</y>
-                        <z>0</z>
-                        <width>176.143875122</width>
-                        <height>132.107910156</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
@@ -1560,8 +1526,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1578</x>
-                        <y>360</y>
+                        <x>1562</x>
+                        <y>375</y>
                         <z>0</z>
                         <width>22.048536301</width>
                         <height>24.128585815</height>
@@ -1585,8 +1551,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1562</x>
-                        <y>476</y>
+                        <x>1546</x>
+                        <y>491</y>
                         <z>0</z>
                         <width>103.114456177</width>
                         <height>92.73815918</height>
@@ -1597,32 +1563,36 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="CantidadMoscas" uid="468">
+                <instance type="aranahud" uid="454">
                     <properties>
-                        <text>0</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial,-27,400,0</font>
-                        <color>0,0,0</color>
-                        <horizontal-alignment>Left</horizontal-alignment>
-                        <vertical-alignment>Top</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
                     </properties>
                     <behavior-instances>
+                        <behavior-instance type="Fade">
+                            <properties>
+                                <active-at-start>Yes</active-at-start>
+                                <fade-in-time>0</fade-in-time>
+                                <wait-time>0</wait-time>
+                                <fade-out-time>0</fade-out-time>
+                                <destroy>No</destroy>
+                            </properties>
+                        </behavior-instance>
                         <behavior-instance type="Pin" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1619</x>
-                        <y>341</y>
+                        <x>1558</x>
+                        <y>226</y>
                         <z>0</z>
-                        <width>200</width>
-                        <height>74</height>
+                        <width>154.574691772</width>
+                        <height>115.931015015</height>
                         <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

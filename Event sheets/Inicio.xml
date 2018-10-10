@@ -26,6 +26,8 @@
                         </action>
                         <action behavior="Fade" id="1" name="Start fade" sid="499919570561723" type="Logo" />
                         <action behavior="Fade" id="1" name="Start fade" sid="723542166882200" type="play" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="102901004652700" type="credits" />
+                        <action behavior="Fade" id="1" name="Start fade" sid="501969505447758" type="recuadro" />
                     </actions>
                 </event-block>
             </sub-events>
