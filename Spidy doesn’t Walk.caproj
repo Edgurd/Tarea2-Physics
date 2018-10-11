@@ -1070,6 +1070,25 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-type name="Mousesprite" sid="918424142479879">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="536892562092249" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.512195" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Mouse.png">
+                            <collision-poly>
+                                <point x="0.0769231" y="0.0689655" />
+                                <point x="0.5" y="0.0862069" />
+                                <point x="0.846154" y="0.137931" />
+                                <point x="0.903846" y="0.5" />
+                                <point x="0.884615" y="0.896552" />
+                                <point x="0.538462" y="0.836207" />
+                                <point x="0.105769" y="0.780172" />
+                                <point x="0.0769231" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
         </object-folder>
         <object-folder name="Menu">
             <object-folder name="Etapa">

@@ -8,6 +8,17 @@
         <comment>Letterbox Scale</comment>
         <comment>HTML5 Website -&gt; Zip</comment>
         <comment>Upload New Proyect -&gt;HTML -&gt; 0$ or donate -&gt; Upload Zip -&gt; This file will be played in teh browser</comment>
+        <event-block sid="585792284529005">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="150923231586366" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="218520568437939" type="Mouse">
+                    <param id="0" name="Sprite">Mousesprite</param>
+                </action>
+                <action id="-24" name="Move to top" sid="387517904550993" type="Mousesprite" />
+            </actions>
+        </event-block>
         <event-group description="" sid="636716604472751" title="Functions">
             <sub-events>
                 <event-block sid="598280766838701">

@@ -1463,6 +1463,28 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
+                <instance type="Mousesprite" uid="489">
+                    <properties>
+                        <initial-visibility>Visible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>-85.49193573</x>
+                        <y>-200.702545166</y>
+                        <z>0</z>
+                        <width>22.665628433</width>
+                        <height>24.455018997</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.51219511</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
             </instances>
             <effects />
         </layer>

@@ -6,6 +6,17 @@
         <variable constant="0" name="Variable2" sid="258238528772033" static="0" type="number">-60</variable>
         <variable constant="0" name="Variable3" sid="306757896355008" static="0" type="number">0</variable>
         <variable constant="0" name="Si" sid="690451838778817" static="0" type="number">0</variable>
+        <event-block sid="269436223943902">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="141441781383530" type="System" />
+            </conditions>
+            <actions>
+                <action id="1" name="Set cursor from sprite" sid="254429707022996" type="Mouse">
+                    <param id="0" name="Sprite">Mousesprite</param>
+                </action>
+                <action id="-24" name="Move to top" sid="622300749708726" type="Mousesprite" />
+            </actions>
+        </event-block>
         <event-block any="1" sid="344205065176916">
             <conditions>
                 <condition id="1" name="On any click" sid="261791893035503" type="Mouse" />
