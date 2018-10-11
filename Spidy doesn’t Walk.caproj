@@ -15,7 +15,6 @@
         <plugin author="Scirra" id="Function" version="1">Function</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
-        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -232,6 +231,41 @@
                                 <point x="0.487805" y="0.962963" />
                                 <point x="0.121951" y="0.814815" />
                                 <point x="0.0487805" y="0.481481" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="ParticulaTela" sid="340029650002230">
+                <plugin id="Sprite" />
+                <behaviors>
+                    <behavior-type name="CustomMovement" sid="410253057545589">
+                        <behavior id="custom" />
+                    </behavior-type>
+                    <behavior-type name="Fade" sid="708314580071850">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
+                <effects>
+                    <effect-type name="BlurHorizontal">
+                        <effect id="blurhorizontal" />
+                    </effect-type>
+                    <effect-type name="BlurVertical">
+                        <effect id="blurvertical" />
+                    </effect-type>
+                </effects>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="359293002809555" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.504348" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\hoja_particle_1.png">
+                            <collision-poly>
+                                <point x="0.37069" y="0.373913" />
+                                <point x="0.5" y="0.321739" />
+                                <point x="0.62069" y="0.382609" />
+                                <point x="0.672414" y="0.495652" />
+                                <point x="0.62069" y="0.617391" />
+                                <point x="0.5" y="0.669565" />
+                                <point x="0.37931" y="0.617391" />
+                                <point x="0.327586" y="0.495652" />
                             </collision-poly>
                         </frame>
                     </animation>
@@ -575,6 +609,23 @@
                             </collision-poly>
                         </frame>
                     </animation>
+                    <animation framecount="6" loop="0" name="Move" pingpong="0" repeatcount="1" repeatto="0" sid="944175543873095" speed="15">
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\telaWin_hundir_02.png" />
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\telaWin_hundir_03.png" />
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\telaWin_hundir_04.png" />
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\telaWin_hundir_05.png" />
+                        <frame duration="1" hotspotX="1" hotspotY="1" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\Nivel\telaWin_hundir_06.png" />
+                        <frame duration="1" hotspotX="1" hotspotY="1">
+                            <collision-poly>
+                                <point x="0.404844" y="0.387417" />
+                                <point x="0.49827" y="0.354305" />
+                                <point x="0.906574" y="0.089404" />
+                                <point x="0.910035" y="0.913907" />
+                                <point x="0.083045" y="0.92053" />
+                                <point x="0.280277" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
                 </animation-folder>
             </object-type>
             <object-type name="Red" sid="310635264854678">
@@ -738,7 +789,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="679578715952440" speed="5">
-                        <frame duration="1" hotspotX="0.505155" hotspotY="0.506494" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaBalance.png" />
+                        <frame duration="1" hotspotX="0.505155" hotspotY="0.506494" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\Nivel\telaBalance.png">
+                            <collision-poly>
+                                <point x="0.213918" y="0.279221" />
+                                <point x="0.484536" y="0.100649" />
+                                <point x="0.82732" y="0.211039" />
+                                <point x="0.868557" y="0.535714" />
+                                <point x="0.739691" y="0.753247" />
+                                <point x="0.494845" y="0.909091" />
+                                <point x="0.167526" y="0.779221" />
+                                <point x="0.113402" y="0.51948" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1474,10 +1536,6 @@
                     <frame duration="1" hotspotX="0" hotspotY="0" original-source="C:\Users\Jhü\Documents\GitHub\Tarea2-Physics\Assets\HUD\FondoMenu.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="Particles" sid="386448317671288">
-            <plugin id="Particles" />
-            <texture />
         </object-type>
     </object-folder>
     <families>

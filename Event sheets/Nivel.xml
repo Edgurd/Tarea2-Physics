@@ -488,6 +488,19 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="667505751906502">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="291214302136126" type="Spidy">
+                            <param id="0" name="Object">TelaFin</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="213557037026245" type="TelaFin">
+                            <param id="0" name="Animation">&quot;Move&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
             </sub-events>
         </event-group>
         <event-group description="" sid="666426520046424" title="Particles">
@@ -570,6 +583,35 @@
                         <action behavior="CustomMovement" id="2" name="Set speed" sid="897513447195772" type="Leave">
                             <param id="0" name="Which">1</param>
                             <param id="1" name="Speed">-80</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="645692069230703">
+                    <conditions>
+                        <condition id="-6" name="Every X seconds" sid="880358184615015" type="System">
+                            <param id="0" name="Interval (seconds)">1.0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Create object" sid="825637188996172" type="System">
+                            <param id="0" name="Object to create">ParticulaTela</param>
+                            <param id="1" name="Layer">&quot;Particles&quot;</param>
+                            <param id="2" name="X">TelaFin.X - round(random(0,70))</param>
+                            <param id="3" name="Y">TelaFin.Y - round(random(0,50))</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="259630027537570" type="ParticulaTela">
+                            <param id="0" name="Scale">0.2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="682035931804521">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="468659368448566" type="ParticulaTela" />
+                    </conditions>
+                    <actions>
+                        <action behavior="CustomMovement" id="2" name="Set speed" sid="312960260400286" type="ParticulaTela">
+                            <param id="0" name="Which">2</param>
+                            <param id="1" name="Speed">-40</param>
                         </action>
                     </actions>
                 </event-block>
