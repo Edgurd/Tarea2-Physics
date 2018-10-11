@@ -599,6 +599,10 @@
                             <param id="0" name="Object">Red</param>
                             <param id="1" name="State">0</param>
                         </action>
+                        <action behavior="Physics" id="23" name="Enable/disable collisions" sid="253473794339973" type="Spidy">
+                            <param id="0" name="Object">Red2</param>
+                            <param id="1" name="State">0</param>
+                        </action>
                         <action behavior="Physics" id="12" name="Set world gravity" sid="437607628982949" type="Spidy">
                             <param id="0" name="Gravity">10</param>
                         </action>
@@ -695,6 +699,33 @@
                         </action>
                         <action behavior="Fade" id="4" name="Set fade-out time" sid="811859438392305" type="Black">
                             <param id="0" name="Fade-out time">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="621882172607781">
+                    <conditions>
+                        <condition id="7" name="Cursor is over object" sid="998589163585301" type="Mouse">
+                            <param id="0" name="Object">Red2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="911864104337298" type="System">
+                            <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                            <param id="1" name="Comparison">2</param>
+                            <param id="2" name="Second value">Spidy.Rango</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="970667236075980" type="Red2">
+                            <param id="0" name="Scale">1.1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="377062106773927">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="825976818639536" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="9" name="Set scale" sid="380444907380116" type="Red2">
+                            <param id="0" name="Scale">1</param>
                         </action>
                     </actions>
                 </event-block>
