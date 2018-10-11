@@ -716,11 +716,11 @@
                         <x>1484</x>
                         <y>87</y>
                         <z>0</z>
-                        <width>38</width>
-                        <height>41</height>
+                        <width>34</width>
+                        <height>43</height>
                         <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.51219511</hotspotY>
+                        <hotspotX>0.14705883</hotspotX>
+                        <hotspotY>0.046511628</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>
