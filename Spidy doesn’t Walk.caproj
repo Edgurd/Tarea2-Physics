@@ -18,6 +18,7 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="gamepad" version="1">Gamepad</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="DragnDrop" version="1">Drag &amp; Drop</behavior>
@@ -112,6 +113,9 @@
             </object-type>
             <object-type global="1" name="LevelState" sid="738026620599247">
                 <plugin id="Arr" />
+            </object-type>
+            <object-type name="Gp" sid="711514801695605">
+                <plugin id="gamepad" />
             </object-type>
         </object-folder>
         <object-folder name="Particles">
@@ -1679,6 +1683,23 @@
                 </behavior-type>
             </behaviors>
         </family>
+        <family name="Ground" plugin-id="Sprite" sid="235333834750533">
+            <members>
+                <member>Escenario1</member>
+                <member>Escenario2</member>
+                <member>Escenario3</member>
+                <member>Escenario4</member>
+                <member>Escenario5</member>
+                <member>Escenario6</member>
+                <member>Escenario7</member>
+                <member>Stick</member>
+                <member>Stick_1</member>
+                <member>Stick_2</member>
+                <member>Stick_3</member>
+                <member>Stick_4</member>
+                <member>Stick_5</member>
+            </members>
+        </family>
     </families>
     <layout-folder>
         <layout-folder name="Etapas">
@@ -1719,6 +1740,11 @@
                 <reference-distance>600</reference-distance>
                 <maximum-distance>10000</maximum-distance>
                 <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
+        <global-instance type="Gp" uid="490">
+            <properties>
+                <analog-deadzone>40</analog-deadzone>
             </properties>
         </global-instance>
     </global-instances>

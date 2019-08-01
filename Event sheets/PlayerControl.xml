@@ -4,6 +4,10 @@
     <name>PlayerControl</name>
     <events>
         <variable constant="0" name="Variable1" sid="605162602972646" static="0" type="number">0</variable>
+        <variable constant="1" name="DEAD_ZONE" sid="629254949769600" static="0" type="number">0.5</variable>
+        <variable constant="0" name="uidPicked" sid="930230494680272" static="0" type="number">0</variable>
+        <variable constant="0" name="actDist" sid="828808650813035" static="0" type="number">0</variable>
+        <variable constant="0" name="hasFound" sid="449888293330855" static="0" type="number">0</variable>
         <event-block sid="337395651322117">
             <conditions />
             <actions>
@@ -42,7 +46,139 @@
                     </conditions>
                     <actions />
                     <sub-events>
-                        <event-block sid="418332287265847">
+                        <event-block any="1" sid="138501941251582">
+                            <conditions>
+                                <condition disabled="1" id="5" name="Compare axis" sid="489582882672714" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">3</param>
+                                    <param id="2" name="Comparison">2</param>
+                                    <param id="3" name="Value">0 - DEAD_ZONE</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="555927549404256" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="274222432818486">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="120861568153585" type="Spidy">
+                                            <param id="0" name="Object">Ground</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="615142362956807" type="Spidy">
+                                            <param id="0" name="Object">SpidyTela</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="694697400226471" type="Red2">
+                                            <param id="0" name="Unique ID">uidPicked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="196367106155414">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="168618734897341" type="System">
+                                                    <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">Spidy.Rango</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-23" name="Move at angle" sid="371498189401269" type="Spidy">
+                                                    <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                    <param id="1" name="Distance">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="129355767002359">
+                            <conditions>
+                                <condition disabled="1" id="5" name="Compare axis" sid="591330982138251" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Axis">3</param>
+                                    <param id="2" name="Comparison">4</param>
+                                    <param id="3" name="Value">0 - DEAD_ZONE</param>
+                                </condition>
+                                <condition id="3" name="Is button down" sid="657332884689366" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="141828093317265">
+                                    <conditions>
+                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="993278014162858" type="Spidy">
+                                            <param id="0" name="Object">Ground</param>
+                                            <param id="1" name="Offset X">0</param>
+                                            <param id="2" name="Offset Y">3</param>
+                                        </condition>
+                                        <condition id="1" name="Is overlapping another object" sid="664141273664753" type="Spidy">
+                                            <param id="0" name="Object">SpidyTela</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="479587118355458" type="Red2">
+                                            <param id="0" name="Unique ID">uidPicked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="688546842914327">
+                                            <conditions>
+                                                <condition id="-8" name="Compare two values" sid="910665057692991" type="System">
+                                                    <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                    <param id="1" name="Comparison">2</param>
+                                                    <param id="2" name="Second value">Spidy.Rango</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-23" name="Move at angle" sid="618316507510201" type="Spidy">
+                                                    <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                    <param id="1" name="Distance">-1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="699196785365985">
+                            <conditions>
+                                <condition id="7" name="On button released" sid="251216559175507" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">6</param>
+                                </condition>
+                                <condition id="7" name="On button released" sid="707055095456879" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">4</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="119929285502974">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="920849832720692" type="Red2">
+                                            <param id="0" name="Unique ID">uidPicked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action behavior="Physics" id="26" name="Remove all joints" sid="241034696983377" type="Spidy" />
+                                        <action behavior="Physics" id="10" name="Create distance joint" sid="731500658052665" type="Spidy">
+                                            <param id="0" name="This image point">0</param>
+                                            <param id="1" name="Object">Red2</param>
+                                            <param id="2" name="That image point">0</param>
+                                            <param id="3" name="Damping ratio">0.5</param>
+                                            <param id="4" name="Spring frequency">100</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block disabled="1" sid="418332287265847">
                             <conditions>
                                 <condition behavior="DragDrop" id="0" name="Is dragging" sid="400530253453761" type="Red" />
                                 <condition id="2" name="Mouse button is down" sid="426568937241818" type="Mouse">
@@ -70,13 +206,13 @@
                                 </action>
                             </actions>
                             <sub-events>
-                                <event-block sid="949559180605589">
+                                <event-block disabled="1" sid="949559180605589">
                                     <conditions>
                                         <condition id="-4" name="Trigger once while true" sid="240167049325448" type="System" />
                                     </conditions>
                                     <actions />
                                     <sub-events>
-                                        <event-block sid="737841477867722">
+                                        <event-block disabled="1" sid="737841477867722">
                                             <conditions>
                                                 <condition id="-14" name="Pick by unique ID" sid="160291357550315" type="Red2">
                                                     <param id="0" name="Unique ID">Red.linkedUID</param>
@@ -84,7 +220,7 @@
                                             </conditions>
                                             <actions />
                                             <sub-events>
-                                                <event-block sid="982629911398926">
+                                                <event-block disabled="1" sid="982629911398926">
                                                     <conditions>
                                                         <condition id="-8" name="Compare two values" sid="649579452218408" type="System">
                                                             <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
@@ -108,19 +244,152 @@
                                 </event-block>
                             </sub-events>
                         </event-block>
-                        <event-block sid="345419281243227">
+                        <event-block disabled="1" sid="539471049558040">
                             <conditions>
-                                <condition behavior="DragDrop" id="2" name="On drop" sid="945334989965206" type="Red" />
+                                <condition behavior="DragDrop" id="2" name="On drop" sid="573379621914508" type="Red" />
                             </conditions>
                             <actions>
-                                <action id="-3" name="Set position" sid="149260255855475" type="Red">
+                                <action id="-3" name="Set position" sid="321736976631011" type="Red">
                                     <param id="0" name="X">Red.coordsX</param>
                                     <param id="1" name="Y">Red.coordsY</param>
                                 </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="355720966738961" type="Red">
+                                <action behavior="Pin" id="0" name="Pin to object" sid="307489104012803" type="Red">
                                     <param id="0" name="Pin to">Red2</param>
                                     <param id="1" name="Mode">0</param>
                                 </action>
+                                <action behavior="Physics" id="26" name="Remove all joints" sid="230034281070922" type="Spidy" />
+                                <action id="-7" name="Set size" sid="197449132239473" type="SpidyTela">
+                                    <param id="0" name="Width">10</param>
+                                    <param id="1" name="Height">10</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="675622161020272" type="SpidyTela">
+                                    <param id="0" name="X">-30</param>
+                                    <param id="1" name="Y">-30</param>
+                                </action>
+                                <action id="-3" name="Set position" sid="130928860435257" type="RedTela">
+                                    <param id="0" name="X">-30</param>
+                                    <param id="1" name="Y">-30</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="657847400696390">
+                            <conditions>
+                                <condition id="3" name="Is button down" sid="902372263032097" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">7</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="610036515201535">
+                                    <conditions>
+                                        <condition id="-4" name="Trigger once while true" sid="597429331596067" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Set value" sid="114071427751812" type="System">
+                                            <param id="0" name="Variable">actDist</param>
+                                            <param id="1" name="Value">Spidy.Rango</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="626218854090889" type="System">
+                                            <param id="0" name="Variable">hasFound</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                    </actions>
+                                    <sub-events>
+                                        <event-block sid="624838021610063">
+                                            <conditions>
+                                                <condition id="-11" name="For Each" sid="560816665158554" type="System">
+                                                    <param id="0" name="Object">Red2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="460707335451661">
+                                                    <conditions>
+                                                        <condition id="-8" name="Compare two values" sid="613771252417779" type="System">
+                                                            <param id="0" name="First value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                            <param id="1" name="Comparison">2</param>
+                                                            <param id="2" name="Second value">actDist</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="-9" name="Set value" sid="573807206940173" type="System">
+                                                            <param id="0" name="Variable">actDist</param>
+                                                            <param id="1" name="Value">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="420609073958671" type="System">
+                                                            <param id="0" name="Variable">uidPicked</param>
+                                                            <param id="1" name="Value">Red2.UID</param>
+                                                        </action>
+                                                        <action id="-9" name="Set value" sid="313149715990729" type="System">
+                                                            <param id="0" name="Variable">hasFound</param>
+                                                            <param id="1" name="Value">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                        <event-block sid="380101310201841">
+                                            <conditions>
+                                                <condition id="-14" name="Compare variable" sid="496648435478241" type="System">
+                                                    <param id="0" name="Variable">hasFound</param>
+                                                    <param id="1" name="Comparison">0</param>
+                                                    <param id="2" name="Value">1</param>
+                                                </condition>
+                                                <condition id="-14" name="Pick by unique ID" sid="382139613548339" type="Red2">
+                                                    <param id="0" name="Unique ID">uidPicked</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="10" name="Create distance joint" sid="879349754941842" type="Spidy">
+                                                    <param id="0" name="This image point">0</param>
+                                                    <param id="1" name="Object">Red2</param>
+                                                    <param id="2" name="That image point">0</param>
+                                                    <param id="3" name="Damping ratio">0.5</param>
+                                                    <param id="4" name="Spring frequency">100</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="831768566196228">
+                                    <conditions>
+                                        <condition id="-14" name="Compare variable" sid="369181675403790" type="System">
+                                            <param id="0" name="Variable">hasFound</param>
+                                            <param id="1" name="Comparison">0</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                        <condition id="-14" name="Pick by unique ID" sid="476812004559169" type="Red2">
+                                            <param id="0" name="Unique ID">uidPicked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-4" name="Set position to another object" sid="803285226268011" type="RedTela">
+                                            <param id="0" name="Object">Red2</param>
+                                            <param id="1" name="Image point (optional)">0</param>
+                                        </action>
+                                        <action id="-3" name="Set position" sid="842290095882759" type="SpidyTela">
+                                            <param id="0" name="X">Red2.X</param>
+                                            <param id="1" name="Y">Red2.Y</param>
+                                        </action>
+                                        <action id="-24" name="Move to top" sid="341112763601394" type="SpidyTela" />
+                                        <action id="-24" name="Move to top" sid="586302281425958" type="RedTela" />
+                                        <action id="-7" name="Set size" sid="449719070610157" type="SpidyTela">
+                                            <param id="0" name="Width">96</param>
+                                            <param id="1" name="Height">distance(Spidy.X,Spidy.Y,Red2.X,Red2.Y)</param>
+                                        </action>
+                                        <action id="-8" name="Set angle" sid="562690436560601" type="SpidyTela">
+                                            <param id="0" name="Angle">angle(Spidy.X,Spidy.Y,Red2.X,Red2.Y) +90</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="345419281243227">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="750720573852676" type="System" />
+                            </conditions>
+                            <actions>
                                 <action behavior="Physics" id="26" name="Remove all joints" sid="731190710834016" type="Spidy" />
                                 <action id="-7" name="Set size" sid="669991807996338" type="SpidyTela">
                                     <param id="0" name="Width">10</param>
@@ -138,137 +407,111 @@
                         </event-block>
                         <event-group description="" sid="693911317379259" title="Controls">
                             <sub-events>
-                                <event-block sid="828319487182320">
+                                <event-block any="1" sid="828319487182320">
                                     <conditions>
                                         <condition id="2" name="Key is down" sid="165802466544379" type="Keyboard">
                                             <param id="0" name="Key">68</param>
                                         </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="775301483986452" type="Spidy">
-                                            <param id="0" name="Object">palitos</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
-                                        </condition>
-                                        <condition id="1" name="Is overlapping another object" sid="872294838470806" type="Spidy">
-                                            <param id="0" name="Object">SpidyTela</param>
-                                        </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="815499759718909" type="Spidy">
-                                            <param id="0" name="Object">SolidEscenario</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
+                                        <condition id="5" name="Compare axis" sid="264671491892358" type="Gp">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">4</param>
+                                            <param id="3" name="Value">0 + DEAD_ZONE</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="0" name="Apply force" sid="156809573051861" type="Spidy">
-                                            <param id="0" name="Force X">Self.velocidad</param>
-                                            <param id="1" name="Force Y">0</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="258576650310257">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="872294838470806" type="Spidy">
+                                                    <param id="0" name="Object">SpidyTela</param>
+                                                </condition>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="678787600241553" type="Spidy">
+                                                    <param id="0" name="Object">Ground</param>
+                                                    <param id="1" name="Offset X">0</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="0" name="Apply force" sid="156809573051861" type="Spidy">
+                                                    <param id="0" name="Force X">Self.velocidad * (abs(Gp.Axis(0,0))/100)</param>
+                                                    <param id="1" name="Force Y">0</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="897737226720052">
+                                <event-block any="1" sid="897737226720052">
                                     <conditions>
                                         <condition id="2" name="Key is down" sid="497816011394493" type="Keyboard">
                                             <param id="0" name="Key">65</param>
                                         </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="349052053366713" type="Spidy">
-                                            <param id="0" name="Object">palitos</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
-                                        </condition>
-                                        <condition id="1" name="Is overlapping another object" sid="953489829923984" type="Spidy">
-                                            <param id="0" name="Object">SpidyTela</param>
-                                        </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="914414461465291" type="Spidy">
-                                            <param id="0" name="Object">SolidEscenario</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
+                                        <condition id="5" name="Compare axis" sid="269860644461769" type="Gp">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Axis">0</param>
+                                            <param id="2" name="Comparison">2</param>
+                                            <param id="3" name="Value">0 - DEAD_ZONE</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="0" name="Apply force" sid="258980346062176" type="Spidy">
-                                            <param id="0" name="Force X">-Self.velocidad</param>
-                                            <param id="1" name="Force Y">0</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="497309636544031">
+                                            <conditions>
+                                                <condition id="9" inverted="1" name="Is overlapping at offset" sid="349052053366713" type="Spidy">
+                                                    <param id="0" name="Object">Ground</param>
+                                                    <param id="1" name="Offset X">0</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                                <condition id="1" name="Is overlapping another object" sid="953489829923984" type="Spidy">
+                                                    <param id="0" name="Object">SpidyTela</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action behavior="Physics" id="0" name="Apply force" sid="258980346062176" type="Spidy">
+                                                    <param id="0" name="Force X">-Self.velocidad * (abs(Gp.Axis(0,0))/100)</param>
+                                                    <param id="1" name="Force Y">0</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
-                                <event-block sid="186791352353667">
-                                    <conditions>
-                                        <condition id="2" name="Key is down" sid="304251402321229" type="Keyboard">
-                                            <param id="0" name="Key">87</param>
-                                        </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="742573125561239" type="Spidy">
-                                            <param id="0" name="Object">palitos</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
-                                        </condition>
-                                        <condition id="1" name="Is overlapping another object" sid="545602208958195" type="Spidy">
-                                            <param id="0" name="Object">SpidyTela</param>
-                                        </condition>
-                                        <condition id="9" inverted="1" name="Is overlapping at offset" sid="791064070982407" type="Spidy">
-                                            <param id="0" name="Object">SolidEscenario</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action behavior="Physics" id="4" name="Apply impulse towards position" sid="804086963867352" type="Spidy">
-                                            <param id="0" name="Impulse">100</param>
-                                            <param id="1" name="X">RedTela.X</param>
-                                            <param id="2" name="Y">RedTela.Y</param>
-                                            <param id="3" name="Image point">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="211436859410089">
+                                <event-block any="1" sid="211436859410089">
                                     <conditions>
                                         <condition id="0" name="On key pressed" sid="732968058978196" type="Keyboard">
                                             <param id="0" name="Key">87</param>
                                         </condition>
-                                        <condition id="9" name="Is overlapping at offset" sid="939815346729116" type="Spidy">
-                                            <param id="0" name="Object">palitos</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
+                                        <condition id="6" name="On button pressed" sid="961982034300061" type="Gp">
+                                            <param id="0" name="Gamepad">0</param>
+                                            <param id="1" name="Button">0</param>
                                         </condition>
                                     </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="970339059844421" type="Audio">
-                                            <param id="0" name="Audio file">jump</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
-                                        </action>
-                                        <action behavior="Physics" id="3" name="Apply impulse" sid="573841171979959" type="Spidy">
-                                            <param id="0" name="Impulse X">0</param>
-                                            <param id="1" name="Impulse Y">-Spidy.salto</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                                <event-block sid="878204053417015">
-                                    <conditions>
-                                        <condition id="0" name="On key pressed" sid="243197742551668" type="Keyboard">
-                                            <param id="0" name="Key">87</param>
-                                        </condition>
-                                        <condition id="9" name="Is overlapping at offset" sid="828899111081876" type="Spidy">
-                                            <param id="0" name="Object">SolidEscenario</param>
-                                            <param id="1" name="Offset X">0</param>
-                                            <param id="2" name="Offset Y">3</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="0" name="Play" sid="715119920283389" type="Audio">
-                                            <param id="0" name="Audio file">jump</param>
-                                            <param id="2" name="Loop">0</param>
-                                            <param id="3" name="Volume">0</param>
-                                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
-                                        </action>
-                                        <action behavior="Physics" id="3" name="Apply impulse" sid="110022683383093" type="Spidy">
-                                            <param id="0" name="Impulse X">0</param>
-                                            <param id="1" name="Impulse Y">-Spidy.salto</param>
-                                            <param id="2" name="Image point">0</param>
-                                        </action>
-                                    </actions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="438759400731103">
+                                            <conditions>
+                                                <condition id="9" name="Is overlapping at offset" sid="188237856384823" type="Spidy">
+                                                    <param id="0" name="Object">Ground</param>
+                                                    <param id="1" name="Offset X">0</param>
+                                                    <param id="2" name="Offset Y">3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Play" sid="970339059844421" type="Audio">
+                                                    <param id="0" name="Audio file">jump</param>
+                                                    <param id="2" name="Loop">0</param>
+                                                    <param id="3" name="Volume">0</param>
+                                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                                </action>
+                                                <action behavior="Physics" id="3" name="Apply impulse" sid="573841171979959" type="Spidy">
+                                                    <param id="0" name="Impulse X">0</param>
+                                                    <param id="1" name="Impulse Y">-Spidy.salto</param>
+                                                    <param id="2" name="Image point">0</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
                                 </event-block>
                             </sub-events>
                         </event-group>

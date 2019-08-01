@@ -302,7 +302,7 @@
                         <collisions>Enabled</collisions>
                     </properties>
                     <instance-variables>
-                        <velocidad>10</velocidad>
+                        <velocidad>7</velocidad>
                         <salto>5</salto>
                         <FlyUp>0</FlyUp>
                         <Control>true</Control>
