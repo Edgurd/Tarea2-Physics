@@ -1,0 +1,270 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Game</name>
+    <events>
+        <event-group description="" sid="602610456374811" title="Sapo">
+            <sub-events>
+                <event-block sid="792711398125402">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="725466676144453" type="Sapo" />
+                    </conditions>
+                    <actions>
+                        <action id="-3" name="Set position" sid="460764773948737" type="LenguaSapo">
+                            <param id="0" name="X">Sapo.X</param>
+                            <param id="1" name="Y">Sapo.y</param>
+                        </action>
+                        <action id="-25" name="Move to bottom" sid="540481355285647" type="LenguaSapo" />
+                        <action id="-22" name="Set angle toward position" sid="242216473075683" type="Sapo">
+                            <param id="0" name="X">int(tokenat((Self.Target),0,&quot;|&quot;))</param>
+                            <param id="1" name="Y">int(tokenat((Self.Target),1,&quot;|&quot;))</param>
+                        </action>
+                        <action id="-22" name="Set angle toward position" sid="510302400567621" type="LenguaSapo">
+                            <param id="0" name="X">int(tokenat((Sapo.Target),0,&quot;|&quot;))</param>
+                            <param id="1" name="Y">int(tokenat((Sapo.Target),1,&quot;|&quot;))</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="707933319985113" type="Sapo">
+                            <param id="0" name="Angle">Self.Angle + 90</param>
+                        </action>
+                        <action id="-8" name="Set angle" sid="935278343571999" type="LenguaSapo">
+                            <param id="0" name="Angle">Self.Angle + 90</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="390371832847075">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="390901783519304" type="Sapo">
+                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="427459901684477" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="462509942988862">
+                    <conditions>
+                        <condition behavior="Timer" id="0" name="On timer" sid="916963388308434" type="Sapo">
+                            <param id="0" name="Tag">&quot;ComeTongue&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Set value" sid="537073638758039" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="579959592905090">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="468736549035837" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="547709408960540">
+                            <conditions>
+                                <condition id="-6" name="Compare height" sid="563201520666520" type="LenguaSapo">
+                                    <param id="0" name="Comparison">2</param>
+                                    <param id="1" name="Height">Sapo.LargoLengua</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-6" name="Set height" sid="542645749256152" type="LenguaSapo">
+                                    <param id="0" name="Height">LenguaSapo.Height+ Self.Speed</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="540426421507931">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="666629460297945" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="223707132065607" type="LenguaSapo">
+                                    <param id="0" name="Instance variable">EstadoLengua</param>
+                                    <param id="1" name="Value">2</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="144082578052624">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="775476434875717" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="813265080367427" type="Audio">
+                                    <param id="0" name="Audio file">Bubble</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">-10</param>
+                                    <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="986638887242001">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="228554450582302" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-4" name="Trigger once while true" sid="805264240330346" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="0" name="Start timer" sid="459821876813986" type="Sapo">
+                            <param id="0" name="Duration">5</param>
+                            <param id="1" name="Type">0</param>
+                            <param id="2" name="Tag">&quot;GoTongue&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="242890936587018">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="993674564706473" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-6" name="Set height" sid="476939481581886" type="LenguaSapo">
+                            <param id="0" name="Height">LenguaSapo.Height - Self.Speed</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="357734178620757">
+                            <conditions>
+                                <condition id="-6" name="Compare height" sid="247546669111206" type="LenguaSapo">
+                                    <param id="0" name="Comparison">3</param>
+                                    <param id="1" name="Height">20</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-10" name="Set value" sid="264981253750958" type="LenguaSapo">
+                                    <param id="0" name="Instance variable">EstadoLengua</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="920551267244294">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="450744146224050" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="613099825942556">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="994360584119262" type="LenguaSapo">
+                            <param id="0" name="Object">Spidy</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Timer" id="1" name="Stop timer" sid="401777730253495" type="Sapo">
+                            <param id="0" name="Tag">&quot;GoTongue&quot;</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="792599410661325" type="Sapo">
+                            <param id="0" name="Animation">&quot;Fat&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="222452004454171" type="LenguaSapo">
+                            <param id="0" name="Instance variable">EstadoLengua</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="0" name="Call function" sid="158517048561720" type="Function">
+                            <param id="0" name="Name">&quot;death&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="816022903005290" title="Helicopter">
+            <sub-events>
+                <event-block sid="547255192470396">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="268272339017067" type="helicopter" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="913020944711595" type="helicopter">
+                            <param id="0" name="Object">HelicopterRamita</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="232329142128112" type="helicopter">
+                            <param id="0" name="Object">Red</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">2</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="912870248728798" type="Red">
+                            <param id="0" name="Scale">0.8</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="221542562497359" type="Red2">
+                            <param id="0" name="Pin to">helicopter</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="550359499413492" type="HelicopterRamita">
+                            <param id="0" name="Pin to">helicopter</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="279490972327937">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="352821686763521" type="helicopter" />
+                        <condition id="-4" name="Trigger once while true" sid="587154098329306" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Play" sid="346078459355353" type="Audio">
+                            <param id="0" name="Audio file">Wind</param>
+                            <param id="2" name="Loop">1</param>
+                            <param id="3" name="Volume">-10</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="988984035891268" title="Zarsamora">
+            <sub-events>
+                <event-block sid="260398287303629">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="525109033508752" type="Spidy">
+                            <param id="0" name="Object">Zarsa</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="600536929583220" type="Function">
+                            <param id="0" name="Name">&quot;death&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="259816307939745">
+                    <conditions>
+                        <condition id="-2" name="Compare Y" sid="181548432222348" type="Spidy">
+                            <param id="0" name="Comparison">5</param>
+                            <param id="1" name="Y co-ordinate">1100</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Call function" sid="925498016993738" type="Function">
+                            <param id="0" name="Name">&quot;death&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

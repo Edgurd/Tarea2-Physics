@@ -2,7 +2,7 @@
 <c2layout>
     <name>Etapa 9</name>
     <sid>275719674827091</sid>
-    <event-sheet>Nivel</event-sheet>
+    <event-sheet>Main</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -1071,7 +1071,7 @@
                 </instance>
                 <instance type="Red" uid="412">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -1079,6 +1079,7 @@
                     <instance-variables>
                         <coordsX>0</coordsX>
                         <coordsY>0</coordsY>
+                        <linkedUID>0</linkedUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

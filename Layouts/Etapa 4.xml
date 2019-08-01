@@ -2,7 +2,7 @@
 <c2layout>
     <name>Etapa 4</name>
     <sid>228104971228457</sid>
-    <event-sheet>Nivel</event-sheet>
+    <event-sheet>Main</event-sheet>
     <size>
         <width>1280</width>
         <height>720</height>
@@ -343,7 +343,7 @@
                 </instance>
                 <instance type="Red" uid="192">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -351,6 +351,7 @@
                     <instance-variables>
                         <coordsX>0</coordsX>
                         <coordsY>0</coordsY>
+                        <linkedUID>0</linkedUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">
@@ -921,7 +922,7 @@
                 </instance>
                 <instance type="Red" uid="203">
                     <properties>
-                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-visibility>Visible</initial-visibility>
                         <initial-animation>Default</initial-animation>
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
@@ -929,6 +930,7 @@
                     <instance-variables>
                         <coordsX>0</coordsX>
                         <coordsY>0</coordsY>
+                        <linkedUID>0</linkedUID>
                     </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Physics">

@@ -8,7 +8,7 @@
     <author-website>http://</author-website>
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>23zd3hdo5fxgo</unique-id>
-    <saved-with-version>26200</saved-with-version>
+    <saved-with-version>26900</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Arr" version="1">Array</plugin>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
@@ -633,6 +633,7 @@
                 <instance-variables>
                     <instance-variable name="coordsX" sid="932692032698151" type="number" />
                     <instance-variable name="coordsY" sid="329949934550425" type="number" />
+                    <instance-variable name="linkedUID" sid="865737666542096" type="number" />
                 </instance-variables>
                 <behaviors>
                     <behavior-type name="Physics" sid="540820162311827">
@@ -1696,8 +1697,11 @@
         <layout>Assets_Layout.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Nivel.xml</event-sheet>
+        <event-sheet>Main.xml</event-sheet>
         <event-sheet>Inicio.xml</event-sheet>
+        <event-sheet>PlayerControl.xml</event-sheet>
+        <event-sheet>Functions.xml</event-sheet>
+        <event-sheet>Game.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="3" />
