@@ -999,6 +999,77 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="StarMenu2" sid="257986783144158">
+                    <plugin id="Sprite" />
+                    <instance-variables>
+                        <instance-variable name="id" sid="622180903865725" type="number" />
+                    </instance-variables>
+                    <behaviors>
+                        <behavior-type name="Pin" sid="571428126388563">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="124346953148582" speed="0">
+                            <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Estrella vacia.png">
+                                <collision-poly>
+                                    <point x="0.206452" y="0.235294" />
+                                    <point x="0.496774" y="0.0220588" />
+                                    <point x="0.787097" y="0.242647" />
+                                    <point x="0.941935" y="0.5" />
+                                    <point x="0.870968" y="0.852941" />
+                                    <point x="0.496774" y="0.838235" />
+                                    <point x="0.116129" y="0.867647" />
+                                    <point x="0.109677" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\liang\Documents\GitHub\Tarea2-Physics\Assets\HUD\Estrella.png">
+                                <collision-poly>
+                                    <point x="0.206452" y="0.235294" />
+                                    <point x="0.496774" y="0.0220588" />
+                                    <point x="0.787097" y="0.242647" />
+                                    <point x="0.941935" y="0.5" />
+                                    <point x="0.870968" y="0.852941" />
+                                    <point x="0.496774" y="0.838235" />
+                                    <point x="0.116129" y="0.867647" />
+                                    <point x="0.109677" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MarcoTimerMenuy2" sid="771948114054427">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="846030225562277">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="165625640619292" speed="5">
+                            <frame duration="1" hotspotX="0.502762" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\MarcoTiempo2.png">
+                                <collision-poly>
+                                    <point x="0.0607735" y="0.211538" />
+                                    <point x="0.497238" y="0.0384615" />
+                                    <point x="0.939227" y="0.211538" />
+                                    <point x="0.983425" y="0.5" />
+                                    <point x="0.950276" y="0.826923" />
+                                    <point x="0.497238" y="0.942308" />
+                                    <point x="0.0773481" y="0.730769" />
+                                    <point x="0.0220994" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="TiempoFinal" sid="644260190978066">
+                    <plugin id="Text" />
+                    <behaviors>
+                        <behavior-type name="Pin" sid="625718936345249">
+                            <behavior id="Pin" />
+                        </behavior-type>
+                    </behaviors>
+                </object-type>
             </object-folder>
             <object-folder name="InGame">
                 <object-type name="Pausa" sid="245365385305144">
@@ -1271,8 +1342,20 @@
                         </effect-type>
                     </effects>
                     <animation-folder>
-                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736457896500220" speed="5">
+                        <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736457896500220" speed="0">
                             <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Estrella vacia.png">
+                                <collision-poly>
+                                    <point x="0.206452" y="0.235294" />
+                                    <point x="0.496774" y="0.0220588" />
+                                    <point x="0.787097" y="0.242647" />
+                                    <point x="0.941935" y="0.5" />
+                                    <point x="0.870968" y="0.852941" />
+                                    <point x="0.496774" y="0.838235" />
+                                    <point x="0.116129" y="0.867647" />
+                                    <point x="0.109677" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="C:\Users\liang\Documents\GitHub\Tarea2-Physics\Assets\HUD\Estrella.png">
                                 <collision-poly>
                                     <point x="0.206452" y="0.235294" />
                                     <point x="0.496774" y="0.0220588" />
@@ -1445,6 +1528,14 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="TiempoMenu" sid="551771492772220">
+                <plugin id="Text" />
+                <behaviors>
+                    <behavior-type name="Fade" sid="600458921098735">
+                        <behavior id="Fade" />
+                    </behavior-type>
+                </behaviors>
             </object-type>
         </object-folder>
         <object-folder name="BG">
@@ -1749,7 +1840,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524832061541152" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\MainMenu.png" />
+                        <frame duration="1" hotspotX="0.501706" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\MainMenu.png" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -2056,8 +2147,22 @@
             <members>
                 <member>CantidadFly</member>
                 <member>CantidadMoscas</member>
+                <member>TiempoFinal</member>
+                <member>TiempoMenu</member>
                 <member>Timer</member>
             </members>
+        </family>
+        <family name="fade" plugin-id="Sprite" sid="397005331998292">
+            <members>
+                <member>MarcoTimerMenuy</member>
+                <member>MenuSeleccion</member>
+                <member>StarMenu</member>
+            </members>
+            <behaviors>
+                <behavior-type name="Fade" sid="692425081028520">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </family>
     </families>
     <layout-folder>

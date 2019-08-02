@@ -295,6 +295,53 @@
                             <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
                         </action>
+                        <action id="0" name="Spawn another object" sid="621050702253943" type="Spidy">
+                            <param id="0" name="Object">FXPelotita</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="9" name="Set scale" sid="232146904389134" type="FXPelotita">
+                            <param id="0" name="Scale">0.4</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="449942486539228" title="FX">
+            <sub-events>
+                <event-block sid="607280986162765">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="555674729164952" type="FXPelotita" />
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="881655645012210">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="885077586369504" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-23" name="Move at angle" sid="539030936382563" type="FXPelotita">
+                                    <param id="0" name="Angle">angle(Self.X,Self.Y,CantidadFly.X,CantidadFly.Y)</param>
+                                    <param id="1" name="Distance">30</param>
+                                </action>
+                                <action id="-8" name="Set angle" sid="405729005812850" type="FXPelotita">
+                                    <param id="0" name="Angle">angle(Self.X,Self.Y,CantidadFly.X,CantidadFly.Y) +90</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="378779415536867">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="522263502786651" type="FXPelotita">
+                            <param id="0" name="Object">CantidadFly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="817625625720735" type="System">
+                            <param id="0" name="Seconds">0.1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="418895197155349" type="FXPelotita" />
                     </actions>
                 </event-block>
             </sub-events>
