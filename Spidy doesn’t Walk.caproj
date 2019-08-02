@@ -1272,7 +1272,18 @@
                     </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736457896500220" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.506494" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Estrella vacia.png">
+                                <collision-poly>
+                                    <point x="0.206452" y="0.235294" />
+                                    <point x="0.496774" y="0.0220588" />
+                                    <point x="0.787097" y="0.242647" />
+                                    <point x="0.941935" y="0.5" />
+                                    <point x="0.870968" y="0.852941" />
+                                    <point x="0.496774" y="0.838235" />
+                                    <point x="0.116129" y="0.867647" />
+                                    <point x="0.109677" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1285,7 +1296,42 @@
                     </effects>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299155504205076" speed="5">
-                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                            <frame duration="1" hotspotX="0.502762" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\MarcoTiempo2.png">
+                                <collision-poly>
+                                    <point x="0.0607735" y="0.211538" />
+                                    <point x="0.497238" y="0.0384615" />
+                                    <point x="0.939227" y="0.211538" />
+                                    <point x="0.983425" y="0.5" />
+                                    <point x="0.950276" y="0.826923" />
+                                    <point x="0.497238" y="0.942308" />
+                                    <point x="0.0773481" y="0.730769" />
+                                    <point x="0.0220994" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="Star" sid="800763874438654">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Grayscale">
+                            <effect id="grayscale" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="445426784800789" speed="5">
+                            <frame duration="1" hotspotX="0.509677" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Estrella.png">
+                                <collision-poly>
+                                    <point x="0.206452" y="0.235294" />
+                                    <point x="0.496774" y="0.0220588" />
+                                    <point x="0.787097" y="0.242647" />
+                                    <point x="0.941935" y="0.5" />
+                                    <point x="0.870968" y="0.852941" />
+                                    <point x="0.496774" y="0.838235" />
+                                    <point x="0.116129" y="0.867647" />
+                                    <point x="0.109677" y="0.5" />
+                                </collision-poly>
+                            </frame>
                         </animation>
                     </animation-folder>
                 </object-type>
@@ -1386,7 +1432,17 @@
                 <plugin id="Sprite" />
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339239029680414" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.503356" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\LevelSelectmenu.png">
+                            <collision-poly>
+                                <point x="0.0140845" y="0.107383" />
+                                <point x="0.5" y="0.134228" />
+                                <point x="0.992958" y="0.0536913" />
+                                <point x="0.966549" y="0.744966" />
+                                <point x="0.5" y="0.946309" />
+                                <point x="0.0176056" y="0.865772" />
+                                <point x="0.00528169" y="0.496644" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1591,7 +1647,16 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585835541331700" speed="5">
-                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\recuadro.png">
+                            <collision-poly>
+                                <point x="0.0183968" y="0.0228758" />
+                                <point x="0.978975" y="0.0261438" />
+                                <point x="0.992116" y="0.5" />
+                                <point x="0.973719" y="0.96732" />
+                                <point x="0.499343" y="0.982026" />
+                                <point x="0.0249671" y="0.968954" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1606,7 +1671,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199899744964736" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.507246" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Continuar.png">
+                            <collision-poly>
+                                <point x="0.0460993" y="0.188406" />
+                                <point x="0.5" y="0.101449" />
+                                <point x="0.971631" y="0.115942" />
+                                <point x="0.957447" y="0.492754" />
+                                <point x="0.964539" y="0.855072" />
+                                <point x="0.5" y="0.391304" />
+                                <point x="0.0425532" y="0.826087" />
+                                <point x="0.0106383" y="0.492754" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1621,7 +1697,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593364001236355" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.501992" hotspotY="0.507937" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\Restart.png">
+                            <collision-poly>
+                                <point x="0.0358566" y="0.142857" />
+                                <point x="0.498008" y="0.0793651" />
+                                <point x="0.976096" y="0.0952381" />
+                                <point x="0.924303" y="0.492063" />
+                                <point x="0.924303" y="0.698413" />
+                                <point x="0.498008" y="0.857143" />
+                                <point x="0.0318725" y="0.873016" />
+                                <point x="0.0159363" y="0.492063" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1636,7 +1723,18 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852175613005371" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.501188" hotspotY="0.507937" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\LevelSelect.png">
+                            <collision-poly>
+                                <point x="0.0213777" y="0.142857" />
+                                <point x="0.498812" y="0.571429" />
+                                <point x="0.985748" y="0.0952381" />
+                                <point x="0.954869" y="0.492063" />
+                                <point x="0.954869" y="0.698413" />
+                                <point x="0.498812" y="0.793651" />
+                                <point x="0.0213777" y="0.857143" />
+                                <point x="0.00950119" y="0.492063" />
+                            </collision-poly>
+                        </frame>
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1651,7 +1749,7 @@
                 </container>
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524832061541152" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\HUD\MainMenu.png" />
                     </animation>
                 </animation-folder>
             </object-type>

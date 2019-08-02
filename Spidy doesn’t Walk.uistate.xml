@@ -10,8 +10,12 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Inicio_Layout</layout>
-        <layout active="1" order="1">Etapa 1</layout>
+        <layout active="1" order="0">Inicio_Layout</layout>
+        <layout order="1">Etapa 1</layout>
+        <layout order="2">Assets_Layout</layout>
+        <event-sheet order="3">Game</event-sheet>
+        <event-sheet order="4">Functions</event-sheet>
+        <event-sheet order="5">PlayerControl</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -36,7 +40,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </families-expanded>
     <folders-expanded>
         <folder expanded="1" path="object-folder/" />
-        <folder expanded="1" path="object-folder/Miscelaneos/" />
+        <folder expanded="0" path="object-folder/Miscelaneos/" />
         <folder expanded="1" path="object-folder/Miscelaneos/Selectors/" />
         <folder expanded="1" path="object-folder/Particles/" />
         <folder expanded="1" path="object-folder/Characters/" />
@@ -108,6 +112,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Etapa9/" />
         <folder expanded="1" path="animation-folder/StarMenu/" />
         <folder expanded="1" path="animation-folder/MarcoTimerMenuy/" />
+        <folder expanded="1" path="animation-folder/Star/" />
         <folder expanded="1" path="animation-folder/Logo/" />
         <folder expanded="1" path="animation-folder/play/" />
         <folder expanded="1" path="animation-folder/recuadro/" />
