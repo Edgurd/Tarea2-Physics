@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2uistate>
+    <!--This is a UI state file - its content describes the user interface settings when the project was last open.
+It is entirely optional and the project will load without it.  If you are placing the project under source control,
+you probably do not want to add any .uistate.xml files to the repository.-->
+    <configurations>
+        <active>
+            <configuration name="HTML5" />
+        </active>
+        <display name="HTML5" />
+    </configurations>
+    <open-tabs>
+        <layout order="0">Inicio_Layout</layout>
+        <layout active="1" order="1">Etapa 1</layout>
+    </open-tabs>
+    <properties>
+        <property expanded="1" name="About" />
+        <property expanded="1" name="Project settings" />
+        <property expanded="0" name="Window Size" />
+        <property expanded="1" name="Configuration Settings" />
+    </properties>
+    <families-expanded root="1">
+        <family expanded="0" name="Solid" />
+        <family expanded="0" name="FlySprite" />
+        <family expanded="0" name="LvlCompleteFade" />
+        <family expanded="0" name="Etapa" />
+        <family expanded="0" name="palitos" />
+        <family expanded="0" name="SolidEscenario" />
+        <family expanded="0" name="Zarsa" />
+        <family expanded="0" name="NoSave" />
+        <family expanded="0" name="Ground" />
+        <family expanded="0" name="Final" />
+        <family expanded="0" name="Pause" />
+        <family expanded="0" name="FX" />
+        <family expanded="0" name="TextToChange" />
+    </families-expanded>
+    <folders-expanded>
+        <folder expanded="1" path="object-folder/" />
+        <folder expanded="1" path="object-folder/Miscelaneos/" />
+        <folder expanded="1" path="object-folder/Miscelaneos/Selectors/" />
+        <folder expanded="1" path="object-folder/Particles/" />
+        <folder expanded="1" path="object-folder/Characters/" />
+        <folder expanded="1" path="object-folder/Escenario/" />
+        <folder expanded="1" path="object-folder/HUD/" />
+        <folder expanded="1" path="object-folder/HUD/Complete/" />
+        <folder expanded="1" path="object-folder/HUD/InGame/" />
+        <folder expanded="1" path="object-folder/Menu/" />
+        <folder expanded="1" path="object-folder/Menu/Etapa/" />
+        <folder expanded="1" path="object-folder/Menu/Cute/" />
+        <folder expanded="1" path="object-folder/BG/" />
+        <folder expanded="1" path="object-folder/EscenarioSolid/" />
+        <folder expanded="1" path="object-folder/Pause/" />
+        <folder expanded="1" path="object-folder/FX/" />
+        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="1" path="layout-folder/Etapas/" />
+        <folder expanded="1" path="event-folder/" />
+        <folder expanded="1" path="file-folder/" />
+        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="1" path="music-folder/" />
+        <folder expanded="1" path="file-folder/Icons/" />
+        <folder expanded="1" path="animation-folder/Black/" />
+        <folder expanded="1" path="animation-folder/Blur/" />
+        <folder expanded="1" path="animation-folder/ParticulaHorizontal/" />
+        <folder expanded="1" path="animation-folder/ParticulaVertical/" />
+        <folder expanded="1" path="animation-folder/Leave/" />
+        <folder expanded="1" path="animation-folder/ParticulaTela/" />
+        <folder expanded="1" path="animation-folder/Spidy/" />
+        <folder expanded="1" path="animation-folder/Fly/" />
+        <folder expanded="1" path="animation-folder/FlySpirte/" />
+        <folder expanded="1" path="animation-folder/Sapo/" />
+        <folder expanded="1" path="animation-folder/SpidyTela/" />
+        <folder expanded="1" path="animation-folder/LenguaSapo/" />
+        <folder expanded="1" path="animation-folder/SpidyLengua/" />
+        <folder expanded="1" path="animation-folder/helicopter/" />
+        <folder expanded="1" path="animation-folder/HelicopterRamita/" />
+        <folder expanded="1" path="animation-folder/Stick/" />
+        <folder expanded="1" path="animation-folder/TelaFin/" />
+        <folder expanded="1" path="animation-folder/Red/" />
+        <folder expanded="1" path="animation-folder/Stick_1/" />
+        <folder expanded="1" path="animation-folder/Stick_2/" />
+        <folder expanded="1" path="animation-folder/Stick_3/" />
+        <folder expanded="1" path="animation-folder/Stick_4/" />
+        <folder expanded="1" path="animation-folder/Stick_5/" />
+        <folder expanded="1" path="animation-folder/zarza_1/" />
+        <folder expanded="1" path="animation-folder/zarza_2/" />
+        <folder expanded="1" path="animation-folder/Red2/" />
+        <folder expanded="1" path="animation-folder/tutoriallevel1/" />
+        <folder expanded="1" path="animation-folder/LvlComplete/" />
+        <folder expanded="1" path="animation-folder/RetryLvl/" />
+        <folder expanded="1" path="animation-folder/BackToSelect/" />
+        <folder expanded="1" path="animation-folder/FlySpirteHUD/" />
+        <folder expanded="1" path="animation-folder/x/" />
+        <folder expanded="1" path="animation-folder/menu/" />
+        <folder expanded="1" path="animation-folder/aranahud/" />
+        <folder expanded="1" path="animation-folder/Pausa/" />
+        <folder expanded="1" path="animation-folder/Retry/" />
+        <folder expanded="1" path="animation-folder/FlySpirteHudNormal/" />
+        <folder expanded="1" path="animation-folder/xIngame/" />
+        <folder expanded="1" path="animation-folder/Mousesprite/" />
+        <folder expanded="1" path="animation-folder/Etapa1/" />
+        <folder expanded="1" path="animation-folder/Etapa2/" />
+        <folder expanded="1" path="animation-folder/Etapa3/" />
+        <folder expanded="1" path="animation-folder/Etapa4/" />
+        <folder expanded="1" path="animation-folder/Etapa5/" />
+        <folder expanded="1" path="animation-folder/Etapa6/" />
+        <folder expanded="1" path="animation-folder/Etapa7/" />
+        <folder expanded="1" path="animation-folder/Etapa8/" />
+        <folder expanded="1" path="animation-folder/Etapa9/" />
+        <folder expanded="1" path="animation-folder/StarMenu/" />
+        <folder expanded="1" path="animation-folder/MarcoTimerMenuy/" />
+        <folder expanded="1" path="animation-folder/Logo/" />
+        <folder expanded="1" path="animation-folder/play/" />
+        <folder expanded="1" path="animation-folder/recuadro/" />
+        <folder expanded="1" path="animation-folder/credits/" />
+        <folder expanded="1" path="animation-folder/MenuSeleccion/" />
+        <folder expanded="1" path="animation-folder/BG_1/" />
+        <folder expanded="1" path="animation-folder/Troncolimite_1/" />
+        <folder expanded="1" path="animation-folder/Troncolimite_2/" />
+        <folder expanded="1" path="animation-folder/Sprite/" />
+        <folder expanded="1" path="animation-folder/Escenario1/" />
+        <folder expanded="1" path="animation-folder/Escenario2/" />
+        <folder expanded="1" path="animation-folder/Escenario3/" />
+        <folder expanded="1" path="animation-folder/Escenario4/" />
+        <folder expanded="1" path="animation-folder/Escenario5/" />
+        <folder expanded="1" path="animation-folder/Escenario6/" />
+        <folder expanded="1" path="animation-folder/Escenario7/" />
+        <folder expanded="1" path="animation-folder/PauseBack/" />
+        <folder expanded="1" path="animation-folder/button1Continuar/" />
+        <folder expanded="1" path="animation-folder/button2Reiniciar/" />
+        <folder expanded="1" path="animation-folder/button3Selector/" />
+        <folder expanded="1" path="animation-folder/button4Menu/" />
+        <folder expanded="1" path="animation-folder/FXJump/" />
+        <folder expanded="1" path="animation-folder/FXEat/" />
+        <folder expanded="1" path="animation-folder/FXDie/" />
+        <folder expanded="1" path="animation-folder/FXPelotita/" />
+        <folder expanded="1" path="animation-folder/FXPelotitaFade/" />
+        <folder expanded="1" path="animation-folder/RedTela/" />
+        <folder expanded="1" path="animation-folder/Back/" />
+    </folders-expanded>
+</c2uistate>

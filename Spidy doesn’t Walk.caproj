@@ -1660,7 +1660,17 @@
             <object-type name="FXJump" sid="158781859255162">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216581510278962" speed="5">
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216581510278962" speed="18">
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo00.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo01.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo02.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo03.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo04.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo05.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo06.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo07.png" />
+                        <frame duration="1" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo08.png" />
+                        <frame duration="0.5" hotspotX="0.48125" hotspotY="0.636364" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\polvo\Polvo09.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1668,7 +1678,17 @@
             <object-type name="FXEat" sid="149275244172235">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463233441807195" speed="5">
+                    <animation framecount="11" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463233441807195" speed="24">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab00.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab05.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab06.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab07.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab08.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\pointgrab\Spidy-PointsGrab09.png" />
                         <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
@@ -1676,16 +1696,32 @@
             <object-type name="FXDie" sid="324149267783225">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952192076512458" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="12" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952192076512458" speed="20">
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir000.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir001.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir002.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir003.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir004.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir005.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir006.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir007.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir009.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Morir010.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\Morir\Spidy-morir008.png" />
+                        <frame duration="1" hotspotX="0.504505" hotspotY="0.504348" />
                     </animation>
                 </animation-folder>
             </object-type>
             <object-type name="FXPelotita" sid="568528282721299">
                 <plugin id="Sprite" />
                 <animation-folder>
-                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972609417206188" speed="5">
-                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <animation framecount="6" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972609417206188" speed="20">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points00.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points01.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points02.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points03.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points04.png" />
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.501901" original-source="D:\EdgardDeveloper\Construct\Tarea2-Physics\Assets\VFX\PointsGo\Spidy-Points05.png" />
                     </animation>
                 </animation-folder>
             </object-type>
