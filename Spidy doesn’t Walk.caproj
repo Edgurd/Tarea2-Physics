@@ -65,6 +65,17 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Miscelaneos">
+            <object-folder name="Selectors">
+                <object-type global="1" name="LevelSelector" sid="781079994414010">
+                    <plugin id="Arr" />
+                </object-type>
+                <object-type global="1" name="MenuSelector" sid="367986081903861">
+                    <plugin id="Arr" />
+                </object-type>
+                <object-type global="1" name="PauseSelector" sid="364287079768251">
+                    <plugin id="Arr" />
+                </object-type>
+            </object-folder>
             <object-type name="Mouse" sid="749265832125014">
                 <plugin id="Mouse" />
             </object-type>
@@ -283,6 +294,7 @@
                     <instance-variable name="velocidad" sid="622597533479418" type="number" />
                     <instance-variable name="salto" sid="474895795710937" type="number" />
                     <instance-variable name="FlyUp" sid="439808918915465" type="number" />
+                    <instance-variable name="MaxFly" sid="914036879092682" type="number" />
                     <instance-variable name="Control" sid="292221437071534" type="boolean" />
                     <instance-variable name="Rango" sid="183618341482512" type="number" />
                     <instance-variable name="Etapa" sid="652389476680849" type="number" />
@@ -1074,6 +1086,9 @@
                         </animation>
                     </animation-folder>
                 </object-type>
+                <object-type name="Timer" sid="320475670946079">
+                    <plugin id="Text" />
+                </object-type>
             </object-folder>
             <object-type name="Mousesprite" sid="918424142479879">
                 <plugin id="Sprite" />
@@ -1247,6 +1262,34 @@
                     </animation-folder>
                 </object-type>
             </object-folder>
+            <object-folder name="Cute">
+                <object-type name="StarMenu" sid="742004871738448">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Grayscale">
+                            <effect id="grayscale" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="736457896500220" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+                <object-type name="MarcoTimerMenuy" sid="726568683968644">
+                    <plugin id="Sprite" />
+                    <effects>
+                        <effect-type name="Grayscale">
+                            <effect id="grayscale" />
+                        </effect-type>
+                    </effects>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="299155504205076" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-type name="Logo" sid="226559685254475">
                 <plugin id="Sprite" />
                 <behaviors>
@@ -1336,6 +1379,14 @@
                 <animation-folder>
                     <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="328377107423494" speed="5">
                         <frame duration="1" hotspotX="0.500493" hotspotY="0.5" original-source="C:\Users\Edgard\Desktop\Assets\HUD\Credits.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="MenuSeleccion" sid="923335916078877">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="339239029680414" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     </animation>
                 </animation-folder>
             </object-type>
@@ -1528,6 +1579,125 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-folder name="Pause">
+            <object-type name="PauseBack" sid="158157651745009">
+                <plugin id="Sprite" />
+                <container>
+                    <type>PauseBack</type>
+                    <type>button1Continuar</type>
+                    <type>button2Reiniciar</type>
+                    <type>button3Selector</type>
+                    <type>button4Menu</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="585835541331700" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="button1Continuar" sid="587059506068420">
+                <plugin id="Sprite" />
+                <container>
+                    <type>PauseBack</type>
+                    <type>button1Continuar</type>
+                    <type>button2Reiniciar</type>
+                    <type>button3Selector</type>
+                    <type>button4Menu</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="199899744964736" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="button2Reiniciar" sid="403811282318547">
+                <plugin id="Sprite" />
+                <container>
+                    <type>PauseBack</type>
+                    <type>button1Continuar</type>
+                    <type>button2Reiniciar</type>
+                    <type>button3Selector</type>
+                    <type>button4Menu</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="593364001236355" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="button3Selector" sid="915104940725736">
+                <plugin id="Sprite" />
+                <container>
+                    <type>PauseBack</type>
+                    <type>button1Continuar</type>
+                    <type>button2Reiniciar</type>
+                    <type>button3Selector</type>
+                    <type>button4Menu</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="852175613005371" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="button4Menu" sid="966732143602915">
+                <plugin id="Sprite" />
+                <container>
+                    <type>PauseBack</type>
+                    <type>button1Continuar</type>
+                    <type>button2Reiniciar</type>
+                    <type>button3Selector</type>
+                    <type>button4Menu</type>
+                </container>
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="524832061541152" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
+        <object-folder name="FX">
+            <object-type name="FXJump" sid="158781859255162">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="216581510278962" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FXEat" sid="149275244172235">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="463233441807195" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FXDie" sid="324149267783225">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="952192076512458" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FXPelotita" sid="568528282721299">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="972609417206188" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="FXPelotitaFade" sid="718743995687160">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="569146723449460" speed="5">
+                        <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
         <object-type name="RedTela" sid="278643835286164">
             <plugin id="Sprite" />
             <animation-folder>
@@ -1606,6 +1776,18 @@
             </members>
             <instance-variables>
                 <instance-variable name="Unlocked" sid="811475033208673" type="boolean" />
+                <instance-variable name="selected" sid="100555883403415" type="boolean" />
+                <instance-variable name="id" sid="329626672716826" type="number" />
+                <instance-variable name="atx" sid="955059390670242" type="number" />
+                <instance-variable name="aty" sid="918895099107077" type="number" />
+                <instance-variable name="BestTime" sid="148521580188508" type="number" />
+                <instance-variable name="Stars" sid="960692804156220" type="number" />
+                <instance-variable name="BestTimeString" sid="353437403754918" type="string" />
+                <instance-variable name="Star1" sid="154419904089357" type="number" />
+                <instance-variable name="Star2" sid="397021963518332" type="number" />
+                <instance-variable name="Star3" sid="181594809145827" type="number" />
+                <instance-variable name="TextMarc" sid="978346970467651" type="number" />
+                <instance-variable name="Text" sid="669725433716235" type="number" />
             </instance-variables>
             <behaviors>
                 <behavior-type name="Fade" sid="694846554621849">
@@ -1698,6 +1880,49 @@
                 <member>Stick_3</member>
                 <member>Stick_4</member>
                 <member>Stick_5</member>
+            </members>
+        </family>
+        <family name="Final" plugin-id="Sprite" sid="224677122033655">
+            <members>
+                <member>BackToSelect</member>
+                <member>menu</member>
+                <member>RetryLvl</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="atx" sid="689555440896927" type="number" />
+            </instance-variables>
+        </family>
+        <family name="Pause" plugin-id="Sprite" sid="576128337708070">
+            <members>
+                <member>button1Continuar</member>
+                <member>button2Reiniciar</member>
+                <member>button3Selector</member>
+                <member>button4Menu</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="atx" sid="180915190103005" type="number" />
+            </instance-variables>
+        </family>
+        <family name="FX" plugin-id="Sprite" sid="878283405382494">
+            <members>
+                <member>FXDie</member>
+                <member>FXEat</member>
+                <member>FXJump</member>
+            </members>
+            <instance-variables>
+                <instance-variable name="timerDead" sid="414795434608187" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Timer" sid="148683426913883">
+                    <behavior id="Timer" />
+                </behavior-type>
+            </behaviors>
+        </family>
+        <family name="TextToChange" plugin-id="Text" sid="251552704308903">
+            <members>
+                <member>CantidadFly</member>
+                <member>CantidadMoscas</member>
+                <member>Timer</member>
             </members>
         </family>
     </families>

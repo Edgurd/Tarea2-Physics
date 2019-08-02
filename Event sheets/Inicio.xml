@@ -6,6 +6,289 @@
         <variable constant="0" name="Variable2" sid="258238528772033" static="0" type="number">-60</variable>
         <variable constant="0" name="Variable3" sid="306757896355008" static="0" type="number">0</variable>
         <variable constant="0" name="Si" sid="690451838778817" static="0" type="number">0</variable>
+        <variable constant="0" name="CurX" sid="839256586902047" static="0" type="number">0</variable>
+        <variable constant="0" name="CurY" sid="870235954532896" static="0" type="number">0</variable>
+        <variable constant="0" name="Selected" sid="879413384087321" static="0" type="number">0</variable>
+        <variable constant="0" name="SelectedUID" sid="881539741158229" static="0" type="number">0</variable>
+        <event-block sid="209739764617627">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="754303304972437" type="System" />
+            </conditions>
+            <actions>
+                <action id="-7" name="Set size" sid="631217479030527" type="Black">
+                    <param id="0" name="Width">LayoutWidth</param>
+                    <param id="1" name="Height">LayoutHeight</param>
+                </action>
+                <action id="-3" name="Set position" sid="975188385322168" type="Black">
+                    <param id="0" name="X">0</param>
+                    <param id="1" name="Y">0</param>
+                </action>
+                <action id="33" name="Stop all" sid="435178196751493" type="Audio" />
+                <action id="2" name="Set at X" sid="102897700296291" type="LevelState">
+                    <param id="0" name="X">1</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="603013396956323" type="System">
+                    <param id="0" name="Variable">PlaySong</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Call function" sid="627172602769653" type="Function">
+                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20{###}0</param>
+                </action>
+                <action id="0" name="Play" sid="173793978874297" type="Audio">
+                    <param id="0" name="Audio file">title</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">-60</param>
+                    <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
+                </action>
+                <action id="3" name="Set at XY" sid="495938160190584" type="LevelSelector">
+                    <param id="0" name="X">CurX</param>
+                    <param id="1" name="Y">CurY</param>
+                    <param id="2" name="Value">1</param>
+                </action>
+                <action id="0" name="Call function" sid="819506308331682" type="Function">
+                    <param id="0" name="Name">&quot;ActSel&quot;</param>
+                    <param id="1" name="Parameter {n}"></param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="602918973889971">
+                    <conditions>
+                        <condition id="3" name="For each element" sid="600943083489007" type="LevelState">
+                            <param id="0" name="Axes">1</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="905372913103750">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="286772334851698" type="System">
+                                    <param id="0" name="First value">LevelState.CurY</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="302596324400881">
+                                    <conditions>
+                                        <condition id="4" name="Compare current value" sid="208551905148407" type="LevelState">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="570322794755070">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="259686668268023" type="Etapa">
+                                                    <param id="0" name="Unique ID">LevelState.CurX + 35</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-13" name="Set boolean" sid="618384705839605" type="Etapa">
+                                                    <param id="0" name="Instance variable">Unlocked</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="357127439302601" type="Etapa">
+                                                    <param id="0" name="Instance variable">Stars</param>
+                                                    <param id="1" name="Value">int(LevelState.At(LevelState.CurX,1))</param>
+                                                </action>
+                                                <action id="-10" name="Set value" sid="230668609037669" type="Etapa">
+                                                    <param id="0" name="Instance variable">BestTimeString</param>
+                                                    <param id="1" name="Value">LevelState.At(LevelState.CurX,2)</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="145014123714455">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="812724429860323" type="System">
+                            <param id="0" name="Object">Etapa</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="107505459928173">
+                            <conditions>
+                                <condition id="-8" name="Is boolean instance variable set" sid="478901703312870" type="Etapa">
+                                    <param id="0" name="Instance variable">Unlocked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="228975926770913" type="Etapa">
+                                    <param id="0" name="Mode">0</param>
+                                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="543391411396769">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="169314153097086" type="Etapa">
+                                            <param id="0" name="Instance variable">Stars</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="461771158746996">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="266796866707745" type="StarMenu">
+                                                    <param id="0" name="Unique ID">Etapa.Star1</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="882437352751091" type="StarMenu">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="794624842799263">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="641718059520474" type="Etapa">
+                                            <param id="0" name="Instance variable">Stars</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="838593802993821">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="775786179536582" type="StarMenu">
+                                                    <param id="0" name="Unique ID">Etapa.Star2</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="408911815517049" type="StarMenu">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="882771213117612">
+                                    <conditions>
+                                        <condition id="-7" name="Compare instance variable" sid="408796251843142" type="Etapa">
+                                            <param id="0" name="Instance variable">Stars</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Value">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="325176118310929">
+                                            <conditions>
+                                                <condition id="-14" name="Pick by unique ID" sid="203874242775529" type="StarMenu">
+                                                    <param id="0" name="Unique ID">Etapa.Star3</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-27" name="Set effect enabled" sid="933005628096224" type="StarMenu">
+                                                    <param id="0" name="Mode">0</param>
+                                                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                                <event-block sid="422649469493381">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="793384021948874" type="MarcoTimerMenuy">
+                                            <param id="0" name="Unique ID">Etapa.TextMarc</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="769350345231206" type="MarcoTimerMenuy">
+                                            <param id="0" name="Mode">0</param>
+                                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="925186480746661">
+                            <conditions>
+                                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="130040850053749" type="Etapa">
+                                    <param id="0" name="Instance variable">Unlocked</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-27" name="Set effect enabled" sid="682728318437205" type="Etapa">
+                                    <param id="0" name="Mode">1</param>
+                                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="923579556208832">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="563475737553688" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="592483922810764" type="StarMenu">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="223050039301662">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="873374506228139" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="786545464745843" type="StarMenu">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="450617324723060">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="868621331977640" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="890887405380448" type="StarMenu">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="926254085857150">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="222024175164379" type="MarcoTimerMenuy">
+                                            <param id="0" name="Unique ID">Etapa.TextMarc</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-27" name="Set effect enabled" sid="716798695343073" type="MarcoTimerMenuy">
+                                            <param id="0" name="Mode">1</param>
+                                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
         <event-block sid="269436223943902">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="141441781383530" type="System" />
@@ -15,12 +298,29 @@
                     <param id="0" name="Sprite">Mousesprite</param>
                 </action>
                 <action id="-24" name="Move to top" sid="622300749708726" type="Mousesprite" />
+                <action id="-9" name="Set value" sid="693112874840488" type="System">
+                    <param id="0" name="Variable">Si</param>
+                    <param id="1" name="Value">0</param>
+                </action>
             </actions>
         </event-block>
         <event-block any="1" sid="344205065176916">
             <conditions>
-                <condition id="1" name="On any click" sid="261791893035503" type="Mouse" />
-                <condition id="1" name="On any key pressed" sid="932648058833587" type="Keyboard" />
+                <condition id="6" name="On button pressed" sid="762944926996766" type="Gp">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">9</param>
+                </condition>
+                <condition id="0" name="On key pressed" sid="796021779284959" type="Keyboard">
+                    <param id="0" name="Key">13</param>
+                </condition>
+                <condition id="6" name="On button pressed" sid="552959344848038" type="Gp">
+                    <param id="0" name="Gamepad">0</param>
+                    <param id="1" name="Button">0</param>
+                </condition>
+                <condition id="0" name="On click" sid="575725491638961" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                </condition>
             </conditions>
             <actions />
             <sub-events>
@@ -54,76 +354,6 @@
                     <param id="1" name="Value">1</param>
                 </action>
             </actions>
-        </event-block>
-        <event-block sid="209739764617627">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="754303304972437" type="System" />
-            </conditions>
-            <actions>
-                <action id="-7" name="Set size" sid="631217479030527" type="Black">
-                    <param id="0" name="Width">LayoutWidth</param>
-                    <param id="1" name="Height">LayoutHeight</param>
-                </action>
-                <action id="-3" name="Set position" sid="975188385322168" type="Black">
-                    <param id="0" name="X">0</param>
-                    <param id="1" name="Y">0</param>
-                </action>
-                <action id="33" name="Stop all" sid="435178196751493" type="Audio" />
-                <action id="2" name="Set at X" sid="102897700296291" type="LevelState">
-                    <param id="0" name="X">1</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-                <action id="-9" name="Set value" sid="603013396956323" type="System">
-                    <param id="0" name="Variable">PlaySong</param>
-                    <param id="1" name="Value">0</param>
-                </action>
-                <action id="0" name="Call function" sid="627172602769653" type="Function">
-                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-20{###}0</param>
-                </action>
-                <action id="0" name="Play" sid="173793978874297" type="Audio">
-                    <param id="0" name="Audio file">title</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">-60</param>
-                    <param id="1" name="Tag (optional)">&quot;OST&quot;</param>
-                </action>
-            </actions>
-            <sub-events>
-                <event-block sid="602918973889971">
-                    <conditions>
-                        <condition id="3" name="For each element" sid="600943083489007" type="LevelState">
-                            <param id="0" name="Axes">2</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="302596324400881">
-                            <conditions>
-                                <condition id="4" name="Compare current value" sid="208551905148407" type="LevelState">
-                                    <param id="0" name="Comparison">0</param>
-                                    <param id="1" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions />
-                            <sub-events>
-                                <event-block sid="570322794755070">
-                                    <conditions>
-                                        <condition id="-14" name="Pick by unique ID" sid="259686668268023" type="Etapa">
-                                            <param id="0" name="Unique ID">LevelState.CurX + 35</param>
-                                        </condition>
-                                    </conditions>
-                                    <actions>
-                                        <action id="-13" name="Set boolean" sid="618384705839605" type="Etapa">
-                                            <param id="0" name="Instance variable">Unlocked</param>
-                                            <param id="1" name="Value">1</param>
-                                        </action>
-                                    </actions>
-                                </event-block>
-                            </sub-events>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-            </sub-events>
         </event-block>
         <event-block sid="761895460109549">
             <conditions>
@@ -257,14 +487,101 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="197044759068491">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="636801057023475" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">1</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="935882438424634">
+                                    <conditions />
+                                    <actions>
+                                        <action id="0" name="Play" sid="168346414928201" type="Audio">
+                                            <param id="0" name="Audio file">Button</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="734292293681295" type="Black" />
+                                        <action id="0" name="Call function" sid="924569305714527" type="Function">
+                                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                        </action>
+                                        <action id="-16" name="Wait" sid="658060720360299" type="System">
+                                            <param id="0" name="Seconds">FadeOutTime</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="389633737003290" type="Audio" />
+                                        <action id="-9" name="Set value" sid="972985007407246" type="System">
+                                            <param id="0" name="Variable">PlaySong</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="-2" name="Go to layout" sid="322399107885523" type="System">
+                                            <param id="0" name="Layout">Inicio_Layout</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="110673762702974">
+                            <conditions>
+                                <condition id="6" name="On button pressed" sid="466056058131710" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">9</param>
+                                </condition>
+                                <condition id="6" name="On button pressed" sid="675784979622130" type="Gp">
+                                    <param id="0" name="Gamepad">0</param>
+                                    <param id="1" name="Button">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <event-block sid="793897577935248">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="274698329042493" type="Etapa">
+                                            <param id="0" name="Unique ID">SelectedUID</param>
+                                        </condition>
+                                        <condition id="-8" name="Is boolean instance variable set" sid="415734416090000" type="Etapa">
+                                            <param id="0" name="Instance variable">Unlocked</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Play" sid="512798424287652" type="Audio">
+                                            <param id="0" name="Audio file">Button</param>
+                                            <param id="2" name="Loop">0</param>
+                                            <param id="3" name="Volume">-10</param>
+                                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
+                                        </action>
+                                        <action id="0" name="Call function" sid="570442374534464" type="Function">
+                                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
+                                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
+                                        </action>
+                                        <action behavior="Fade" id="1" name="Start fade" sid="890401790445000" type="Black" />
+                                        <action id="-16" name="Wait" sid="130794373990377" type="System">
+                                            <param id="0" name="Seconds">1</param>
+                                        </action>
+                                        <action id="-9" name="Set value" sid="402298638054412" type="System">
+                                            <param id="0" name="Variable">Si</param>
+                                            <param id="1" name="Value">0</param>
+                                        </action>
+                                        <action id="33" name="Stop all" sid="419259015359960" type="Audio" />
+                                        <action id="-25" name="Go to layout (by name)" sid="348829680629994" type="System">
+                                            <param id="0" name="Layout">&quot;Etapa &quot; &amp; Selected</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
                         <event-block sid="188284559590091">
                             <conditions>
                                 <condition id="6" name="On object clicked" sid="766630150658832" type="Mouse">
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa1</param>
+                                    <param id="2" name="Object clicked">Etapa</param>
                                 </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="993116971922919" type="Etapa1">
+                                <condition id="-8" name="Is boolean instance variable set" sid="725255002238538" type="Etapa">
                                     <param id="0" name="Instance variable">Unlocked</param>
                                 </condition>
                             </conditions>
@@ -288,296 +605,8 @@
                                     <param id="1" name="Value">0</param>
                                 </action>
                                 <action id="33" name="Stop all" sid="531808007920138" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="215058453066759" type="System">
-                                    <param id="0" name="Layout">Etapa 1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="217564943139623">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="514511460206307" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa2</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="827175592720394" type="Etapa2">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="696312056087955" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="844551927873121" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="353571184594278" type="Black" />
-                                <action id="-16" name="Wait" sid="595167483895368" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="528518164811830" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="341813026361733" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="830916344536611" type="System">
-                                    <param id="0" name="Layout">Etapa 2</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="460958589158273">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="371435863254765" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa3</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="657244869420640" type="Etapa3">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="782309513536215" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="993971510370817" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="298274843638075" type="Black" />
-                                <action id="-16" name="Wait" sid="397160255986338" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="641762789138817" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="765286210630142" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="807971399401872" type="System">
-                                    <param id="0" name="Layout">Etapa 3</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="324846625722730">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="781856350596688" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa4</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="482344592627649" type="Etapa4">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="492397269574306" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="291553339439276" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="825289844381815" type="Black" />
-                                <action id="-16" name="Wait" sid="297968784762235" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="263815418763969" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="648860998362848" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="590595940297293" type="System">
-                                    <param id="0" name="Layout">Etapa 4</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="739507914237314">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="646094533164539" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa5</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="541398829598162" type="Etapa5">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="661115861792762" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="365414489445327" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="879770545614792" type="Black" />
-                                <action id="-16" name="Wait" sid="578584168793979" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="318835743600739" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="287272823839428" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="221300056136254" type="System">
-                                    <param id="0" name="Layout">Etapa 5</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="427536027752468">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="397769548637902" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa6</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="978725270297578" type="Etapa6">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="249311809938022" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="976476581498732" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="203919119842539" type="Black" />
-                                <action id="-16" name="Wait" sid="604482824951985" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="278340212879996" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="172889163306551" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="451859567830218" type="System">
-                                    <param id="0" name="Layout">Etapa 6</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="111321588809961">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="758432416271227" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa7</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="175522379540308" type="Etapa7">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="319334668103286" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="843110414988769" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="926114566493724" type="Black" />
-                                <action id="-16" name="Wait" sid="862787558453795" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="210128672263229" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="226929604649541" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="537968130023643" type="System">
-                                    <param id="0" name="Layout">Etapa 7</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="353891096125642">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="291833481209306" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa8</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="994142791062511" type="Etapa8">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="718476071804551" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="152489076920416" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="970582727439662" type="Black" />
-                                <action id="-16" name="Wait" sid="569992188521096" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="973036192514113" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="265799792714027" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="448886709805259" type="System">
-                                    <param id="0" name="Layout">Etapa 8</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="761296983345618">
-                            <conditions>
-                                <condition id="6" name="On object clicked" sid="233645989688027" type="Mouse">
-                                    <param id="0" name="Mouse button">0</param>
-                                    <param id="1" name="Click type">0</param>
-                                    <param id="2" name="Object clicked">Etapa9</param>
-                                </condition>
-                                <condition id="-8" name="Is boolean instance variable set" sid="911549236353359" type="Etapa9">
-                                    <param id="0" name="Instance variable">Unlocked</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="473278656021612" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action id="0" name="Call function" sid="348159647349233" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="978592309631531" type="Black" />
-                                <action id="-16" name="Wait" sid="292914665096544" type="System">
-                                    <param id="0" name="Seconds">1</param>
-                                </action>
-                                <action id="-9" name="Set value" sid="747509689841271" type="System">
-                                    <param id="0" name="Variable">Si</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="155136056436825" type="Audio" />
-                                <action id="-2" name="Go to layout" sid="455588986208901" type="System">
-                                    <param id="0" name="Layout">Etapa 9</param>
+                                <action id="-25" name="Go to layout (by name)" sid="215058453066759" type="System">
+                                    <param id="0" name="Layout">&quot;Etapa &quot; &amp; Etapa.id</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -585,31 +614,421 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="107505459928173">
+        <event-block sid="377609358774974">
             <conditions>
-                <condition id="-8" name="Is boolean instance variable set" sid="478901703312870" type="Etapa">
-                    <param id="0" name="Instance variable">Unlocked</param>
+                <condition id="0" name="On function" sid="971737296095084" type="Function">
+                    <param id="0" name="Name">&quot;ActSel&quot;</param>
                 </condition>
             </conditions>
-            <actions>
-                <action id="-27" name="Set effect enabled" sid="228975926770913" type="Etapa">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
-                </action>
-            </actions>
+            <actions />
+            <sub-events>
+                <event-block sid="465650471412654">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="282590849533024" type="System">
+                            <param id="0" name="Object">Etapa</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="549289806637486">
+                            <conditions>
+                                <condition id="-8" name="Compare two values" sid="429713388524487" type="System">
+                                    <param id="0" name="First value">LevelSelector.At(Etapa.atx,Etapa.aty)</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Second value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="279365759204776" type="Etapa">
+                                    <param id="0" name="Scale">0.70</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="403898752714898" type="System">
+                                    <param id="0" name="Variable">Selected</param>
+                                    <param id="1" name="Value">Etapa.id</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="120872638813269" type="System">
+                                    <param id="0" name="Variable">SelectedUID</param>
+                                    <param id="1" name="Value">Etapa.UID</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="770128985619856">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="601508047756980" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="523476417728280" type="StarMenu">
+                                            <param id="0" name="Scale">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="983804998046023">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="993252624804362" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="214901830695117" type="StarMenu">
+                                            <param id="0" name="Scale">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="460029080293664">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="649955091709637" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="798810415715043" type="StarMenu">
+                                            <param id="0" name="Scale">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="192527796207000">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="873578571334726" type="MarcoTimerMenuy">
+                                            <param id="0" name="Unique ID">Etapa.TextMarc</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="615390392750218" type="MarcoTimerMenuy">
+                                            <param id="0" name="Scale">1.2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="245467543655705">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="613913673747378" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="9" name="Set scale" sid="185168328627356" type="Etapa">
+                                    <param id="0" name="Scale">0.55</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="898973700734006">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="445386600302269" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star1</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="745049552205423" type="StarMenu">
+                                            <param id="0" name="Scale">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="278771810693654">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="577797956207284" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="512680069233047" type="StarMenu">
+                                            <param id="0" name="Scale">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="337990260086844">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="679249342570047" type="StarMenu">
+                                            <param id="0" name="Unique ID">Etapa.Star3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="922413250499118" type="StarMenu">
+                                            <param id="0" name="Scale">1.0</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block sid="293622392369462">
+                                    <conditions>
+                                        <condition id="-14" name="Pick by unique ID" sid="692821514242317" type="MarcoTimerMenuy">
+                                            <param id="0" name="Unique ID">Etapa.TextMarc</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="9" name="Set scale" sid="476053543074468" type="MarcoTimerMenuy">
+                                            <param id="0" name="Scale">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
         </event-block>
-        <event-block sid="925186480746661">
-            <conditions>
-                <condition id="-8" inverted="1" name="Is boolean instance variable set" sid="130040850053749" type="Etapa">
-                    <param id="0" name="Instance variable">Unlocked</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-27" name="Set effect enabled" sid="682728318437205" type="Etapa">
-                    <param id="0" name="Mode">1</param>
-                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
-                </action>
-            </actions>
-        </event-block>
+        <event-group description="" sid="885146357748776" title="Movement">
+            <sub-events>
+                <event-block any="1" sid="264330173505771">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="556268923230684" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">12</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="163162692271149" type="Function">
+                            <param id="0" name="Name">&quot;IniUp&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="214260040109389">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="397679656650919" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="399347866725098" type="System">
+                                    <param id="0" name="Variable">CurY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="181107276577937" type="System">
+                                    <param id="0" name="Variable">CurY</param>
+                                    <param id="1" name="Value">clamp(CurY,0,2)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="954022834505019" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="803023665483203" type="Function">
+                                    <param id="0" name="Name">&quot;ActSel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="611002189171388">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="462927277222130" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">13</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="878067929867937" type="Function">
+                            <param id="0" name="Name">&quot;IniDown&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="103100670814985">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="926763355701622" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="574289898381042" type="System">
+                                    <param id="0" name="Variable">CurY</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="859932384167633" type="System">
+                                    <param id="0" name="Variable">CurY</param>
+                                    <param id="1" name="Value">clamp(CurY,0,2)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="904325805806970" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="923934233246393" type="Function">
+                                    <param id="0" name="Name">&quot;ActSel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="346567171328030">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="910635748609130" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">14</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="181386324823652" type="Function">
+                            <param id="0" name="Name">&quot;IniLeft&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="267191840576547">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="441464159795513" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="100862500472783" type="System">
+                                    <param id="0" name="Variable">CurX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="747409868552977" type="System">
+                                    <param id="0" name="Variable">CurX</param>
+                                    <param id="1" name="Value">clamp(CurX,0,2)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="822156435156674" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="617198326532594" type="Function">
+                                    <param id="0" name="Name">&quot;ActSel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="189687977805871">
+                    <conditions>
+                        <condition id="6" name="On button pressed" sid="626467093338892" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Button">15</param>
+                        </condition>
+                        <condition id="0" name="On function" sid="613120774822088" type="Function">
+                            <param id="0" name="Name">&quot;IniRight&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="203999194736665">
+                            <conditions />
+                            <actions>
+                                <action id="3" name="Set at XY" sid="198379508619091" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">0</param>
+                                </action>
+                                <action id="-10" name="Add to" sid="868020032490943" type="System">
+                                    <param id="0" name="Variable">CurX</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="431231551157238" type="System">
+                                    <param id="0" name="Variable">CurX</param>
+                                    <param id="1" name="Value">clamp(CurX,0,2)</param>
+                                </action>
+                                <action id="3" name="Set at XY" sid="790970472349328" type="LevelSelector">
+                                    <param id="0" name="X">CurX</param>
+                                    <param id="1" name="Y">CurY</param>
+                                    <param id="2" name="Value">1</param>
+                                </action>
+                                <action id="0" name="Call function" sid="518333615211354" type="Function">
+                                    <param id="0" name="Name">&quot;ActSel&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="420149506191444">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="546221204143283" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">DEAD_ZONE2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="963203251536694">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="899798929545841" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="519721898120720" type="Function">
+                                    <param id="0" name="Name">&quot;IniDown&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="759397964492675">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="419496672325416" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">1</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-DEAD_ZONE2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="442180523258259">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="870985045811174" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="502972762601752" type="Function">
+                                    <param id="0" name="Name">&quot;IniUp&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="172437619269331">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="857158792889270" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">4</param>
+                            <param id="3" name="Value">DEAD_ZONE2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="396258589638758">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="242751721655664" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="833215374092244" type="Function">
+                                    <param id="0" name="Name">&quot;IniRight&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="774218173435197">
+                    <conditions>
+                        <condition id="5" name="Compare axis" sid="350898765624067" type="Gp">
+                            <param id="0" name="Gamepad">0</param>
+                            <param id="1" name="Axis">0</param>
+                            <param id="2" name="Comparison">2</param>
+                            <param id="3" name="Value">-DEAD_ZONE2</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="715013974374131">
+                            <conditions>
+                                <condition id="-4" name="Trigger once while true" sid="209752514433253" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Call function" sid="711195696023389" type="Function">
+                                    <param id="0" name="Name">&quot;IniLeft&quot;</param>
+                                    <param id="1" name="Parameter {n}"></param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

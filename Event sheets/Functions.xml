@@ -8,13 +8,100 @@
         <variable constant="0" name="Param6" sid="736519096676797" static="0" type="number">0</variable>
         <event-group description="" sid="713634868040351" title="Functions">
             <sub-events>
+                <event-block sid="520970632247281">
+                    <conditions>
+                        <condition id="0" name="On function" sid="245171710887548" type="Function">
+                            <param id="0" name="Name">&quot;win&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="3" name="Set at XY" sid="343282858225131" type="LevelState">
+                            <param id="0" name="X">Spidy.Etapa</param>
+                            <param id="1" name="Y">2</param>
+                            <param id="2" name="Value">Timer.Text</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <comment>3</comment>
+                        <event-block sid="488574516702832">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="226353488191821" type="Spidy">
+                                    <param id="0" name="Instance variable">MaxFly</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">Self.FlyUp</param>
+                                </condition>
+                                <condition id="-14" name="Compare variable" sid="557083542892449" type="System">
+                                    <param id="0" name="Variable">LayoutTimer</param>
+                                    <param id="1" name="Comparison">2</param>
+                                    <param id="2" name="Value">25</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="3" name="Set at XY" sid="641165159487875" type="LevelState">
+                                    <param id="0" name="X">Spidy.Etapa</param>
+                                    <param id="1" name="Y">1</param>
+                                    <param id="2" name="Value">3</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="760301249420853">
+                            <conditions>
+                                <condition id="-22" name="Else" sid="289652964233324" type="System" />
+                            </conditions>
+                            <actions />
+                            <sub-events>
+                                <comment>2</comment>
+                                <event-block sid="848726124942702">
+                                    <conditions>
+                                        <condition id="-8" name="Compare two values" sid="639938408924106" type="System">
+                                            <param id="0" name="First value">Spidy.FlyUp</param>
+                                            <param id="1" name="Comparison">5</param>
+                                            <param id="2" name="Second value">Spidy.MaxFly-1</param>
+                                        </condition>
+                                        <condition id="-14" name="Compare variable" sid="926589983808660" type="System">
+                                            <param id="0" name="Variable">LayoutTimer</param>
+                                            <param id="1" name="Comparison">2</param>
+                                            <param id="2" name="Value">40</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="552442563244689" type="LevelState">
+                                            <param id="0" name="X">Spidy.Etapa</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">2</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <comment>1</comment>
+                                <event-block sid="194203738593617">
+                                    <conditions>
+                                        <condition id="-22" name="Else" sid="741937024476421" type="System" />
+                                    </conditions>
+                                    <actions>
+                                        <action id="3" name="Set at XY" sid="250812162898378" type="LevelState">
+                                            <param id="0" name="X">Spidy.Etapa</param>
+                                            <param id="1" name="Y">1</param>
+                                            <param id="2" name="Value">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                    </sub-events>
+                </event-block>
                 <event-block sid="436515710217535">
                     <conditions>
                         <condition id="0" name="On function" sid="941561937117743" type="Function">
                             <param id="0" name="Name">&quot;death&quot;</param>
                         </condition>
                     </conditions>
-                    <actions />
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="873478914063112" type="Spidy">
+                            <param id="0" name="Object">FXDie</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                    </actions>
                     <sub-events>
                         <event-block sid="244588295580584">
                             <conditions />

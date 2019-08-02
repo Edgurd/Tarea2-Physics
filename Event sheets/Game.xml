@@ -266,5 +266,38 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="583798291506954" title="Moscas">
+            <sub-events>
+                <event-block sid="444285877589290">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="978018564520469" type="Spidy">
+                            <param id="0" name="Object">Fly</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Spawn another object" sid="522201226460103" type="Spidy">
+                            <param id="0" name="Object">FXEat</param>
+                            <param id="1" name="Layer">&quot;Game&quot;</param>
+                            <param id="2" name="Image point">0</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="221072183224637" type="Fly" />
+                        <action id="0" name="Play" sid="850847807804726" type="Audio">
+                            <param id="0" name="Audio file">234</param>
+                            <param id="2" name="Loop">0</param>
+                            <param id="3" name="Volume">-5</param>
+                            <param id="1" name="Tag (optional)">&quot;SFX&quot;</param>
+                        </action>
+                        <action id="-11" name="Add to" sid="985392017765454" type="Spidy">
+                            <param id="0" name="Instance variable">FlyUp</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="0" name="Call function" sid="500831258075662" type="Function">
+                            <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
+                            <param id="1" name="Parameter {n}"></param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
     </events>
 </c2eventsheet>

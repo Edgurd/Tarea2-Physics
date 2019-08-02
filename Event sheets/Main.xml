@@ -8,9 +8,22 @@
         <include>PlayerControl</include>
         <variable comment="1: True 0: False" constant="0" name="PlaySong" sid="955422386921335" static="0" type="number">0</variable>
         <variable comment="1: True 0: False" constant="0" name="FadeOutTime" sid="701286384916133" static="0" type="number">0.3</variable>
+        <variable constant="0" name="LayoutTimer" sid="880120172148739" static="0" type="number">0</variable>
+        <variable constant="0" name="isFinished" sid="321368167262438" static="0" type="number">0</variable>
         <comment>Letterbox Scale</comment>
         <comment>HTML5 Website -&gt; Zip</comment>
         <comment>Upload New Proyect -&gt;HTML -&gt; 0$ or donate -&gt; Upload Zip -&gt; This file will be played in teh browser</comment>
+        <event-block sid="685359597226445">
+            <conditions>
+                <condition id="-18" name="On created" sid="382634763597264" type="TextToChange" />
+            </conditions>
+            <actions>
+                <action id="5" name="Set web font" sid="267145530829860" type="TextToChange">
+                    <param id="0" name="Family name">&quot;pouregular&quot;</param>
+                    <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                </action>
+            </actions>
+        </event-block>
         <event-block sid="585792284529005">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="150923231586366" type="System" />
@@ -20,6 +33,83 @@
                     <param id="0" name="Sprite">Mousesprite</param>
                 </action>
                 <action id="-24" name="Move to top" sid="387517904550993" type="Mousesprite" />
+                <action id="3" name="Set at XY" sid="788556625421910" type="LevelState">
+                    <param id="0" name="X">Spidy.Etapa</param>
+                    <param id="1" name="Y">0</param>
+                    <param id="2" name="Value">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="651583786011117" type="System">
+                    <param id="0" name="Variable">LayoutTimer</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="0" name="Set text" sid="593630554662995" type="Timer">
+                    <param id="0" name="Text">&quot;0:00&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="420857867715771" type="System">
+                    <param id="0" name="Variable">isFinished</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="381010585793601">
+                    <conditions>
+                        <condition id="-11" name="For Each" sid="644054302186412" type="System">
+                            <param id="0" name="Object">TextToChange</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="5" name="Set web font" sid="620428470160601" type="TextToChange">
+                            <param id="0" name="Family name">&quot;pouregular&quot;</param>
+                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="174288608142498">
+            <conditions>
+                <condition id="-18" name="On created" sid="132481197424734" type="FX" />
+            </conditions>
+            <actions>
+                <action id="-8" name="Set angle" sid="729087218791988" type="FX">
+                    <param id="0" name="Angle">0</param>
+                </action>
+                <action behavior="Timer" id="0" name="Start timer" sid="729499126708477" type="FX">
+                    <param id="0" name="Duration">Self.timerDead</param>
+                    <param id="1" name="Type">0</param>
+                    <param id="2" name="Tag">&quot;&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="747107643341594">
+            <conditions>
+                <condition behavior="Timer" id="0" name="On timer" sid="392763906260525" type="FX">
+                    <param id="0" name="Tag">&quot;&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="627754578431359" type="FX" />
+            </actions>
+        </event-block>
+        <event-block sid="660714447291690">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="415337281761558" type="System">
+                    <param id="0" name="Interval (seconds)">1.0</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="561406191145484" type="System">
+                    <param id="0" name="Variable">isFinished</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-10" name="Add to" sid="938650065647314" type="System">
+                    <param id="0" name="Variable">LayoutTimer</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="0" name="Set text" sid="806723881947041" type="Timer">
+                    <param id="0" name="Text">int(LayoutTimer/60) &amp; &quot;:&quot; &amp; zeropad(int(LayoutTimer%60),2)</param>
+                </action>
             </actions>
         </event-block>
         <event-group description="" sid="884502806569036" title="Misc">
@@ -56,14 +146,6 @@
                         <action id="0" name="Call function" sid="789868736775098" type="Function">
                             <param id="0" name="Name">&quot;ActualizarFly&quot;</param>
                             <param id="1" name="Parameter {n}"></param>
-                        </action>
-                        <action id="5" name="Set web font" sid="516179995212130" type="CantidadMoscas">
-                            <param id="0" name="Family name">&quot;pouregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
-                        </action>
-                        <action id="5" name="Set web font" sid="650116531816815" type="CantidadFly">
-                            <param id="0" name="Family name">&quot;pouregular&quot;</param>
-                            <param id="1" name="CSS URL">&quot;stylesheet.css&quot;</param>
                         </action>
                         <action behavior="Pin" id="0" name="Pin to object" sid="961950335921175" type="CantidadMoscas">
                             <param id="0" name="Pin to">LvlComplete</param>
@@ -173,6 +255,32 @@
                     <actions>
                         <action id="9" name="Set scale" sid="380444907380116" type="Red2">
                             <param id="0" name="Scale">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="650085201652112">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="982962159065483" type="Spidy">
+                            <param id="0" name="Instance variable">FlyUp</param>
+                            <param id="1" name="Comparison">4</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="696189863240218" type="BackToSelect">
+                            <param id="0" name="Mode">0</param>
+                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="457854341753462">
+                    <conditions>
+                        <condition id="-22" name="Else" sid="382257758930601" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-27" name="Set effect enabled" sid="116835511863227" type="BackToSelect">
+                            <param id="0" name="Mode">1</param>
+                            <param id="1" name="Effect">&quot;Grayscale&quot;</param>
                         </action>
                     </actions>
                 </event-block>
@@ -294,235 +402,6 @@
         </event-group>
         <event-group description="" sid="933686444740955" title="HUD">
             <sub-events>
-                <event-block any="1" sid="495598768374360">
-                    <conditions>
-                        <condition id="9" name="Is overlapping at offset" sid="771685937692066" type="Spidy">
-                            <param id="0" name="Object">palitos</param>
-                            <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">0</param>
-                        </condition>
-                        <condition id="9" name="Is overlapping at offset" sid="793290704185838" type="Spidy">
-                            <param id="0" name="Object">SolidEscenario</param>
-                            <param id="1" name="Offset X">0</param>
-                            <param id="2" name="Offset Y">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="632976042266115">
-                            <conditions>
-                                <condition id="0" name="On collision with another object" sid="791462383824252" type="Spidy">
-                                    <param id="0" name="Object">TelaFin</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-3" name="Set position" sid="284184874216890" type="Blur">
-                                    <param id="0" name="X">0</param>
-                                    <param id="1" name="Y">0</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="124744567717860" type="Blur" />
-                                <action id="-16" name="Wait" sid="668317252471525" type="System">
-                                    <param id="0" name="Seconds">0.3</param>
-                                </action>
-                                <action id="-15" name="Set visible" sid="227772433680289" type="SpidyTela">
-                                    <param id="0" name="Visibility">0</param>
-                                </action>
-                                <action id="-3" name="Set position" sid="966635443591304" type="LvlComplete">
-                                    <param id="0" name="X">LayoutWidth/2</param>
-                                    <param id="1" name="Y">LayoutHeight/2</param>
-                                </action>
-                                <action id="0" name="Set text" sid="666561827302350" type="CantidadMoscas">
-                                    <param id="0" name="Text">&quot;&quot; &amp;Spidy.FlyUp</param>
-                                </action>
-                                <action behavior="Physics" id="26" name="Remove all joints" sid="564935436500919" type="Spidy" />
-                                <action behavior="Physics" id="12" name="Set world gravity" sid="421227550878175" type="Spidy">
-                                    <param id="0" name="Gravity">0</param>
-                                </action>
-                                <action id="-13" name="Set boolean" sid="571421324309373" type="Spidy">
-                                    <param id="0" name="Instance variable">Control</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action behavior="Physics" id="15" name="Set velocity" sid="995875313025344" type="Spidy">
-                                    <param id="0" name="X component">0</param>
-                                    <param id="1" name="Y component">0</param>
-                                </action>
-                                <action behavior="Physics" id="26" name="Remove all joints" sid="935509533042446" type="Spidy" />
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="666248319445188">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="675266016517827" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">RetryLvl</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="892175885820700" type="Audio">
-                            <param id="0" name="Audio file">Button</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="479650963363605" type="Black" />
-                        <action id="-16" name="Wait" sid="670912121409587" type="System">
-                            <param id="0" name="Seconds">FadeOutTime</param>
-                        </action>
-                        <action id="6" name="Stop" sid="236789274749714" type="Audio">
-                            <param id="0" name="Tag">&quot;SFX&quot;</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="757399379646917" type="System" />
-                    </actions>
-                </event-block>
-                <event-block sid="622298238047290">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="387048630407453" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Retry</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="103069631899810" type="Audio">
-                            <param id="0" name="Audio file">Button</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="580733607154927" type="Black" />
-                        <action id="-16" name="Wait" sid="423987651955917" type="System">
-                            <param id="0" name="Seconds">FadeOutTime</param>
-                        </action>
-                        <action id="6" name="Stop" sid="740111247640461" type="Audio">
-                            <param id="0" name="Tag">&quot;SFX&quot;</param>
-                        </action>
-                        <action id="-26" name="Restart layout" sid="564361731261496" type="System" />
-                    </actions>
-                </event-block>
-                <event-block sid="551539059124377">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="286860491496633" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">BackToSelect</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="990778556594841" type="Spidy">
-                            <param id="0" name="Instance variable">FlyUp</param>
-                            <param id="1" name="Comparison">4</param>
-                            <param id="2" name="Value">0</param>
-                        </condition>
-                    </conditions>
-                    <actions />
-                    <sub-events>
-                        <event-block sid="115023349026723">
-                            <conditions>
-                                <condition id="-8" name="Compare two values" sid="529834684317744" type="System">
-                                    <param id="0" name="First value">LayoutName</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Second value">&quot;Etapa 9&quot;</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="680702752586134" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="661187046603378" type="Black" />
-                                <action id="0" name="Call function" sid="564405457193318" type="Function">
-                                    <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                                    <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="530684416213306" type="System">
-                                    <param id="0" name="Seconds">FadeOutTime</param>
-                                </action>
-                                <action id="33" name="Stop all" sid="161663295681727" type="Audio" />
-                                <action id="-43" name="Go to next/previous layout" sid="705733186072957" type="System">
-                                    <param id="0" name="Which">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="654770408734089">
-                            <conditions>
-                                <condition id="-22" name="Else" sid="524534720454064" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="415977007295174" type="Audio">
-                                    <param id="0" name="Audio file">Button</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-10</param>
-                                    <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                                </action>
-                                <action behavior="Fade" id="1" name="Start fade" sid="157562977767045" type="Black" />
-                                <action id="-16" name="Wait" sid="179544057080153" type="System">
-                                    <param id="0" name="Seconds">FadeOutTime</param>
-                                </action>
-                                <action id="6" name="Stop" sid="665631604055358" type="Audio">
-                                    <param id="0" name="Tag">&quot;SFX&quot;</param>
-                                </action>
-                                <action id="-43" name="Go to next/previous layout" sid="153447800438651" type="System">
-                                    <param id="0" name="Which">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
-                </event-block>
-                <event-block sid="376265369582485">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="807344703140542" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">menu</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="846468759277784" type="Audio">
-                            <param id="0" name="Audio file">Button</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                        </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="546147767447581" type="Black" />
-                        <action id="0" name="Call function" sid="171589512418560" type="Function">
-                            <param id="0" name="Name">&quot;FadeAudio&quot;</param>
-                            <param id="1" name="Parameter {n}">&quot;OST&quot;{###}-60{###}1</param>
-                        </action>
-                        <action id="-16" name="Wait" sid="164310112902360" type="System">
-                            <param id="0" name="Seconds">FadeOutTime</param>
-                        </action>
-                        <action id="33" name="Stop all" sid="824839957130874" type="Audio" />
-                        <action id="-9" name="Set value" sid="533737432411641" type="System">
-                            <param id="0" name="Variable">PlaySong</param>
-                            <param id="1" name="Value">0</param>
-                        </action>
-                        <action id="-2" name="Go to layout" sid="684291503854046" type="System">
-                            <param id="0" name="Layout">Inicio_Layout</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="424879570089224">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="597222578365331" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Pausa</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="0" name="Play" sid="423531118172074" type="Audio">
-                            <param id="0" name="Audio file">Button</param>
-                            <param id="2" name="Loop">0</param>
-                            <param id="3" name="Volume">-10</param>
-                            <param id="1" name="Tag (optional)">&quot;Extra&quot;</param>
-                        </action>
-                        <action id="-13" name="Set time scale" sid="533977571757457" type="System">
-                            <param id="0" name="Time scale">1-timescale</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="567856487257979">
                     <conditions />
                     <actions>
@@ -531,33 +410,27 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="183690924759530">
-                    <conditions />
-                    <actions />
-                    <sub-events>
-                        <event-block sid="258853438960431">
-                            <conditions>
-                                <condition id="-18" name="On created" sid="609258158375468" type="x" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="438581649567822" type="x">
-                                    <param id="0" name="Pin to">LvlComplete</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="162357374912382">
-                            <conditions>
-                                <condition id="-18" name="On created" sid="170517409733149" type="menu" />
-                            </conditions>
-                            <actions>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="800653409226417" type="menu">
-                                    <param id="0" name="Pin to">LvlComplete</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                    </sub-events>
+                <event-block sid="258853438960431">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="609258158375468" type="x" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="438581649567822" type="x">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="162357374912382">
+                    <conditions>
+                        <condition id="-18" name="On created" sid="170517409733149" type="menu" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Pin" id="0" name="Pin to object" sid="800653409226417" type="menu">
+                            <param id="0" name="Pin to">LvlComplete</param>
+                            <param id="1" name="Mode">0</param>
+                        </action>
+                    </actions>
                 </event-block>
                 <event-block sid="910642303976263">
                     <conditions>
@@ -620,42 +493,5 @@
                 </event-block>
             </sub-events>
         </event-group>
-        <event-block sid="650085201652112">
-            <conditions>
-                <condition id="-7" name="Compare instance variable" sid="982962159065483" type="Spidy">
-                    <param id="0" name="Instance variable">FlyUp</param>
-                    <param id="1" name="Comparison">4</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-27" name="Set effect enabled" sid="696189863240218" type="BackToSelect">
-                    <param id="0" name="Mode">0</param>
-                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="457854341753462">
-            <conditions>
-                <condition id="-22" name="Else" sid="382257758930601" type="System" />
-            </conditions>
-            <actions>
-                <action id="-27" name="Set effect enabled" sid="116835511863227" type="BackToSelect">
-                    <param id="0" name="Mode">1</param>
-                    <param id="1" name="Effect">&quot;Grayscale&quot;</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block sid="584767722865267">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="514458810618172" type="System" />
-            </conditions>
-            <actions>
-                <action id="2" name="Set at X" sid="788556625421910" type="LevelState">
-                    <param id="0" name="X">Spidy.Etapa</param>
-                    <param id="1" name="Value">1</param>
-                </action>
-            </actions>
-        </event-block>
     </events>
 </c2eventsheet>
